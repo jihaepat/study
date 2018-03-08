@@ -11,3 +11,4 @@ print(minus_array[1])
 # end_time =time.time() -start_time
 
 # print(end_time)
+# 수정중 
