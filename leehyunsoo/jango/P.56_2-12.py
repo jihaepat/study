@@ -4,8 +4,6 @@ from urllib.request import urlretrieve
 from html.parser import HTMLParser
 import os
 
-import os
-
 
 class image_parser(HTMLParser):
 
