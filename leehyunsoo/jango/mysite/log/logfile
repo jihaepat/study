@@ -1,0 +1,4 @@
+[22/Mar/18 18:13:47] DEBUG [polls.views:40]vote().question_id: 1
+[22/Mar/18 18:13:50] DEBUG [polls.views:40]vote().question_id: 3
+[22/Mar/18 18:18:07] DEBUG [polls.views:40]vote().question_id: 1
+[22/Mar/18 18:18:10] DEBUG [polls.views:40]vote().question_id: 3

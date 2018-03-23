@@ -6,8 +6,8 @@
 <ul>
     <!--<a href="">{{ object_list }}</a>-->
     {% for modelname in object_list %}
-    {% with "books:"|add:modelname|lower as urlvar %}
-    <li><a href="/{{ urlvar }}/">{{ modelname }}</a></li>
+    {% with modelname|lower as urlvar %}
+    <li><a href="{{urlvar}}/">{{ urlvar }}</a></li>
     {% endwith %}
     {% endfor %}
 </ul>
