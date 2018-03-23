@@ -15,5 +15,4 @@ for i, splits in enumerate(split_lines):
     with open(split_file_name, 'w') as split_file:
         split_file.writelines(splits)
 
-os.remove(original_file_name)
 print('complete')
