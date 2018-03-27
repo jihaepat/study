@@ -2,3 +2,9 @@
 [22/Mar/18 18:13:50] DEBUG [polls.views:40]vote().question_id: 3
 [22/Mar/18 18:18:07] DEBUG [polls.views:40]vote().question_id: 1
 [22/Mar/18 18:18:10] DEBUG [polls.views:40]vote().question_id: 3
+[26/Mar/18 12:18:01] DEBUG [polls.views:40]vote().question_id: 1
+[26/Mar/18 12:18:06] DEBUG [polls.views:40]vote().question_id: 3
+[26/Mar/18 12:18:12] DEBUG [polls.views:40]vote().question_id: 2
+[26/Mar/18 12:18:15] DEBUG [polls.views:40]vote().question_id: 1
+[26/Mar/18 12:18:17] DEBUG [polls.views:40]vote().question_id: 2
+[26/Mar/18 12:19:31] DEBUG [polls.views:40]vote().question_id: 2

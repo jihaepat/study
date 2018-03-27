@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 class Question(models.Model):
@@ -16,3 +16,7 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+class Meetup(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    title = models.CharField(max_length= 200)
