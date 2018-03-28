@@ -7,15 +7,10 @@ from .views import home_page
 from .models import Item
 import re
 
-# Create your tests here.
-#
-# class SmokeTest(TestCase):
-#     def test_bad_maths(self):
-#         self.assertEqual(1 + 1, 3)
-
 class HomePageTest(TestCase):
 
     pattern_input_csrf = re.compile(r'<input[^>]*csrfmiddlewaretoken[^>]*>')
+
 
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
@@ -57,28 +52,34 @@ class HomePageTest(TestCase):
         response = home_page(request)
 
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response['location'], '/')
+        self.assertEqual(response['location'], 'lists/the-only-list-in-the-world/')
 
     def test_home_page_displays_all_list_items(self):
-        Item.objects.create(text = 'itemey 1')
-        Item.objects.create(text = 'itemey 2')
+        Item.objects.create(text='itemey 1')
+        Item.objects.create(text='itemey 2')
 
         request = HttpRequest()
         responese = home_page(request)
 
-        # expected_html = render_to_string('home.html')
-
-        # self.assertEqual(
-        #     re.sub(self.pattern_input_csrf, 'itemey 1', responese.content.decode()),
-        #     re.sub(self.pattern_input_csrf, 'itemey 1', expected_html),
-        # )
-
-        # self.assertIn(
-        #     re.sub(self.pattern_input_csrf, 'itemey 1', responese.content.decode()),
-        #     re.sub(self.pattern_input_csrf, 'itemey 1', expected_html),
-        # )
         self.assertIn('itemey 1', responese.content.decode())
         self.assertIn('itemey 2', responese.content.decode())
+
+
+
+class ListViewTest(TestCase):
+
+    def test__displays_all_items(self):
+        Item.objects.create(text='itemey 1')
+        Item.objects.create(text='itemey 2')
+
+
+        responese = self.client.get('lists/the-only-list-in-the-world/')
+        print(responese)
+
+        self.assertContains(responese, 'itemey 1')
+        self.assertContains(responese, 'itemey 2')
+
+
 
 class ItemModelTest(TestCase):
     def test_saving_and_retrieving_items(self):
