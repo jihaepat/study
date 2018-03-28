@@ -41,21 +41,21 @@ class NewVisitorTest(unittest.TestCase):
 
         inputbox.send_keys('공작깃털 사기')
         inputbox.send_keys(Keys.ENTER)
-        self.check_for_row_in_list_table('1: 공장깃털 사기')
+        self.check_for_row_in_list_table('1: 공작깃털 사기')
 
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('공작깃털을 이용해서 그물 만들기')
         inputbox.send_keys(Keys.ENTER)
 
         self.check_for_row_in_list_table('2: 공작깃털을 이용해서 그물 만들기')
-        self.check_for_row_in_list_table('1: 공작깃털사기')
+        self.check_for_row_in_list_table('1: 공작깃털 사기')
 
         rows = self.browser.find_elements_by_tag_name('td')
 
         # sleep(5)
 
-        self.assertIn('1: 공장깃털 사기', ([rows[row].text for row in range(len(rows))]))
-        self.assertIn('2: 공장깃털 사기', ([rows[row].text for row in range(len(rows))]))
+        self.assertIn('1: 공작깃털 사기', ([rows[row].text for row in range(len(rows))]))
+        self.assertIn('2: 공작깃털을 이용해서 그물 만들기', ([rows[row].text for row in range(len(rows))]))
 
         self.fail('Finish the test!')
 
