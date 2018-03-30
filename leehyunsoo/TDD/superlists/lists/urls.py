@@ -19,8 +19,8 @@ from django.urls import path, re_path, include
 from lists import views
 
 urlpatterns = [
-
-    path('', views.home_page, name='home'),
-    re_path(r'^lists/', include('lists.urls')),
+    re_path(r'^(\d+)/$', views.view_list, name='view_list'),
+    re_path(r'^new$', views.new_list, name='new_list'),
+    re_path(r'^(\d+)/add_item$', views.add_item, name='add_item'),
     # path('admin/', admin.site.urls),
 ]

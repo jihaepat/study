@@ -7,28 +7,21 @@ from selenium.webdriver.support.wait import WebDriverWait
 import unittest
 from time import sleep
 
-
 from selenium.webdriver.common.keys import Keys
-
 
 
 class NewVisitorTest(LiveServerTestCase):
 
-
-
     def setUp(self):
-
         self.browser = webdriver.Chrome('/home/leehyunsoo/work/TDD/study/leehyunsoo/TDD/chromedriver')
         # self.browser = webdriver.Chrome()
         # self.browser = webdriver.Firefox(executable_path = '/home/leehyunsoo/work/TDD/study/leehyunsoo/TDD/geckodriver')
         # self.browser = webdriver.Firefox(executable_path = '/Users/leehyunsoo/work/TDD/study/leehyunsoo/TDD/geckodriver')
 
-
     def tearDown(self):
         self.browser.quit()
 
     def check_for_row_in_list_table(self, row_text):
-        # table = self.browser.find_element_by_id('id_list_table')
         rows = self.browser.find_elements_by_id('td')
         self.assertIn(row_text, ([rows[x].text for x in range(len(rows))]))
 
@@ -42,6 +35,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         inputbox.send_keys('공작깃털 사기')
         inputbox.send_keys(Keys.ENTER)
+        rows = self.browser.find_elements_by_id('td')
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists/.+')
 
@@ -53,7 +47,6 @@ class NewVisitorTest(LiveServerTestCase):
 
         self.check_for_row_in_list_table('2: 공작깃털을 이용해서 그물 만들기')
         self.check_for_row_in_list_table('1: 공작깃털 사기')
-
         self.browser.quit()
         self.browser = webdriver.Chrome('/home/leehyunsoo/work/TDD/study/leehyunsoo/TDD/chromedriver')
         # self.browser = webdriver.Firefox(executable_path = '/home/leehyunsoo/work/TDD/study/leehyunsoo/TDD/geckodriver')
@@ -74,7 +67,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         page_text = self.browser.find_element_by_tag_name('body').text
         print(page_text)
-        self.assertIn('공작깃털 사기', page_text)
+        self.assertNotIn('공작깃털 사기', page_text)
         self.assertIn('우유 사기', page_text)
 
         self.fail('Finish the test!')
