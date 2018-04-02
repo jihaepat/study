@@ -3,3 +3,17 @@ setuptools
 django
 ipython
 jupyter
+djangorestframework
+pygments
+httpie
+pytest
+pytest-django
+django-test-plus
+pytest-cov
+flake8
+pyflakes
+codecov
+django-debug-toolbar
+pytest-profiling
+pytest-xdist
+snakeviz
