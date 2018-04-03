@@ -16,8 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rest_framework.routers import DefaultRouter
+from rest_framework.schemas import get_schema_view
+
+from snippets import views
+
+router = DefaultRouter()
+router.register('snippets', views.SnippetViewSet)
+router.register('users', views.UserViewSet)
+
+schema_view = get_schema_view(title='Pastebin API')
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', include('snippets.urls'))
-
+    path('', include(router.urls)),
+    path('schema/', schema_view),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

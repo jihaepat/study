@@ -22,14 +22,15 @@ class Snippet(BaseModel):
     linenos = BooleanField(default=False)
     language = CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     style = CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
-    owner = ForeignKey('auth.User', related_name='snippets', on_delete=True)
+    owner = ForeignKey('auth.User', related_name='snippets', on_delete=CASCADE)
     highlighted = TextField()
 
     def save(self, *args, **kwargs):
         lexer = get_lexer_by_name(self.language)
         linenos = self.linenos and 'table' or False
+        print(linenos)
         options = self.title and {'title': self.title} or {}
-        formatter = HtmlFormatter(style=self, linenos=linenos, full=True, **options)
+        formatter = HtmlFormatter(style=self.style, linenos=linenos, full=True, **options)
         self.highlighted = highlight(self.code, lexer, formatter)
         super(Snippet, self).save(*args, **kwargs)
 
