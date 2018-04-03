@@ -17,3 +17,5 @@ django-debug-toolbar
 pytest-profiling
 pytest-xdist
 snakeviz
+coreapi
+coreapi-cli

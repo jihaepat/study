@@ -23,8 +23,10 @@ SECRET_KEY = 'z+z_^-8^!w9d3*%xpby+udxejhu0w!_1qz11h2=ysic=c_$!&='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -69,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tutorial.wsgi.application'
 
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10
+}
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
