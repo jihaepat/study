@@ -1,11 +1,7 @@
 pip
 setuptools
 django
-ipython
-jupyter
-djangorestframework
-pygments
-httpie
+psycopg2
 pytest
 pytest-django
 django-test-plus
@@ -13,9 +9,8 @@ pytest-cov
 flake8
 pyflakes
 codecov
+ipython
 django-debug-toolbar
 pytest-profiling
 pytest-xdist
 snakeviz
-coreapi
-coreapi-cli
