@@ -1,0 +1,588 @@
+In [2]: from gensim.models.fasttext import FastText
+
+In [3]: model = FastText.load_fasttext_format('/home/gulby/Downloads/wiki.en.bin')
+
+In [4]: dir(model)
+Out[4]:
+['__class__',
+ '__contains__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_adapt_by_suffix',
+ '_check_training_sanity',
+ '_clear_post_train',
+ '_do_train_job',
+ '_get_job_params',
+ '_get_thread_working_mem',
+ '_job_producer',
+ '_load_dict',
+ '_load_model_params',
+ '_load_specials',
+ '_load_vectors',
+ '_log_epoch_end',
+ '_log_epoch_progress',
+ '_log_progress',
+ '_log_train_end',
+ '_raw_word_count',
+ '_save_specials',
+ '_set_train_params',
+ '_smart_save',
+ '_train_epoch',
+ '_update_job_params',
+ '_worker_loop',
+ 'accuracy',
+ 'alpha',
+ 'batch_words',
+ 'bucket',
+ 'build_vocab',
+ 'build_vocab_from_freq',
+ 'callbacks',
+ 'cbow_mean',
+ 'clear_sims',
+ 'compute_loss',
+ 'corpus_count',
+ 'cum_table',
+ 'doesnt_match',
+ 'epochs',
+ 'estimate_memory',
+ 'evaluate_word_pairs',
+ 'file_name',
+ 'hashfxn',
+ 'hs',
+ 'init_sims',
+ 'iter',
+ 'layer1_size',
+ 'load',
+ 'load_binary_data',
+ 'load_fasttext_format',
+ 'max_n',
+ 'min_alpha',
+ 'min_alpha_yet_reached',
+ 'min_count',
+ 'min_n',
+ 'model_trimmed_post_training',
+ 'most_similar',
+ 'most_similar_cosmul',
+ 'n_similarity',
+ 'negative',
+ 'new_format',
+ 'num_ngram_vectors',
+ 'num_original_vectors',
+ 'random',
+ 'running_training_loss',
+ 'sample',
+ 'save',
+ 'sg',
+ 'similar_by_vector',
+ 'similar_by_word',
+ 'similarity',
+ 'struct_unpack',
+ 'syn0_lockf',
+ 'syn0_ngrams_lockf',
+ 'syn0_vocab_lockf',
+ 'syn1',
+ 'syn1neg',
+ 'total_train_time',
+ 'train',
+ 'train_count',
+ 'trainables',
+ 'vector_size',
+ 'vocabulary',
+ 'window',
+ 'wmdistance',
+ 'word_ngrams',
+ 'workers',
+ 'wv']
+
+In [5]:
+
+In [5]: model.most_similar('understanding')
+/home/gulby/.pyenv/versions/study/bin/ipython:1: DeprecationWarning: Call to deprecated `most_similar` (Method will be removed in 4.0.0, use self.wv.most_similar() instead).
+  #!/home/gulby/.pyenv/versions/3.6.4/envs/study/bin/python
+Out[5]:
+[('understanding,', 0.8274970054626465),
+ ('understandings', 0.8159542083740234),
+ ('understandin', 0.8156628012657166),
+ ('understanding…', 0.8139849901199341),
+ ('understanding—and', 0.804895281791687),
+ ('‘understanding', 0.7969396710395813),
+ ('understandingly', 0.7954122424125671),
+ ('overstanding', 0.7883124947547913),
+ ('understandment', 0.786480188369751),
+ ('nderstanding', 0.7771008610725403)]
+
+In [6]: model.wv.most_similar('understanding')
+Out[6]:
+[('understanding,', 0.8274970054626465),
+ ('understandings', 0.8159542083740234),
+ ('understandin', 0.8156628012657166),
+ ('understanding…', 0.8139849901199341),
+ ('understanding—and', 0.804895281791687),
+ ('‘understanding', 0.7969396710395813),
+ ('understandingly', 0.7954122424125671),
+ ('overstanding', 0.7883124947547913),
+ ('understandment', 0.786480188369751),
+ ('nderstanding', 0.7771008610725403)]
+
+In [7]: model.wv.most_similar('understanding')
+Out[7]:
+[('understanding,', 0.8274970054626465),
+ ('understandings', 0.8159542083740234),
+ ('understandin', 0.8156628012657166),
+ ('understanding…', 0.8139849901199341),
+ ('understanding—and', 0.804895281791687),
+ ('‘understanding', 0.7969396710395813),
+ ('understandingly', 0.7954122424125671),
+ ('overstanding', 0.7883124947547913),
+ ('understandment', 0.786480188369751),
+ ('nderstanding', 0.7771008610725403)]
+
+In [8]: model.wv.most_similar('understanding', 20)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-8-e5a0505d43eb> in <module>()
+----> 1 model.wv.most_similar('understanding', 20)
+
+~/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/gensim/models/keyedvectors.py in most_similar(self, positive, negative, topn, restrict_vocab, indexer)
+    354         negative = [
+    355             (word, -1.0) if isinstance(word, string_types + (ndarray,)) else word
+--> 356             for word in negative
+    357         ]
+    358
+
+TypeError: 'int' object is not iterable
+
+In [9]: model.wv.most_similar('understanding')
+Out[9]:
+[('understanding,', 0.8274970054626465),
+ ('understandings', 0.8159542083740234),
+ ('understandin', 0.8156628012657166),
+ ('understanding…', 0.8139849901199341),
+ ('understanding—and', 0.804895281791687),
+ ('‘understanding', 0.7969396710395813),
+ ('understandingly', 0.7954122424125671),
+ ('overstanding', 0.7883124947547913),
+ ('understandment', 0.786480188369751),
+ ('nderstanding', 0.7771008610725403)]
+
+In [10]: model.wv.most_similar('Pneumonoultramicroscopicsilicovolcanoconiosis')
+Out[10]:
+[('pneumonoultramicroscopicsilicovolcanoconiosis', 0.9666447639465332),
+ ('pneumonoultramicroscopicsilicovolcaniconiosic', 0.9329695105552673),
+ ('floccinaucinihilipilification', 0.6995849609375),
+ ('podoconiosis', 0.6797456741333008),
+ ('rickrolling#examples', 0.6458093523979187),
+ ('coniosis', 0.6447961330413818),
+ ('hippopotomonstrosesquipedaliophobia', 0.6320408582687378),
+ ('cromulence', 0.6291528940200806),
+ ('cromulent', 0.6273607015609741),
+ ('yaschoolcruftarticle', 0.6260790228843689)]
+
+In [11]: model.wv.most_similar('pneumonoultramicroscopicsilicovolcanoconiosis')
+Out[11]:
+[('pneumonoultramicroscopicsilicovolcaniconiosic', 0.9652616381645203),
+ ('podoconiosis', 0.7428508996963501),
+ ('coniosis', 0.6889476180076599),
+ ('hyperphacosorbitomyopicosis', 0.6833521127700806),
+ ('floccinaucinihilipilification', 0.6832881569862366),
+ ('pneumothroax', 0.6684249043464661),
+ ('pneumoconiosis', 0.6638138294219971),
+ ('microscopial', 0.659485399723053),
+ ('ultramicroscopic', 0.6552302837371826),
+ ('pneumoconioses', 0.6529240608215332)]
+
+In [12]: model.wv.most_similar('pneumonoultramicroscopicsilicovolcanoconiosis', topn=20
+    ...: )
+Out[12]:
+[('pneumonoultramicroscopicsilicovolcaniconiosic', 0.9652616381645203),
+ ('podoconiosis', 0.7428508996963501),
+ ('coniosis', 0.6889476180076599),
+ ('hyperphacosorbitomyopicosis', 0.6833521127700806),
+ ('floccinaucinihilipilification', 0.6832881569862366),
+ ('pneumothroax', 0.6684249043464661),
+ ('pneumoconiosis', 0.6638138294219971),
+ ('microscopial', 0.659485399723053),
+ ('ultramicroscopic', 0.6552302837371826),
+ ('pneumoconioses', 0.6529240608215332),
+ ('ultramicroscopy', 0.649488091468811),
+ ('polyradiculopathy', 0.6492072939872742),
+ ('metallurgymicroscope', 0.6373241543769836),
+ ('uveoparotitis', 0.6356022953987122),
+ ('cromulence', 0.6349717378616333),
+ ('lycoperdonosis', 0.6327734589576721),
+ ('parapneumonic', 0.6317909955978394),
+ ('lipogranulomatosis', 0.6304755210876465),
+ ('ultramicroscope', 0.6298692226409912),
+ ('echinococcosis', 0.6291658282279968)]
+
+In [13]: model.wv.most_similar('distgulby')
+Out[13]:
+[('osguthorpe', 0.5954227447509766),
+ ('forwardinfaithlincs', 0.5924943089485168),
+ ('glassthorpe', 0.5924087762832642),
+ ('vesthordland', 0.5916388034820557),
+ ('fingringhoe', 0.5913254022598267),
+ ('barlby', 0.5902549624443054),
+ ('skíringssalr', 0.5867330431938171),
+ ('churchstow', 0.5855626463890076),
+ ('warbstow', 0.5852502584457397),
+ ('osgathorpe', 0.5839097499847412)]
+
+In [14]: model.wv.most_similar('gulby')
+Out[14]:
+[('bulby', 0.6406438946723938),
+ ('gulb', 0.6212785840034485),
+ ('daulby', 0.6178371906280518),
+ ('sulby', 0.6083654761314392),
+ ('aulby', 0.6043213605880737),
+ ('hagthorpe', 0.5974838137626648),
+ ('gaulby', 0.5877355337142944),
+ ('badgworth', 0.5765807032585144),
+ ('carthorpe', 0.5735824108123779),
+ ('kirkthorpe', 0.5732477903366089)]
+
+In [15]: model.wv.wmdistance('queen', 'king')
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-15-7b4f6a1e5b61> in <module>()
+----> 1 model.wv.wmdistance('queen', 'king')
+
+~/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/gensim/models/keyedvectors.py in wmdistance(self, document1, document2)
+    578
+    579         if not PYEMD_EXT:
+--> 580             raise ImportError("Please install pyemd Python package to compute WMD.")
+    581
+    582         # Remove out-of-vocabulary words.
+
+ImportError: Please install pyemd Python package to compute WMD.
+
+In [16]: model.wv.wmdistance('queen', 'king')
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-16-7b4f6a1e5b61> in <module>()
+----> 1 model.wv.wmdistance('queen', 'king')
+
+~/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/gensim/models/keyedvectors.py in wmdistance(self, document1, document2)
+    578
+    579         if not PYEMD_EXT:
+--> 580             raise ImportError("Please install pyemd Python package to compute WMD.")
+    581
+    582         # Remove out-of-vocabulary words.
+
+ImportError: Please install pyemd Python package to compute WMD.
+
+In [17]: model.wv.wmdistance('queen', 'king')
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-17-7b4f6a1e5b61> in <module>()
+----> 1 model.wv.wmdistance('queen', 'king')
+
+~/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/gensim/models/keyedvectors.py in wmdistance(self, document1, document2)
+    578
+    579         if not PYEMD_EXT:
+--> 580             raise ImportError("Please install pyemd Python package to compute WMD.")
+    581
+    582         # Remove out-of-vocabulary words.
+
+ImportError: Please install pyemd Python package to compute WMD.
+
+In [18]: model.wv.similar_by_word('queen')
+Out[18]:
+[('queen—a', 0.6952741146087646),
+ ('#queen', 0.6564976572990417),
+ ('—queen', 0.6516332030296326),
+ ('queena', 0.650313138961792),
+ ('king', 0.6493098735809326),
+ ('queen`s', 0.6395399570465088),
+ ('king/queen', 0.6348545551300049),
+ ('s/queen', 0.6273863911628723),
+ ('princess', 0.6238889098167419),
+ ('queeny', 0.6209192872047424)]
+
+In [19]: model.wv.most_similar('queen')
+Out[19]:
+[('queen—a', 0.6952741146087646),
+ ('#queen', 0.6564976572990417),
+ ('—queen', 0.6516332030296326),
+ ('queena', 0.650313138961792),
+ ('king', 0.6493098735809326),
+ ('queen`s', 0.6395399570465088),
+ ('king/queen', 0.6348545551300049),
+ ('s/queen', 0.6273863911628723),
+ ('princess', 0.6238889098167419),
+ ('queeny', 0.6209192872047424)]
+
+In [20]: dir(model.wv)
+Out[20]:
+['__class__',
+ '__contains__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_adapt_by_suffix',
+ '_load_specials',
+ '_save_specials',
+ '_smart_save',
+ 'accuracy',
+ 'bucket',
+ 'buckets_word',
+ 'closer_than',
+ 'cosine_similarities',
+ 'distance',
+ 'distances',
+ 'doesnt_match',
+ 'evaluate_word_pairs',
+ 'get_vector',
+ 'hash2index',
+ 'index2entity',
+ 'index2word',
+ 'init_sims',
+ 'load',
+ 'log_accuracy',
+ 'log_evaluate_word_pairs',
+ 'max_n',
+ 'min_n',
+ 'most_similar',
+ 'most_similar_cosmul',
+ 'most_similar_to_given',
+ 'n_similarity',
+ 'num_ngram_vectors',
+ 'rank',
+ 'save',
+ 'save_word2vec_format',
+ 'similar_by_vector',
+ 'similar_by_word',
+ 'similarity',
+ 'similarity_matrix',
+ 'syn0',
+ 'syn0_ngrams',
+ 'syn0_ngrams_norm',
+ 'syn0_vocab',
+ 'syn0_vocab_norm',
+ 'syn0norm',
+ 'vector_size',
+ 'vectors',
+ 'vectors_ngrams',
+ 'vectors_ngrams_norm',
+ 'vectors_norm',
+ 'vectors_vocab',
+ 'vectors_vocab_norm',
+ 'vocab',
+ 'wmdistance',
+ 'word_vec',
+ 'words_closer_than',
+ 'wv']
+
+In [21]: model.wv.distance('king', 'queen')
+Out[21]: 0.35069004081525557
+
+In [22]: model.wv.distance('king', 'gulby')
+Out[22]: 0.8266218214112452
+
+In [23]: model.wv.distance('king', 'loyal')
+Out[23]: 0.6549935085261348
+
+In [24]: model.wv.distance('king', 'knight')
+Out[24]: 0.6092113097787404
+
+In [25]: model.wv.similarity('king', 'knight')
+Out[25]: 0.39078869022125956
+
+In [26]: model.wv.similarity('king', 'queen')
+Out[26]: 0.6493099591847444
+
+In [27]: model.wv.similarity('king', 'king')
+Out[27]: 1.0000000000000002
+
+In [28]: model.wv.most_similar('video')
+Out[28]:
+[('videos', 0.7669093608856201),
+ ('video—', 0.7583253383636475),
+ ('→video', 0.7468556761741638),
+ ('video,', 0.7360259294509888),
+ ('video】', 0.7337895631790161),
+ ('video—a', 0.7295863032341003),
+ ('scene—video', 0.725836992263794),
+ ('—video', 0.7244983911514282),
+ ('video/mp', 0.7191222906112671),
+ ('video/youtube', 0.7143580317497253)]
+
+In [29]: model.wv.most_similar('video', topn=20)
+Out[29]:
+[('videos', 0.7669093608856201),
+ ('video—', 0.7583253383636475),
+ ('→video', 0.7468556761741638),
+ ('video,', 0.7360259294509888),
+ ('video】', 0.7337895631790161),
+ ('video—a', 0.7295863032341003),
+ ('scene—video', 0.725836992263794),
+ ('—video', 0.7244983911514282),
+ ('video/mp', 0.7191222906112671),
+ ('video/youtube', 0.7143580317497253),
+ ('video/video', 0.7094783186912537),
+ ('videos—', 0.7083617448806763),
+ ('game/video', 0.7070990800857544),
+ ('video—which', 0.7051479816436768),
+ ('videos,', 0.7006760239601135),
+ ('videoscreen', 0.7003294229507446),
+ ('videoclix', 0.6983340382575989),
+ ('videocd', 0.695553183555603),
+ ('song/video', 0.6952235698699951),
+ ('dvd/video', 0.6897675395011902)]
+
+In [30]: model.wv.most_similar('video', topn=30)
+Out[30]:
+[('videos', 0.7669093608856201),
+ ('video—', 0.7583253383636475),
+ ('→video', 0.7468556761741638),
+ ('video,', 0.7360259294509888),
+ ('video】', 0.7337895631790161),
+ ('video—a', 0.7295863032341003),
+ ('scene—video', 0.725836992263794),
+ ('—video', 0.7244983911514282),
+ ('video/mp', 0.7191222906112671),
+ ('video/youtube', 0.7143580317497253),
+ ('video/video', 0.7094783186912537),
+ ('videos—', 0.7083617448806763),
+ ('game/video', 0.7070990800857544),
+ ('video—which', 0.7051479816436768),
+ ('videos,', 0.7006760239601135),
+ ('videoscreen', 0.7003294229507446),
+ ('videoclix', 0.6983340382575989),
+ ('videocd', 0.695553183555603),
+ ('song/video', 0.6952235698699951),
+ ('dvd/video', 0.6897675395011902),
+ ('video—in', 0.6896860003471375),
+ ('avideo', 0.6873034834861755),
+ ('video/cd', 0.6858232021331787),
+ ('video+audio', 0.6836346983909607),
+ ('videoz', 0.6817992925643921),
+ ('+video', 0.6805824637413025),
+ ('videoscape', 0.6803915500640869),
+ ('videoclips', 0.679401159286499),
+ ('videogame', 0.6782997846603394),
+ ('videoout', 0.6782119274139404)]
+
+In [31]: model.wv.distance('video', 'camera')
+Out[31]: 0.5291030241193377
+
+In [32]: model.wv.similarity('video', 'camera')
+Out[32]: 0.47089697588066226
+
+In [33]: model.wv.most_similar('magician', topn=30)
+Out[33]:
+[('imagician', 0.84601891040802),
+ ('magician/illusionist', 0.794693112373352),
+ ('magicians', 0.7863353490829468),
+ ('illusionist', 0.7483078837394714),
+ ('magician/actor', 0.7480413913726807),
+ ('spymagician', 0.7275274395942688),
+ ('comedian/magician', 0.7163940668106079),
+ ('magician/comedian', 0.7149491906166077),
+ ('nycmagician', 0.7102484703063965),
+ ('mathemagician', 0.709094226360321),
+ ('conjurer', 0.7079928517341614),
+ ('escapologist', 0.6992725133895874),
+ ('sorcerer', 0.6945160031318665),
+ ('magic', 0.6942192316055298),
+ ('gyromagician', 0.6921923160552979),
+ ('magiciandude', 0.6894881129264832),
+ ('hypnotist', 0.6830539107322693),
+ ('conjuror', 0.679155170917511),
+ ('magic,', 0.6730213165283203),
+ ('magicless', 0.6600512266159058),
+ ('houdini', 0.6560875177383423),
+ ('metamagician', 0.6477165222167969),
+ ('magical', 0.6430390477180481),
+ ('magic»', 0.6425788402557373),
+ ('sorcerery', 0.6388475298881531),
+ ('conjuring', 0.6251266598701477),
+ ('magicked', 0.6236857175827026),
+ ('magicperson', 0.6190435886383057),
+ ('sorcere', 0.6167159676551819),
+ ('necromancer', 0.6151143908500671)]
+
+In [34]: model.wv.similarity('magician', 'wizard')
+Out[34]: 0.5836946581363632
+
+In [35]: model.wv.most_similar('video', topn=30)
+Out[35]:
+[('videos', 0.7669093608856201),
+ ('video—', 0.7583253383636475),
+ ('→video', 0.7468556761741638),
+ ('video,', 0.7360259294509888),
+ ('video】', 0.7337895631790161),
+ ('video—a', 0.7295863032341003),
+ ('scene—video', 0.725836992263794),
+ ('—video', 0.7244983911514282),
+ ('video/mp', 0.7191222906112671),
+ ('video/youtube', 0.7143580317497253),
+ ('video/video', 0.7094783186912537),
+ ('videos—', 0.7083617448806763),
+ ('game/video', 0.7070990800857544),
+ ('video—which', 0.7051479816436768),
+ ('videos,', 0.7006760239601135),
+ ('videoscreen', 0.7003294229507446),
+ ('videoclix', 0.6983340382575989),
+ ('videocd', 0.695553183555603),
+ ('song/video', 0.6952235698699951),
+ ('dvd/video', 0.6897675395011902),
+ ('video—in', 0.6896860003471375),
+ ('avideo', 0.6873034834861755),
+ ('video/cd', 0.6858232021331787),
+ ('video+audio', 0.6836346983909607),
+ ('videoz', 0.6817992925643921),
+ ('+video', 0.6805824637413025),
+ ('videoscape', 0.6803915500640869),
+ ('videoclips', 0.679401159286499),
+ ('videogame', 0.6782997846603394),
+ ('videoout', 0.6782119274139404)]
+
+In [36]:
