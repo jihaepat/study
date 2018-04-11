@@ -1,3 +1,5 @@
+ps -eo user,pid,ppid,rss,size,vsize,pmem,pcpu,time,comm --sort -rss
+
 In [2]: from gensim.models.fasttext import FastText
 
 In [3]: model = FastText.load_fasttext_format('/home/gulby/Downloads/wiki.en.bin')
