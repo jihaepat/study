@@ -29,7 +29,7 @@ def make_model(data_file_path, data_file_name, save_file_name):
     try:
         model = FastText.train_unsupervised(data_file)
         # 불러온 data의 위치에 바로 저장(원본소스 수정으로 bin 과 vec 파일 자동 생성) -> 추후 변동 가능
-        
+
         model.save_model(save_path)
 
     except Exception as e:
