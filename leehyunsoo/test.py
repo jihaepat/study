@@ -1,9 +1,16 @@
-def ttt(path):
-    return path
+import time
+from time import strftime
+from pandas import Series, DataFrame
+
+
+def ttt(ttt):
+    keys = ttt.keys()
+    return keys
+
 
 def ddd(**kwargs):
-    path = kwargs.get('path')
-    # assert int(path)
-    return kwargs.keys()
+    for k, item in kwargs.items():
+        print(k, '=', item)
 
-print(ddd(path=1, ddd = 2,dd2d = 3))
+
+ddd(path=1, ddd=2, dd2d=3)
