@@ -31,6 +31,7 @@ def make_model(data_file_path, data_file_name, save_file_name):
         # 불러온 data의 위치에 바로 저장(원본소스 수정으로 bin 과 vec 파일 자동 생성) -> 추후 변동 가능
 
         model.save_model(save_path)
+        model.save_vectors(save_path)
 
     except Exception as e:
         print(e)
@@ -41,8 +42,12 @@ def benchmark(filepath):
     return filepath
 
 
-assert make_model('/home/leehyunsoo/study', 'small_claims.txt',
-                  'ttt') == '/home/leehyunsoo/study/small_claims.txt'
+result = make_model('.', 'small_title.txt', 'tmp')
+print(result)
+
+
+# assert make_model('/home/leehyunsoo/study', 'small_claims.txt',
+#                   'ttt') == '/home/leehyunsoo/study/small_claims.txt'
 # assert make_model('/home/leehyunsoo/study/', 'ttt.csv', '') == '/home/leehyunsoo/study/ttt.csv'
 
 
