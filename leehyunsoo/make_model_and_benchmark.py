@@ -23,6 +23,7 @@ def make_model(data_path, data_file_name, save_path, save_file_name, **kwargs):
         else:
             model = FastText.train_unsupervised(total_data_path, **kwargs)
 
+        model.save_model(total_save_path)
         model.save_vectors(total_save_path)
 
     except Exception as e:
