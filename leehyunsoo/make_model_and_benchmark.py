@@ -1,6 +1,6 @@
 import os, sys
 from time import strftime
-from web import evaluate
+
 
 # os.system(
 #     'word-embeddings-benchmarks/scripts/evaluate_on_all.py -f /media/leehyunsoo/4TB2/usa_patent/small_model.vec -o /media/leehyunsoo/4TB2/usa_patent/result.csv -p word2vec')
@@ -34,6 +34,7 @@ def make_model(data_path, data_file_name, save_path, save_file_name, **kwargs):
 
 
 def benchmark(filepath, savepath, save_file_name):
+    from web import evaluate
     from web.embeddings import load_embedding
 
     w = load_embedding(filepath, format='word2vec')
