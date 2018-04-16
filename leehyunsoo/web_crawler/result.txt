@@ -1,0 +1,3471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+		매장검색 | GS25 Site</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="no-cache" http-equiv="pragma"/>
+<meta content="No-Cache" http-equiv="Cache-Control"/>
+<meta content="http://hpsimg.gsretail.com/medias/sys_master/images/images/hf4/hf8/8962697461790.jpg" property="og:image"/><meta content="http://www.gsretail.com" property="og:url"/><meta content="GS리테일" property="og:title"/><meta content="GS리테일" property="og:description"/><link href="http://hpimg.gsretail.com/_ui/desktop/common/images/icon/GS25_114.png" rel="apple-touch-icon-precomposed"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/images/icon/GS25_16.ico" rel="icon"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/images/icon/GS25_16.ico" rel="shortcut icon" type="image/x-icon"/>
+<!-- CSS 왓슨스 survey-Page 페이지에서는 jquery-ui.min.css 적용 안되도록 함-->
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gsretail/member.css" media="all" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+	/* web font */
+	@font-face {
+	font-family:'NanumBarunGothic';
+	font-style:normal;
+	font-weight:normal;
+	src:url('http://hpimg.gsretail.com/_ui/desktop/common/font/NanumBarunGothic.eot');
+	src:local(※), 
+		url('http://hpimg.gsretail.com/_ui/desktop/common/font/NanumBarunGothic.woff') format('woff'), 
+		url('http://hpimg.gsretail.com/_ui/desktop/common/font/NanumBarunGothic.ttf') format('truetype');
+	}
+
+	.layer {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:8000;}
+	.layer .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50); z-index:10;}
+	.pop-layer {display:none; position: absolute; top: 50%; left: 50%; width: auto; height:auto;  background-color:#fff; z-index: 50;}
+	.alertToolTip {
+		position: absolute;
+		margin-top: -65px;
+		margin-left: 20px;
+		border-bottom-right-radius: -40px solid transparent;
+		z-index: 999;
+		background: #fbfbfb;
+		padding: 8px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border: 1px solid #dfdfdf;
+	}
+</style>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/main.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/common.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/layout.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/gscvs.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/popup.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://hpimg.gsretail.com/_ui/desktop/common/css/gscvs/event.css" media="all" rel="stylesheet" type="text/css"/>
+<style media="print" type="text/css">
+	@IMPORT url("http://hpimg.gsretail.com/_ui/desktop/common/blueprint/print.css");
+</style>
+<style type="text/css">
+	
+	@IMPORT url("http://hpimg.gsretail.com/_ui/desktop/common/css/gsretail/temp.css");
+</style>
+<!-- 구글 웹 분석 JS 빼야할거 같음 -->
+<!-- 구글 map api 같음 빼야할거 같음 -->
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery-1.11.2.inno.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/gscommon.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/common_util.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/plugin/jquery-barcode.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/gscvs/ui.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/json/json2.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/json/jquery.serializeobject.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/plugin/jPushMenu.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/plugin/jquery-barcode.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/TweenMax.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/gsretail/sha256.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery.form-3.09.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery.form-3.51.js" type="text/javascript"></script>
+<script src="http://hpimg.gsretail.com/_ui/desktop/common/js/jquery.blockUI.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[ 
+
+        document.domain="gsretail.com";
+    
+ 
+//스크립트단에서 쓸 baseContext값 지정. 차후 context가 변경되면 이 값도 변경해줘야함
+var baseContext = "/gscvs/ko";
+// // $.blockUI를 ajax call시 무효화 하려면 .ajax시 global: false, 옵션을 추가하면 된다.
+$.blockUI.defaults.message = "<h2>처리중입니다<br />잠시만 기다려 주세요</h2>";
+
+
+ $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+
+ 
+// $(document).ajaxStop($.unblockUI());
+//셀렉트박스 년/월/일 셋팅 (아이디/비번찾기등에 사용)
+//20151222 : SelectBox 값이 계속 추가 되어 초기화 하는 로직 추가함.
+function initDateSelectBox(formId, filedPrefix){
+    // 서버날짜 사용. 만14세이상 90세
+    var startYear = 2018-95;
+    var endYear = 2018-14;
+    var currentYear = 2018;
+    
+    $("#"+formId+" #"+filedPrefix+"Year").html("");
+    $("#"+formId+" #"+filedPrefix+"Month").html("");
+    $("#"+formId+" #"+filedPrefix+"Day").html("");
+    
+    for (var i=startYear; i<=endYear; i++){
+        //$("#"+formId+" #"+filedPrefix+"Year").append(new Option(i,i));
+        $("#"+formId+" #"+filedPrefix+"Year").append("<option value='" + i + "'>" + i + "</option>");
+    }
+    for (var i=1; i<13; i++){
+        $("#"+formId+" #"+filedPrefix+"Month").append("<option value='" + ((i<10)?"0"+i:i) + "'>" + ((i<10)?"0"+i:i) + "</option>");
+    }
+    // 초기값 30세로 가정하고 5월 15일로 셋팅한다. 6월1일에서 하루를 빼면 5월의 마지막일자.
+    var days = new Date(new Date(currentYear-30, 5, 1)-86400000).getDate();
+    for (var i=0, j; i < days; i++) {
+        j = (i < 9) ? '0'+(i+1) : i+1;
+        $("#"+formId+" #"+filedPrefix+"Day").append("<option value='" + j + "'>" + j + "</option>");
+    }
+    
+    $("#"+formId+" #"+filedPrefix+"Year").val(currentYear-30);
+    $("#"+formId+" #"+filedPrefix+"Month").val("05");
+    $("#"+formId+" #"+filedPrefix+"Day").val("15");
+}
+
+$(function(){
+    // 쿠키로그인 & 하이브리스세션로그인 동기화 처리
+    // 1. 팝카드냐 아니냐로 구분하여 id에 덧붙힐 siteKind구분자를 처리한다.
+    // 2. GS쿠키로그인[false], POPCARD 쿠키로그인[false], 하이브리스세션로그인[false]
+    // 3. 리테일인 경우 isLogin과 하이브리스 로그인여부(hybrisIsLogin)를 비교하고
+    //    팝카드인 경우 isPopCardLogin과 하이브리스 로그인여부를 비교한다.
+     
+})
+
+$.ajaxSetup({
+        headers: {
+            'CSRFToken': $('meta[name="_token"]').attr('content')
+        }
+    });
+//]]>
+</script>
+<script type="text/javascript">
+		/*<![CDATA[*/
+		
+		var ACC = { config: {} };
+			ACC.config.contextPath = "";
+			ACC.config.encodedContextPath = "/gscvs/ko";
+			ACC.config.commonResourcePath = "http://hpimg.gsretail.com/_ui/desktop/common";
+			ACC.config.themeResourcePath = "/_ui/desktop/theme-blue";
+			ACC.config.siteResourcePath = "/_ui/desktop/site-gscvs";
+			ACC.config.rootPath = "/_ui/desktop";	
+			ACC.config.CSRFToken = "a101a660-dc45-4be9-9159-9648aec037c1";
+			ACC.pwdStrengthVeryWeak = 'Very weak';
+			ACC.pwdStrengthWeak = 'Weak';
+			ACC.pwdStrengthMedium = 'Medium';
+			ACC.pwdStrengthStrong = 'Strong';
+			ACC.pwdStrengthVeryStrong = 'Very strong';
+			ACC.pwdStrengthUnsafePwd = 'password.strength.unsafepwd';
+			ACC.pwdStrengthTooShortPwd = 'Too short';
+			ACC.pwdStrengthMinCharText = 'Minimum length is %d characters';
+			ACC.accessibilityLoading = 'Loading... Please wait...';
+			ACC.accessibilityStoresLoaded = 'Stores loaded';
+			
+			ACC.autocompleteUrl = '/gscvs/ko/search/autocomplete';
+			
+			
+		/*]]>*/
+	</script>
+<script type="text/javascript">
+	/*<![CDATA[*/
+	ACC.addons = {};	//JS holder for addons properties
+			
+	
+		ACC.addons.liveeditaddon = [];
+		
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.create'] = 'Create new content slot';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.edit_menu'] = 'Edit menu';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.add'] = 'Add new component to content slot';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.override'] = 'Override content slot';
+			
+		ACC.addons.buynowaddon = [];
+		
+				ACC.addons.buynowaddon['buynow'] = 'false';
+			
+		ACC.addons.koreansolraddon = [];
+		
+		ACC.addons.b2ccheckoutaddon = [];
+		
+				ACC.addons.b2ccheckoutaddon['key.1'] = 'value 1';
+			
+				ACC.addons.b2ccheckoutaddon['key.2'] = 'value 2';
+			
+	/*]]>*/
+</script>
+<script src="//assets.adobedtm.com/215c6b39ee8e8b31d18344a97fe59ca635c0ce15/satelliteLib-0c92191477df49c3cdac3d1e9dbacd21a2d5dc28.js"></script>
+<script type="text/javascript"> 
+		var _dl = {
+				page : {
+					pageName : ""
+				}
+		}; 
+	</script>
+<script type="text/javascript">
+//<![CDATA[
+//페이지 타이틀 스크립트로 변경.
+var PageTitleCtrl = function() {
+	var _this = this;
+	var siteName = 'gscvs';
+	var titleHtml = '';
+	siteName = siteName.replace(/gsretail/, 'Value No.1 GS리테일');
+	siteName = siteName.replace(/gscvs/,    '대한민국 대표편의점 GS25');
+	siteName = siteName.replace(/gssuper/,  '신선, 맛 No.1 GS수퍼마켓');
+	siteName = siteName.replace(/watsons/,  'Life is lovable, lalavla');
+	siteName = siteName.replace(/popcard/,  '행복한 소비문화를 위한 현명한 선택, 팝카드');
+	var pageName = '';		
+	
+	this.init = function() {
+	    try{
+			if ( $(".lctwrap").length ) {
+		        var str1 = '';
+		        var str2 = '';
+		        var $title = $(".lctwrap > ul.lct > li > a");
+		        str1 = $title.eq(1).text();
+		        str2 = $title.filter(':last').text();
+		        if ( str1 != str2 ) {
+		        	str1 += ' > ' + str2
+		        }
+		        str1 = str1.replace(/메뉴열기/g,'').replace(/\n/g, '').replace(/\t/g, '');
+		        
+		        
+		        $title.each(function(idx){
+		        	if(pageName != "")
+		        		pageName += "^";
+		        	pageName += $(this).find("span").filter(":first").text();
+		        });
+		        
+		        
+		        this.setTitleName( str1 );
+		        
+		    } else if ( $("#contents .tlt1").length ) {
+		        var str = '';
+		        str = $("#contents .tlt1").text();
+		        this.setTitleName( str );
+		        
+		        pageName = str;	
+		    }
+		    
+		    if(pageName == ""){
+		    	pageName = trim($("title").text());
+			}
+		    _dl.page.pageName = pageName;	
+		    
+		    //console.log("pageView : "+_dl.page.pageName);
+			_satellite.track("pageView");
+		} catch(e) { }	
+	    
+	};
+	    
+    this.setTitleName = function( str ) {
+    	titleHtml = str;
+    	this.setTitle();
+    };
+    
+    this.getTitleName = function() {
+    	return titleHtml;
+    };
+    
+    this.setTitle = function() {
+    	var titleName = titleHtml + ' | ' + siteName;
+        // $("title").text( titleName );
+        document.title =  titleName;
+    };
+};
+
+var pageTitleCtrl = null;
+$(document).ready(function(){
+	// 일단 미반영.
+	pageTitleCtrl = new PageTitleCtrl();
+	pageTitleCtrl.init();
+
+});
+//]]>
+</script>
+</head>
+<body>
+<form action="/gscvs/ko/store-services/locations" id="CSRFForm" method="post"><input name="CSRFToken" type="hidden" value="a101a660-dc45-4be9-9159-9648aec037c1"/>
+</form><div id="wrap">
+<script type="text/javascript">
+//<![CDATA[
+           
+/* 2016-02-04 수정 */
+var scrollLock = false;
+var headHeight = 0;
+var scrollMarginHeight = 0;
+function personaMenuContentScroll(){
+	if(!scrollLock) {
+		if( headHeight < parseInt($(document).scrollTop()) + scrollMarginHeight) {  
+			if(scrollMarginHeight < 0){ 
+				$("#personaMenuContent").css("top","0px");
+			}else{
+				$("#personaMenuContent").css("top", (scrollMarginHeight) + "px");  
+			}
+		} else {
+			$("#personaMenuContent").css("top", (headHeight - parseInt($(document).scrollTop())) + "px");
+		}
+	}
+}
+$(document).ready(function(){
+	headHeight = $(".header").height() + $(".cnt_topwrap").height();
+	scrollMarginHeight = ($(window).height() - $("#personaMenuContent").height())/2; 
+	
+	personaMenuContentScroll();
+	$(window).scroll(function(){
+		personaMenuContentScroll();
+	});
+	/*//2016-02-04 수정 */
+
+
+	/** 개인화 구현 8가지 - CMB **/
+	// 대상 레이어 기본 값	
+	var targetLayerOn = true;
+	var targetLayerId = 0; 
+	var cookiedata = document.cookie;
+	
+	// 생일 페이지 알림
+	var now = new Date();
+	var year= now.getFullYear();
+	var month = now.getMonth()+1;
+	var day = now.getDate();
+	if(month < 10) month = "0"+month;
+	if(day < 10) day = "0"+day;
+	
+	
+	
+	// JSJ : 2015-10-26 : 메인화면에서 Layer 팝업이 있을 경우 개인화 팝업을 띄우지 않는 스크립트 삭제(현업 요청)
+	
+	// 진행중인 이벤트 페이지 알림. 비로그인시에만.
+	if(!false) {
+		if(window.location.href.indexOf("/customer-engagement/event/current-events") > 0 && targetLayerOn){
+			if ( cookiedata.indexOf("2_layerPop=done") < 0 ){
+				targetLayerId = 2;
+				targetLayerOn = false;
+			}
+		}
+	}
+	
+	// 출석체크 페이지 알림
+	if(window.location.href.indexOf("/common/events/attendance-event") > 0 && targetLayerOn){
+		if ( cookiedata.indexOf("7_layerPop=done") < 0 ){
+			targetLayerId = 7;
+			targetLayerOn = false;
+		}
+	}
+	
+	// 마이페이지-나의멤버십포인트 페이지 알림
+	if(window.location.href.indexOf("/my-page/membership-point/search") > 0 && targetLayerOn){
+		if ( cookiedata.indexOf("8_layerPop=done") < 0 ){
+			targetLayerId = 8;
+			targetLayerOn = false;
+		}
+	}
+
+	// 마이페이지-이벤트현황 페이지 알림
+	if(window.location.href.indexOf("/my-page/my-events") > 0 && targetLayerOn){
+		if ( cookiedata.indexOf("6_layerPop=done") < 0 ){
+			targetLayerId = 6;
+			targetLayerOn = false;
+		}
+	}
+	
+	// 팝카드 예외처리
+	
+	
+		// 비로그인 접속 후 3이상 페이지가 로드 될 경우 - 7일간 보간
+		if(!false) {
+			if(targetLayerOn){
+				//쿠키가 존재하지 않을 경우 생성
+				if($.getCookie("1_layerPopCnt") == false){
+					$.makeExpierCookie( "1_layerPopCnt", "1" , 7);
+				}else{
+					var cnt = $.getCookie("1_layerPopCnt");
+					// 4번째 로드 했을 경우 부터 보임
+					if(cnt > 2){
+						if ( cookiedata.indexOf("1_layerPop=done") < 0 ){
+							//가입페이지에선 보여지지 않는다
+							if(window.location.href.indexOf("/sign-up") < 0){
+								targetLayerId = 1;
+								targetLayerOn = false;
+							}
+						}
+					}else{
+						cnt++;
+						$.deleteCookie("1_layerPopCnt");
+						$.makeExpierCookie( "1_layerPopCnt", cnt , 7);
+					}
+				}
+			}
+		}
+		
+	
+	// 개인화 닫기
+	$(".personalization_wrap .btn_close").on("click",function(){
+		$(".personalization_box").hide("slide", { direction: "down" }, 1000);
+	});
+
+		
+	if(targetLayerId > 0){
+		$(".personalization_wrap").css("position","fixed");
+		$(".personalization_wrap").css("z-index","1000");
+		$(".personalization_box.type"+targetLayerId).show("slide", { direction: "down" }, 1000);
+	}
+});
+
+// gsBdd 값 치환
+function setDataTrans(data){
+	var return_val = 0;
+	var arr = ["A","B","C","D","E","F","G","H","I","J","K","L"];
+	for(var i=0;i<arr.length;i++){
+		if(data == arr[i]){
+			return_val = i+1;
+		}
+	}
+	if(return_val < 10) return_val = "0"+return_val;
+	
+	return return_val;
+}
+
+// 일주일간 열지 않기
+function setPriodLayer(target){
+	$.makeExpierCookie( target+"_layerPop", "done" , 7);
+	$(".personalization_box").hide("slide", { direction: "down" }, 1000);
+}
+
+function openLink(linkName){
+	if(linkName=="point"){
+		location.href="/my-page/membership-point/search";
+	}else if(linkName=="coupon"){
+		location.href="/common/events/secretcoupon-event";
+	}
+}
+//]]>
+</script>
+<!-- 개인화영역 -->
+<!-- //개인화영역 -->
+<div class="personalization_wrap">
+<div class="personalization_box type1" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>회원만의 특권!</strong>
+				로그인을 하면 찾아오는<br/>다양한 이벤트 기회!<br/>꼭 잡으세요~!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1" href="/sign-up/join-main?siteGubun=1" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'비회원 접속 시 팝업/회원가입 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_b.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls1" onclick="setPriodLayer('1');" type="checkbox"/><label for="cls1">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type2" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>회원만의 특권!</strong>
+				로그인을 하면 찾아오는<br/>다양한 이벤트 기회!<br/>꼭 잡으세요~!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1" href="/sign-up/join-main?siteGubun=1" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'이벤트 메뉴 인입 시 팝업/회원가입 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_b.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls2" onclick="setPriodLayer('2');" type="checkbox"/><label for="cls2">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type3" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>또 오셨네요^-^</strong>
+				자주 방문하신다면,<br/>매일 찾아오는 행운의<br/>출석체크에 도전~!!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1" href="http://www.gsretail.com/gsretail/ko/common/events/attendance-event" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'3회 이상 동일IP 접속 시 팝업/출석체크 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_b.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls3" onclick="setPriodLayer('3');" type="checkbox"/><label for="cls3">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type4" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>시크릿쿠폰 지급 알림!!</strong>
+				이달의 시크릿쿠폰<br/>참여기회가 <span id="fourLayerValue">0</span>회 있습니다.<br/>응모하러 고고!!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1 orange" href="/common/events/secretcoupon-event" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'시크릿쿠폰 응모기회 有 팝업/시크릿쿠폰 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_o.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls4" onclick="setPriodLayer('4');" type="checkbox"/><label for="cls4">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type5" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>생일축하 선물입니다!</strong>
+				생일을 진심으로 축하드려요!<br/>시크릿쿠폰 응모기회<br/>1회를 선물해드렸어요
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1" href="/common/events/secretcoupon-event" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'생일인 달에 접속 시 팝업/시크릿쿠폰 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_b.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls5" onclick="setPriodLayer('5');" type="checkbox"/><label for="cls5">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type6" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>또 있어요!!</strong>
+				경품이 팡팡 쏟아지는<br/>GS25,GS수퍼마켓의<br/>다양한 이벤트로 고고 ~!!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1 orange" href="/customer-engagement/event/current-events" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'나의 이벤트페이지 접속 시 팝업/이벤트 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_o.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls6" onclick="setPriodLayer('6');" type="checkbox"/><label for="cls6">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type7" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2015-12-24 수정 -->
+<p class="txt">
+<strong>또 있어요!!</strong>
+				경품이 팡팡 쏟아지는<br/>GS25,GS수퍼마켓의<br/>다양한 이벤트로 고고 ~!!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1 orange" href="/customer-engagement/event/current-events" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'출석체크페이지 접속 시 팝업/이벤트 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_o.png"/></a>
+</div>
+<!-- //2015-12-24 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls7" onclick="setPriodLayer('7');" type="checkbox"/><label for="cls7">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+<div class="personalization_box type8" style="display:none">
+<div class="psnztn_cnt">
+<!-- 2016-06-23 수정 -->
+<p class="txt">
+<strong>포인트로 쇼핑한다!!!</strong>
+				멤버십포인트로 GS25<br/>나만의 냉장고에서<br/>핫딜 쇼핑하세요!
+			</p>
+<div class="btnwrap">
+<a class="btn_arr basic1" href="http://gs25.gsretail.com/gscvs/ko/store-services/myrefrigerator" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'나의 포인트페이지 접속 시 팝업/나만의 냉장고 바로가기\' ); }catch(_e){ }');">바로가기
+				<img alt="바로가기" class="img_arrow" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_btn_ico_b.png"/></a>
+</div>
+<!-- //2016-06-23 수정 -->
+</div>
+<div class="chkbox_cls"><input id="cls8" onclick="setPriodLayer('8');" type="checkbox"/><label for="cls8">일주일간 열지않음</label></div>
+<a class="btn_close" href="#" onclick="return false;"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/new_personalization_cls.png"/></a>
+</div>
+</div><script type="text/javascript">
+//<![CDATA[
+function fn_login() {
+	location.href = "/gscvs/ko/popcardlogin/login";
+}
+
+
+function goPage(url, parentId){
+	//location.href=url;
+	
+		openLayerPopup("moveLoginPage", parentId);
+		
+}
+<!--
+if (!window.console){ console = {log: function() {}} };
+//-->
+//]]>
+</script>
+<div id="accessibility">
+<ul>
+<li><a href="#contents">본문 바로가기</a></li>
+<li><a href="#gnb_menu">주메뉴 바로가기</a></li>
+</ul>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+		$(document).ready(function() {
+			//회사소개 켜고 끄기
+			$('.toggle-menu').jPushMenu();
+
+			//select스타일 먹이기
+			$(function () {
+				//$("SELECT").selectbox("detach").selectbox("attach");
+
+				
+					$(".brd_gs25 > a").addClass("on");
+				
+			});
+			
+			/* language 열고, 닫기 */
+			$("#headerLanguage > a").attr('title', '메뉴열기').on("click", 
+				function() {
+					var $this = $(this);
+					var $target = $this.next(".langwrap");
+					if ( $this.hasClass('on') ) {
+						$this.removeClass('on').attr('title', '메뉴열기');
+						$target.hide();	
+					} else {
+						$this.addClass('on').attr('title', '메뉴닫기');
+						$target.show();
+					}
+				}
+			);
+
+			if(location.href.indexOf("ko/main") > 0){
+				//IE8버젼 체크
+				if(navigator.appVersion.indexOf('MSIE 8.0') >= 0 || navigator.appVersion.indexOf('Trident/4.0') >= 0){
+					var html = "지금 사용하고 계신 브라우저(Internet Explorer 8)은 알려진 <strong>보안 취약점</strong>이 존재하며,";
+					html += " 새로운 웹 사이트가 <strong>깨져 보일 수도</strong> 있습니다. <a href='http://windows.microsoft.com/ko-kr/windows/downloads'>\"브라우저를 어떻게 업데이트하나요?\"</a>";
+					html += "<a href='#' onclick='$(\"#alertIE8\").hide();' style='display:block;float:right;padding:5px'>X</a>";
+					$(".header > .topwrap").before("<div align='center' id='alertIE8'>"+html+"</div>");
+					$("#alertIE8").css("background-color","yellow");
+					$("#alertIE8").css("border-bottom","1px solid #dfdfdf");
+					$("#alertIE8").css("padding","8px");
+				}
+			}
+			
+			
+			$(".header .brdwrap .brd a").on("click", function(){
+				try{
+					_satellite.scTrackEvent('header.click','link.linkName',"header^"+$(this).text());
+				} catch(e) { }	
+			});	
+			$(".header .brdwrap .uty a").on("click", function(){
+				try{
+					if($(this).parents("div:first").hasClass("langwrap")){
+						_satellite.scTrackEvent('header.click','link.linkName',"header^LANGUAGE^"+$(this).find("img").attr("alt") + " " + $(this).find("span").text());
+					}else if($(this).hasClass("lang")){
+						_satellite.scTrackEvent('header.click','link.linkName',"header^LANGUAGE");
+					}else{
+						_satellite.scTrackEvent('header.click','link.linkName',"header^"+trim($(this).text()));
+					}	
+				} catch(e) { }	
+			});	
+			$("#cpinfo .cpmenu a").on("click", function(e){
+				try{
+					var title = "회사소개^";
+					if($(this).parent().get(0).tagName.toLowerCase() == "h3"){
+						title += $(this).text();
+					}else if($(this).parent().get(0).tagName.toLowerCase() == "li"){
+						title += $(this).parent().parent().prev().text() + "^" + $(this).text();	
+					}
+					_satellite.scTrackEvent('header.click','link.linkName',title);
+				} catch(e) { }	
+			});
+			
+		});
+
+		function logout(){
+			location.href="/gscvs/ko/sign-up/logout";
+		}
+
+		function setLanguage(){
+			$(".langwrap").show();
+		}
+		//]]>
+	</script>
+<!-- header -->
+<div class="header">
+<!-- topwrap -->
+<div class="topwrap">
+<!-- brandwrap -->
+<div class="brdwrap">
+<!-- brand -->
+<div class="brd">
+<ul>
+<li class="brd_rtl"><a href="http://www.gsretail.com/gsretail/ko/main">GS리테일</a></li>
+<li class="brd_gs25"><a href="http://gs25.gsretail.com/gscvs/ko/main">GS25</a></li>
+<li class="brd_gsssm"><a href="http://gssuper.gsretail.com/gssuper/ko/main">GS Supermarket</a></li>
+<li class="brd_gsisp"><a class="isuper" href="http://www.gsisuper.com/eretail.main.dev?retRef=Y&amp;source=http://www.gsretail.com/gsretail/ko/main" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/상단유틸리티/GS fresh 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS fresh</a></li><!-- 2017-08-08 수정 -->
+<li class="brd_gswsn"><a href="http://lalavla.gsretail.com/lalavla/ko/main?uiel=Desktop" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/상단유틸리티/왓슨스 바로가기\' ); }catch(_e){ }');">lalavla</a></li><!-- 2018-01-23 수정 -->
+<li class="brd_gspop"><a href="http://www.popcard.co.kr/popcard/ko/main" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/상단유틸리티/팝카드 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">POP</a></li><!-- 2016-01-25 로거삽입 -->
+</ul>
+</div>
+<!-- //brand -->
+<!-- utility -->
+<div class="uty">
+<ul>
+<li><a href="/gscvs/ko/sign-up/login">로그인</a></li>
+<li>
+<a href="/gscvs/ko/sign-up/join-main?siteGubun=2">
+										회원가입</a>
+</li>
+<li><a href="https://www.gsretail.com/gsretail/ko/corporation/recruit/employment/recruit-info">채용안내</a></li>
+<li><a href="/gscvs/ko/customer-satisfaction/main">고객센터</a></li>
+<li id="headerLanguage"><a class="lang" href="#">LANGUAGE<span class="invisible">다국어 사이트 더보기</span></a>
+<div class="langwrap" style="display:none">
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/en/global/gsretail-main"><img alt="GS리테일" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/lang_retail.png"/><span>ENG</span></a></li>
+<li><a href="http://gs25.gsretail.com/gscvs/en/global/gscvs-main"><img alt="GS25" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/lang_gs25.png"/><span>ENG</span></a></li>
+<li><a href="http://gs25.gsretail.com/gscvs/zh/global/gscvs-main"><img alt="GS25" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/lang_gs25.png"/><span>中文</span></a></li>
+</ul>
+</div>
+</li>
+</ul>
+<button class="btn_com toggle-menu menu-top push-body"><span>회사소개</span></button>
+</div>
+<!-- //utility -->
+</div>
+<!-- //brandwrap -->
+<!-- corporation info -->
+<!-- corporation info -->
+<div class="cpinfo cbp-spmenu-horizontal cbp-spmenu-top" id="cpinfo">
+<div class="cpmenu">
+<ul>
+<li>
+<div class="cpmenu_vt">
+<h3>GS리테일</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/philosophy">경영이념</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/ceo-message">CEO인사말</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/history">기업연혁 </a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/awards">수상이력</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/affiliates/gs-retail">계열사소개</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/corporate-and-brand-identity/gs-symbol">기업 CI/RI</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/about-gs-retail/news">기업소식</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location">오시는길</a></li>
+</ul>
+</div>
+</li>
+<li>
+<div class="cpmenu_vt2">
+<ul>
+<li class="dotline">
+<h3>정도경영</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management-introduce">정도경영 소개</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/guideline/gs-retail-code-of-ethics">정도경영 지침</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/rewards">정도경영 제도</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/report">정도경영 제보</a></li>
+</ul>
+</li>
+<li class="dotline"><h3><a href="http://www.gsretail.com/gsretail/ko/corporation/customer-satisfaction/evaluation">고객만족경영</a></h3></li>
+<li class="dotline"><h3><a href="http://www.gsretail.com/gsretail/ko/corporation/sharing/management">나눔경영</a></h3></li>
+<li>
+<h3>공정거래</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/fair-trade/compliance-program/introduce">공정거래 자율준수</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/fair-trade/compliance-manual/fair-trade-concept">공정거래 업무매뉴얼</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<div class="cpmenu_vt3">
+<ul>
+<li class="dotline">
+<h3>투자정보</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/invest/shareholders">주주현황</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/invest/business-results/finance">경영성과</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/invest/disclosure-information/annual-report">공시정보</a></li>
+</ul>
+</li>
+<li>
+<h3>동반성장</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/win-win-growth/overview">동반성장 개요</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/win-win-growth/partner-support">파트너사 지원제도</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<div class="cpmenu_vt4">
+<ul>
+<li class="dotline">
+<h3><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/submain">입점상담</a></h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/support-center/faq">입점안내</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/counselor-corner/apply-gateway">상담신청 </a></li>
+<li><a href="http://partner.gsretail.com:8001/login.do" target="_blank" title="새창">전자계약</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/announce/notice">공지사항</a></li>
+</ul>
+</li>
+<li>
+<h3>임대상가</h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location/subway">지하철</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location/shoppingmall">쇼핑몰</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location/rant-corner">GS수퍼마켓 임대코너</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location/raise">모집공고</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<div class="cpmenu_vt5">
+<ul>
+<li class="dotline">
+<h3><a href="https://www.gsretail.com/gsretail/ko/corporation/recruit/employment/recruit-info">채용안내</a></h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/recruit/personnel-system">인사제도</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/recruit/job-introduction">직무소개</a></li>
+<li><a href="https://www.gsretail.com/gsretail/ko/corporation/recruit/posting">채용공고</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/recruit/recruiting-part-time-employees/notices">파트타이머채용</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/recruit/employment/recruit-faq">채용문의</a></li>
+</ul>
+</li>
+<li>
+<h3><a href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/main">고객센터</a></h3>
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/faq">자주묻는 질문</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/submain">고객의 소리</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/notice">공지사항</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="btn_cls"><a href="#"><img alt="닫기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/btn_cls.gif"/></a></div>
+</div>
+<!-- //corporation info -->
+<!-- gnbwrap -->
+<div class="gnbwrap">
+<!-- gsretail mnb -->
+<!-- //gsretail mnb -->
+<!-- gscvs mnb -->
+<!-- url 선언 -->
+<!-- 당첨자발표 -->
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		var gscvsGNB = new GNBController;
+		gscvsGNB.init( ".gnbw .gnb", ".gnb ul li h2 a", ".gnb ul.mlb_action", ".gnb_bg");
+	});
+
+//]]>
+</script>
+<div class="gnbw">
+<h1 class="logo"><a data-dimension-name="link.linkName" data-dimension-value="홈페이지" data-sc-action="gnb.click" href="/gscvs/ko/main">GS25</a></h1><div class="gnb" id="gnb_menu">
+<p class="skyscraper"><a class="btn_sc" href="http://gs25.gsretail.com/gscvs/ko/social-services/gs25socialLiveBoard" onclick="window.open(this.href, '', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=yes,dependent=no,width=1300,height=900,left=0,top=0'); return false;" title="소셜 GS25 보러가기"></a></p>
+<ul>
+<li><h2><a href="javascript:void(0);">상품</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt mlb_ani dsp_non">
+<li class="ico_cvs_bg1">
+<a data-dimension-name="link.linkName" data-dimension-value="상품^행사상품" data-sc-action="gnb.click" href="/gscvs/ko/products/event-goods"><span class="tltwrap">
+<span class="mlb_tlt"> 행사상품 </span>
+<span class="mlb_txt"> 행사상품을 사면 하나 더! <br/> GS25에서 놀라운 혜택을 즐기세요.</span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="mlb1_2 ico_cvs_bg1_n01"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="상품^유어스(PB)상품" data-sc-action="gnb.click" href="/gscvs/ko/products/youus-main"><span class="tltwrap">
+<span class="mlb_tlt">유어스(PB)상품</span><!-- 2016-12-07 수정 -->
+<span class="mlb_txt" style="width:300px;">오직 GS25에만 있는 차별화된 브랜드 상품으로<br/>품질은 높고 가격은 저렴한 상품을 만나보세요.</span><!-- 2016-12-06 수정 -->
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<!-- 2018-03-21 삭제 
+					<li class="cvs_pb_banner">
+						<a href="/gscvs/ko/customer-engagement/event/detail/pb-social-vote" data-sc-action= "gnb.click" data-dimension-name= "link.linkName" data-dimension-value= "상품^유어스(PB)상품 투표"><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/cvs_pb_banner.jpg" alt="한달에 2번! 인기PB(유어스)상품에 투표해주세요." />
+						</a>
+					</li> -->
+<li class="mlb1_3 ico_cvs_bg1_n02"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="상품^GS25 e-카다로그" data-sc-action="gnb.click" href="/gscvs/ko/products/e-catalog"><span class="tltwrap">
+<span class="mlb_tlt"> e카탈로그 </span>
+<span class="mlb_txt"> 사랑하는 사람에게<br/> 감사의 마음을 전하세요. </span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+</ul>
+<!-- //2depth -->
+</li>
+<li><h2><a href="javascript:void(0);">이벤트</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt2 mlb_ani dsp_non">
+<!-- 
+					<li class="ico_cvs_bg2_1" >
+						<a href="/gscvs/ko/common/events/secretcoupon-event" data-sc-action= "gnb.click" data-dimension-name= "link.linkName" data-dimension-value= "이벤트^시크릿쿠폰"><span class="tltwrap">
+								<span class="mlb_tlt"> 시크릿 쿠폰 </span>
+								<span class="mlb_txt"> 매일매일 만나는 행운의 쿠폰!</span>
+							</span>
+							<span class="btn_more_new"><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png" alt="바로가기" /></span>
+						</a>
+					</li>
+					2017-10-27 삭제 -->
+<!-- <li>
+						<a href="http://www.gsretail.com/gsretail/ko/common/events/attendance-event" data-sc-action= "gnb.click" data-dimension-name= "link.linkName" data-dimension-value= "이벤트^출석체크"><span class="tltwrap">
+								<span class="mlb_tlt"> 출석체크 </span>
+								<span class="mlb_txt"> 365일 매일 새로운 출석체크!</span>
+							</span> 
+							<span class="btn_more_new"><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png" alt="바로가기" /></span>
+						</a>
+					</li> 2018-03-21 삭제 -->
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="이벤트^진행중이벤트" data-sc-action="gnb.click" href="/gscvs/ko/customer-engagement/event/current-events"><span class="tltwrap">
+<span class="mlb_tlt"> 진행중 이벤트 </span>
+<span class="mlb_txt" style="letter-spacing:-0.5px;">GS리테일에서 제공하는<br/>특별한 이벤트에 지금 참여하세요.</span><!-- 2018-03-21 추가 -->
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span>
+</a>
+</li>
+<!-- //2018-03-21 수정 -->
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="이벤트^종료이벤트/당첨발표" data-sc-action="gnb.click" href="/gscvs/ko/customer-engagement/event/last-events"><span class="tltwrap">
+<span class="mlb_tlt"> 종료이벤트/당첨발표 </span>
+<span class="mlb_txt" style="letter-spacing:-0.5px;">지난 이벤트와 당첨내역을<br/>확인해 보세요.</span><!-- 2018-03-21 추가 -->
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<!-- <li>
+						<a href="/gscvs/ko/customer-engagement/event/detail/pb-social-vote" data-sc-action= "gnb.click" data-dimension-name= "link.linkName" data-dimension-value= "이벤트^PB대결 투표이벤트">
+							<span class="tltwrap">
+								<span class="mlb_tlt">PB대결 투표이벤트 </span>
+							</span>
+							<span class="btn_more_new"><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png" alt="바로가기" /></span>
+						</a>
+					</li> 2018-03-21 삭제 -->
+<li>
+<div>
+<div class="tltwrap">
+<p class="mlb_tlt">고객만족평가</p>
+</div>
+<ul class="mlb_lst">
+<li><a data-dimension-name="link.linkName" data-dimension-value="이벤트^고객만족평가^고객만족평가" data-sc-action="gnb.click" href="/gscvs/ko/products/customer-satisfaction/evaluation"> 고객만족평가 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="이벤트^고객만족평가^당첨자발표" data-sc-action="gnb.click" href="/gscvs/ko/products/announcementWinner"> 당첨자발표 </a></li></ul>
+</div>
+</li>
+<!-- 2016-11-30 수정 -->
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="이벤트^마케터즈" data-sc-action="gnb.click" href="/gscvs/ko/products/gs-young-marketer/introduce"><span class="tltwrap">
+<span class="mlb_tlt">마케터즈</span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span>
+</a>
+</li>
+<!-- //2016-11-30 수정 -->
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="이벤트^푸드공작소" data-sc-action="gnb.click" href="/gscvs/ko/products/midnight-hero"><span class="tltwrap">
+<span class="mlb_tlt"> 푸드공작소 </span><!-- 2016-01-07 야참히어로명칭변경 -->
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+</ul>
+<!-- //2depth -->
+</li>
+<li><h2><a href="javascript:void(0);">매장/서비스</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt3 mlb_ani">
+<li class="ico_cvs_bg3_1">
+<a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^매장검색" data-sc-action="gnb.click" href="/gscvs/ko/store-services/locations"><span class="tltwrap">
+<span class="mlb_tlt"> 매장검색 </span>
+<span class="mlb_txt"> 전국 곳곳 GS25 매장을 안내! <br/> GS25를 찾아보세요!</span>
+</span>
+<!-- <span class="btn_more m2"> 바로가기 </span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="ico_cvs_bg3_n01"> <!-- 2016-05-02 수정 -->
+<div>
+<div class="tltwrap">
+<p class="mlb_tlt">생활서비스</p>
+</div>
+<ul class="mlb_lst">
+<li><a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^생활서비스^생활서비스" data-sc-action="gnb.click" href="/gscvs/ko/store-services/gs25-in-everyday-life"> 생활 서비스 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^생활서비스^택배&amp;픽업" data-sc-action="gnb.click" href="/gscvs/ko/store-services/courier-service"> 택배&amp;픽업 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^생활서비스^공공요금수납" data-sc-action="gnb.click" href="/gscvs/ko/store-services/utility-bills"> 공공요금수납 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^생활서비스^상품권 판매" data-sc-action="gnb.click" href="/gscvs/ko/store-services/certificate"> 상품권 판매 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^생활서비스^티켓발권" data-sc-action="gnb.click" href="/gscvs/ko/store-services/ticketing-guide"> 티켓발권 </a></li></ul>
+</div>
+</li>
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^카운터FF점포" data-sc-action="gnb.click" href="/gscvs/ko/store-services/new-concept"><span class="tltwrap">
+<span class="mlb_tlt"> 카운터FF 점포 </span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<!-- 2016-02-01 수정 -->
+<li>
+<a class="mlb_evt2" data-dimension-name="link.linkName" data-dimension-value="매장/서비스^GSTV" data-sc-action="gnb.click" href="/gscvs/ko/products/gs-tv"><span class="tltwrap">
+<span class="mlb_tlt"> GSTV </span>
+<span class="mlb_txt"> GS25만의 재미있는 영상 소개!</span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<li class="ico_cvs_bg3_2 ico_cvs_bg3_n02"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="매장/서비스^나만의냉장고" data-sc-action="gnb.click" href="/gscvs/ko/store-services/myrefrigerator"><span class="tltwrap">
+<span class="mlb_tlt"> 나만의 냉장고 </span>
+<span class="mlb_txt"> GS25만의 서비스, 증정품을 <br/> 내 폰에 보관하실 수 있습니다.</span>
+</span>
+<!-- <span class="btn_more m2"> 바로가기 </span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<!-- //2016-02-01 수정 -->
+</ul>
+<!-- //2depth -->
+</li>
+<li><h2><a href="javascript:void(0);">멤버십</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt4 mlb_ani dsp_non">
+<li class="ico_cvs_bg4">
+<a data-dimension-name="link.linkName" data-dimension-value="멤버십^멤버십이란" data-sc-action="gnb.click" href="/gscvs/ko/membership-services/gs-retail"><span class="tltwrap">
+<span class="mlb_tlt"> 멤버십(GS&amp;POINT)란? </span>
+<span class="mlb_txt"> 포인트를 즐겁게 누릴 수 있는 <br/> GS리테일 멤버십입니다.</span>
+</span>
+<!-- <span class="btn_more m1">바로가기</a></span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="ico_cvs_bg4_n01"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="멤버십^멤버십가입/등록" data-sc-action="gnb.click" href="/gscvs/ko/membership-services/join"><span class="tltwrap">
+<span class="mlb_tlt"> 멤버십(GS&amp;POINT)<br/> 가입/등록</span>
+<span class="mlb_txt"> GS&amp;POINT 카드는 GS리테일 관련 <br/>매장에서 발급 받으실 수 있습니다.</span>
+</span>
+<!-- <span class="btn_more m1">바로가기</a></span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<!-- 2016-06-22 수정 -->
+<li class="ico_cvs_bg4_n02">
+<a data-dimension-name="link.linkName" data-dimension-value="멤버십^멤버십혜택안내" data-sc-action="gnb.click" href="/gscvs/ko/membership-services/benefits"><span class="tltwrap">
+<span class="mlb_tlt"> 멤버십(GS&amp;POINT) <br/> 혜택안내 </span>
+<span class="mlb_txt">GS&amp;POINT의 실속있는 혜택들을<br/>가맹점별로 안내해 드립니다.</span>
+</span>
+</a>
+</li>
+<li class="mlb_evt3">
+<a data-dimension-name="link.linkName" data-dimension-value="멤버십^제휴카드/상품권안내" data-sc-action="gnb.click" href="/gscvs/ko/membership-services/gift-certificate"><span class="tltwrap">
+<p class="mlb_tlt">제휴카드/상품권 안내</p>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="멤버십^멤버십FAQ" data-sc-action="gnb.click" href="/gscvs/ko/customer-satisfaction/membership-faq"><span class="tltwrap">
+<span class="mlb_tlt"> 멤버십FAQ </span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<!-- //2016-06-22 수정 -->
+</ul>
+<!-- //2depth -->
+</li>
+<li><h2><a href="javascript:void(0);">창업안내</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt5 mlb_ani dsp_non">
+<li class="ico_cvs_bg5_1">
+<div>
+<div class="tltwrap">
+<p class="mlb_tlt">창업 가이드 </p>
+</div>
+<ul class="mlb_lst">
+<li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^창업가이드^GS25의특징" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/guide"> GS25의 특징 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^창업가이드^가맹타입" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/guide/affiliation-types"> 가맹타입 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^창업가이드^창업 절차" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/guide/process"> 창업절차 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^창업가이드^계약전 확인사항" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/guide/items-to-be-confirmed"> 계약전 확인사항 </a></li></ul>
+</div>
+</li>
+<li class="ico_cvs_bg5_n01"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="창업안내^창업설명회" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/affiliate-briefing/affiliate-briefing-guide"><span class="tltwrap">
+<span class="mlb_tlt"> 창업설명회 </span>
+<span class="mlb_txt"> GS25 가맹점 사업에 대한 다양한 <br/> 정보를 얻을 수 있는 창업설명회!</span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="ico_cvs_bg5_2">
+<div>
+<div class="tltwrap">
+<p class="mlb_tlt">1:1 상담</p>
+</div>
+<ul class="mlb_lst">
+<li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^1:1상담^자주묻는질문" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/one-on-ones-consult/faq"> 자주묻는질문 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^1:1상담^창업상담" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/one-on-ones-consult/counsel"> 창업상담 </a></li><li><a data-dimension-name="link.linkName" data-dimension-value="창업안내^1:1상담^입지제안" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/one-on-ones-consult/location-offer"> 입지제안 </a></li></ul>
+</div>
+</li>
+<li class="ico_cvs_bg5_n02"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="창업안내^추천점포소개" data-sc-action="gnb.click" href="/gscvs/ko/franchise-info/recommended-stores"><span class="tltwrap">
+<span class="mlb_tlt"> 추천점포소개 </span>
+<span class="mlb_txt"> 상권 조사를 바탕으로 창업을 <br/> 위한 최적의 점포를 소개합니다. </span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+</ul>
+<!-- //2depth -->
+</li>
+<li><h2><a href="javascript:void(0);">상생협력</a></h2>
+<!-- 2depth : mlb start -->
+<ul class="mlb_action mlb_cnt6 mlb_ani dsp_non">
+<li class="ico_cvs_bg6">
+<a data-dimension-name="link.linkName" data-dimension-value="상생협력^경영주복지몰" data-sc-action="gnb.click" href="/gscvs/ko/win-win-cooperation/benefits"><span class="tltwrap">
+<span class="mlb_tlt"> 경영주 복지몰 </span>
+<span class="mlb_txt"> 경영주님에게 더욱 큰 혜택을 <br/> 제공하는 복지몰 제도를 소개합니다. </span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="ico_cvs_bg6_n01"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="상생협력^운영지원제도" data-sc-action="gnb.click" href="/gscvs/ko/win-win-cooperation/support"><span class="tltwrap">
+<span class="mlb_tlt"> 운영 지원제도 </span>
+<span class="mlb_txt">경영주님의 만족스러운 점포 운영을 위해<br/> 다양한 지원을 해드리고 있습니다. </span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li class="ico_cvs_bg6_n02"> <!-- 2016-05-02 수정 -->
+<a data-dimension-name="link.linkName" data-dimension-value="상생협력^참여제도" data-sc-action="gnb.click" href="/gscvs/ko/win-win-cooperation/participation"><span class="tltwrap">
+<span class="mlb_tlt"> 참여제도 </span>
+<span class="mlb_txt"> 의견 수렴, 홍보, 자문위원, 콜센터 <br/> 지원으로 도움을 드리고 있습니다. </span>
+</span>
+<!-- <span class="btn_more m2">바로가기</span> --> <!-- 2016-05-02 삭제 -->
+</a>
+</li>
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="상생협력^복리후생" data-sc-action="gnb.click" href="/gscvs/ko/win-win-cooperation/welfare"><span class="tltwrap">
+<span class="mlb_tlt"> 복리후생 </span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+<li>
+<a data-dimension-name="link.linkName" data-dimension-value="상생협력^GS25명예의전당" data-sc-action="gnb.click" href="/gscvs/ko/win-win-cooperation/honor"><span class="tltwrap">
+<span class="mlb_tlt"> GS25 명예의 전당 </span>
+</span>
+<span class="btn_more_new"><img alt="바로가기" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_bg1_n_arr.png"/></span> <!-- 2016-05-02 수정 -->
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- //gscvs mnb -->
+<!-- gssuper mnb -->
+<!-- //gssuper mnb -->
+<!-- watsons mnb -->
+<!-- //watsons mnb -->
+<div class="gnb_bg"></div>
+</div>
+<!-- //gnbwrap -->
+</div>
+<!-- //topwrap -->
+</div>
+<!-- //header -->
+<div class="popup-outer-layer">
+<div class="bg"></div>
+<div class="popwrap lypop_my1 pop-inner-layer" id="moveLoginPage">
+<div class="pop_tltwrap">
+<h4 class="pop_tlt1">로그인 안내</h4>
+</div>
+<div class="pop_cnt">
+<div class="pop_tblwrap">
+<div class="pop_box2 w370">
+<div class="pop_txt1">
+<p>이 페이지를 이용하기 위해서는<br/>로그인이 필요합니다.<br/>로그인 후 이용해 주시기 바랍니다.</p>
+</div>
+</div>
+<div class="btnwrap pb10">
+<input class="btn sty02 bk" onclick="javascript:fn_login();" type="button" value="로그인 하기"/>
+</div>
+</div>
+</div>
+<div class="pop_cls">
+<a href="#;" onclick="javascript:fn_login();">닫기</a>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var MAIN_POPUP_COUNT = 0;
+//Validation Message 관리
+$.globalMsg = {
+	//입점상담 신규업체 등록
+	newRegComNo : "사업자등록번호가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegComNm : "회사명이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegComGubun : "사업자구분이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegBizNo : "법인번호가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegBizOwner : "대표자가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegBizType : "업태 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegBizSub : "업종이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegPostNo : "우편번호가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpNm : "신청인이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpBirthYear : "신청인의 생년월일의 연도가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpBirthMon : "신청인의 생년월일의 월이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpBirthDate : "신청인의 생년월일의 일이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpGender : "성별이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpEmail : "이메일이 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpId : "아이디가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpPw : "비밀번호가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpPwNotEq : "비밀번호가 일치하지 않습니다.",
+	newRegEmpPhoneNo : "전화번호가 입력이 되지 않았거나 잘못 입력되었습니다.",
+	newRegEmpHpNo : "휴대폰이 입력이 되지 않았거나 잘못 입력되었습니다."
+};
+
+function setPopupPosition(popupObj) {
+	try{
+		var height = (popupObj.popupPositionWidth / 2) + 70;
+		var width  = (popupObj.popupPositionHeight / 2) + 50;
+		
+		if(popupObj.popupPosition.code == "TOPLEFT"){
+			$("#popManage"+popupObj.pk).css("top",height+"px");
+			$("#popManage"+popupObj.pk).css("left",width+"px");
+		}else if(popupObj.popupPosition.code == "TOPMIDDLE"){
+			$("#popManage"+popupObj.pk).css("top",height+"px");
+		}else if(popupObj.popupPosition.code == "TOPRIGHT"){
+			$("#popManage"+popupObj.pk).css("top",height+"px");
+			$("#popManage"+popupObj.pk).css("left","");
+			$("#popManage"+popupObj.pk).css("right",width+"px");
+		}else if(popupObj.popupPosition.code == "MIDLEFT"){
+			$("#popManage"+popupObj.pk).css("left",width+"px");
+		}else if(popupObj.popupPosition.code == "MIDRIGHT"){
+			$("#popManage"+popupObj.pk).css("left","");
+			$("#popManage"+popupObj.pk).css("right",width+"px");
+		}else if(popupObj.popupPosition.code == "BOTTOMLEFT"){
+			$("#popManage"+popupObj.pk).css("top","");
+			$("#popManage"+popupObj.pk).css("bottom",height+"px");
+			$("#popManage"+popupObj.pk).css("left",width+"px");
+		}else if(popupObj.popupPosition.code == "BOTTOMMIDDLE"){
+			$("#popManage"+popupObj.pk).css("top","");
+			$("#popManage"+popupObj.pk).css("bottom",height+"px");
+		}else if(popupObj.popupPosition.code == "BOTTOMRIGHT"){
+			$("#popManage"+popupObj.pk).css("top","");
+			$("#popManage"+popupObj.pk).css("bottom",height+"px");
+			$("#popManage"+popupObj.pk).css("left","");
+			$("#popManage"+popupObj.pk).css("right",width+"px");
+		}else if(popupObj.popupPosition.code == "MANUAL"){
+			$("#popManage"+popupObj.pk).css("top",popupObj.manuallyTopPosition);
+			$("#popManage"+popupObj.pk).css("left",popupObj.manuallyLeftPosition);
+		}
+	}catch(e){}
+}
+
+function popupTermCkecked(pk) {
+	var term = "";
+
+	if($("#popManage" + pk ).attr("term") == "ONE"){
+		term = 1;
+	}else if($("#popManage" + pk).attr("term") == "SEVEN"){
+		term = 7;
+	}
+
+	$.makeExpierCookie( "gsCommonPopup" + pk + "_pop", "done" , term);
+    
+    $('#popManage' + pk).fadeOut();
+}
+
+function getPopupHtml(popupObj) {
+	var term = ""; //그만보기 설정
+	var popStyle = "";
+	var popWrapStyle = "";
+	var popHtml = "";
+
+		
+	try{
+		if(popupObj.stopPopup.code == "ONE"){
+			term = "하루동안 열지 않음";
+		}else if(popupObj.stopPopup.code == "SEVEN"){
+			term = "일주일간 열지 않음";
+		}
+	}catch(e){}
+
+	//팝업 높이
+	if(popupObj.popupPositionHeight != "" && popupObj.popupPositionHeight != null){
+		popStyle = "style='height:"+popupObj.popupPositionHeight+"px'";
+	}
+	//팝업 넓이
+	if(popupObj.popupPositionWidth != "" && popupObj.popupPositionWidth != null){
+		if(popupObj.popupPositionHeight != "" && popupObj.popupPositionHeight != null){
+			popStyle = "style='height:"+popupObj.popupPositionHeight+"px;width:"+popupObj.popupPositionWidth+"px'";
+		}else{
+			popStyle = "style='width:"+popupObj.popupPositionWidth+"px'";
+		}
+		popWrapStyle = "style='width:"+popupObj.popupPositionWidth+"px'";
+	}
+
+	try{
+		popHtml += "<div class='' id='popManage" + popupObj.pk + "' term='"+popupObj.stopPopup.code+"' >";
+	}catch(e){
+		popHtml += "<div class='' id='popManage" + popupObj.pk + "' term='NONE' >";
+	}
+	
+	popHtml += "	<div class='popwrap lypop_my2 pop-inner-layer admin_popup' id='gsCommonPopup" + popupObj.pk + "' "+popWrapStyle+">";
+// 	try{
+// 		popHtml += "		<div class='pop_tltwrap' term='"+popupObj.stopPopup.code+"'>";
+// 	}catch(e){
+// 		popHtml += "		<div class='pop_tltwrap' term='NONE'>";
+// 	}
+// 	popHtml += "			<h4 class='pop_tlt1'>"+popupObj.popupTitle+"</h4>";
+// 	popHtml += "		</div>";
+	popHtml += "		<div "+popStyle+">";
+	popHtml += "			<div class='all_wrap'>";
+	popHtml += popupObj.popupTemplateText;
+	popHtml += "			</div>";
+	try{
+		if(popupObj.stopPopup.code != "NONE" && popupObj.stopPopup.code != "NEVER"){
+			popHtml += "		<div class='ie_close_box' style='bottom: 0px'>";
+			popHtml += "			<input type='checkbox' id='popupTermCkecked" + popupObj.pk + "' class='pop_term' value='" + popupObj.pk + "' onclick='popupTermCkecked(" + popupObj.pk + ")'><label for='popupTermCkecked" + popupObj.pk + "'>"+term+"</label>";
+			popHtml += "		</div>";
+		}
+	}catch(e){}
+	popHtml += "		</div>";
+	popHtml += "		<div class='pop_cls'>";
+	popHtml += "			<a href='#'>닫기</a>";
+	popHtml += "		</div>";
+	popHtml += "	</div>";
+	popHtml += "</div>";
+	
+	return popHtml;
+}
+
+
+$(function(){
+	$(document).on("keyup", "input:text[numberOnly]", function() {
+		$(this).val($(this).val().replace(/[^0-9]/g,''));
+		$(this).blur(function(){
+			$(this).val($(this).val().replace(/[^0-9]/g,''));
+		});
+	});
+	
+	/* 팝업 관리 
+	 * AUTH : CMB
+	 */
+
+	var url = "/gscvs/ko/common/popup-list";
+	var ajaxType="GET";
+	var isExceptionUrl = false;	
+	
+	try
+	{
+		var checkUrl = location.href.toUpperCase().replace("HTTP://", "").replace("HTTPS://", "").replace("#", "");
+		
+		//회원가입 및 마이페이지 메인 화면에서 Layer 팝업이 호출되게 수정함, 팝카드 제외 
+		//SSL =  POST, CSRFToken
+	    if ( checkUrl.indexOf("/POPCARD/KO/")==-1 && ( checkUrl.indexOf("/SIGN-UP/CERTIFICATION") > 0 || checkUrl.indexOf("/MY-PAGE") > 0 || checkUrl.indexOf("/CORPORATION/PARTNERSHIP/") > 0 || checkUrl.indexOf("/SIGN-UP/JOIN-MAIN") > 0 
+	    		|| checkUrl.indexOf("/COMMUNITY-SERVICE/APPLY-TO-VOLUNTEER") > 0 ) )
+	    {
+	    	 isExceptionUrl=true;
+	    	 ajaxType="POST";
+	    	 url=url+"?"+getCSRFToken();
+	    }
+	}
+	catch(e)
+	{
+	     return null;
+	}	   
+	
+	// SSL화면에서는 사용 안함
+	if("http" == "http" || isExceptionUrl){
+		$.ajax({
+	        url: url,
+	        cache : false,
+	        type: ajaxType,
+	        dataType: "json",
+			contentType : "application/json",
+		    success: function (data) {
+		    	
+				try
+				{
+			    	var json = $.parseJSON(data);
+	
+			    	for(var i=0; i<json.results.length;i++){
+						//위치 상세설정 : 적용페이지 URL
+						//url 다중 처리 : BOS 처리가 안되서 임시로 # 으로 url 구분 하기로 함 // 20150728
+						var targetUrl = "";
+						
+						if(json.results[i].visibleSiteUrl!=null){
+							
+							var arrUrl = json.results[i].visibleSiteUrl.split("#"); // 20150728
+							for(var k =0; k<arrUrl.length; k++){ // start of FOR // 20150728
+								targetUrl = arrUrl[k].replace(/(\s*)/g,""); // 20150728
+								if(window.location.href == targetUrl){// 20150728							
+									if(json.results[i].exposure){
+										var popHtml = "";
+										popHtml = getPopupHtml(json.results[i]);
+		
+										$("body").prepend(popHtml);
+										
+										var cookiedata = document.cookie;
+		
+								 		if ( cookiedata.indexOf("gsCommonPopup"+json.results[i].pk+"_pop=done") < 0 ){
+								 			Clayer_open('gsCommonPopup'+json.results[i].pk, json.results[i].pk, json.results[i].popupPosition.code);
+											//팝업위치
+											setPopupPosition(json.results[i]);
+											MAIN_POPUP_COUNT++;
+								 		}
+									}
+								}
+							} // end of FOR // 20150728
+			    		}
+					}
+				}
+				catch(e)
+				{
+					return null;
+				}
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) {
+	       		//alert(errorThrown + " (" +textStatus +")" );
+	        }
+		});
+	}
+		
+
+	
+	function Clayer_open(el, pk, position){
+		var temp = $('#' + el);
+		//var bg = temp.prev().hasClass('bg');	//dimmed 레이어를 감지하기 위한 boolean 변수
+
+		$('#popManage' + pk).css("z-index", 9999);
+		$('#popManage' + pk).css("position","fixed");
+		$('#popManage' + pk).css("top","50%");
+		$('#popManage' + pk).css("left","50%");
+		$('#popManage' + pk).fadeIn();
+		temp.fadeIn();
+		var margin_top_calibration = 0;
+	
+		if(position == "TOPLEFT" || position == "TOPMIDDLE" || position == "TOPRIGHT"){
+		    margin_top_calibration = -70; 
+		} else if ( position == "BOTTOMLEFT" || position == "BOTTOMMIDDLE" || position == "BOTTOMRIGHT") {
+			margin_top_calibration = +30;
+		}
+		
+		// 화면의 중앙에 레이어를 띄운다.
+		if (temp.height() < $(document).height() ) temp.css('margin-top', '-'+(temp.height()/2+margin_top_calibration)+'px');
+		else temp.css('top', '0px');
+		if (temp.width() < $(document).width() ) temp.css('margin-left', '-'+temp.width()/2+'px');
+		else temp.css('left', '0px');
+		
+		temp.find('.pop_cls').click(function(e){
+            $('#popManage' + pk).fadeOut();
+			temp.fadeOut();
+			e.preventDefault();
+		});
+	}
+});
+
+/**
+ * 쿠키 생성
+ * @param name 쿠키명
+ * @param value 쿠키 값
+ * @param expiredays 쿠키 기간
+ */
+$.makeExpierCookie=function( name, value, expiredays ){
+  var todayDate = new Date();
+  todayDate.setDate( todayDate.getDate() + expiredays );
+  document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+/**
+ * 쿠키 삭제
+ * @param cookieName 삭제할 쿠키명
+ */
+$.deleteCookie = function( cookieName ){
+  var expireDate = new Date();
+  //어제 날짜를 쿠키 소멸 날짜로 설정한다.
+  expireDate.setDate( expireDate.getDate() - 1 );
+  document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() + "; path=/";
+}
+
+/**
+ * 쿠키값 추출
+ * @param cookieName 쿠키명
+ */
+$.getCookie = function( cookieName ){
+	var search = cookieName + "=";
+	var cookie = document.cookie;
+	
+	// 현재 쿠키가 존재할 경우
+	if( cookie.length > 0 ){
+		// 해당 쿠키명이 존재하는지 검색한 후 존재하면 위치를 리턴.
+		startIndex = cookie.indexOf( cookieName );
+		
+		// 만약 존재한다면
+		if( startIndex != -1 ){
+			// 값을 얻어내기 위해 시작 인덱스 조절
+			startIndex += cookieName.length;
+			
+			// 값을 얻어내기 위해 종료 인덱스 추출
+			endIndex = cookie.indexOf( ";", startIndex );
+			
+			// 만약 종료 인덱스를 못찾게 되면 쿠키 전체길이로 설정
+			if( endIndex == -1) endIndex = cookie.length;
+			
+			// 쿠키값을 추출하여 리턴
+			return unescape( cookie.substring( startIndex + 1, endIndex ) );
+		}else{
+			// 쿠키 내에 해당 쿠키가 존재하지 않을 경우
+			return false;
+		}
+	}else{
+		// 쿠키 자체가 없을 경우
+		return false;
+	}
+}
+
+$.formValidation = function(formNm){
+	var validYN = true;		//유효성 통과여부
+	var labelText = "";		//label의 텍스트 가져오기
+	var alertMsg = "";		//얼럿 메세지 세팅
+
+	//텍스트 박스 일 경우
+	$.each($("#" + formNm).find("input:text"), function(){
+		labelText = $("label[for=" + $(this).attr("id") + "]").text();
+
+		if(labelText.indexOf("*") > 0){
+			labelText = labelText.replace("*","").replace(" ","");
+		}
+
+		if($(this).attr("validation")){
+			if("" == labelText){
+				alertMsg = $("#" + $(this).attr("id")).attr("title") + "이(가) 입력이 되지 않았거나 잘못 입력되었습니다.";
+			} else {
+				alertMsg = labelText + "이(가) 입력이 되지 않았거나 잘못 입력되었습니다.";
+			}
+
+			//Validation Check
+			if("" == $("#" + $(this).attr("id")).val()){
+				$("#" + $(this).attr("id")).parent().append("<div class='alertToolTip' onClick='$.tooltipHide();'>" + alertMsg + "</div>");
+				validYN = false;
+				$("#" + $(this).attr("id")).focus();
+				return false;
+			} else {
+				$(".alertToolTip").remove();
+				validYN = true;
+			}
+		}
+	});
+
+	//셀렉트 박스 일 경우
+	$.each($("#" + formNm).find("select.valid"), function(){
+		if(validYN){
+			if("" == $("#" + $(this).attr("id")).val()){
+				alertMsg = $("#" + $(this).attr("id")).attr("title") + "을(를) 선택해주세요";
+				$("#" + $(this).attr("id")).parent().append("<div class='alertToolTip' onClick='$.tooltipHide();'>" + alertMsg + "</div>");
+				validYN = false;
+				return false;
+			} else {
+				$(".alertToolTip").remove();
+				validYN = true;
+			}
+		}
+	});
+
+	return validYN;
+};
+
+//툴팁 삭제
+$.tooltipHide = function(){
+	$(".alertToolTip").remove();
+};
+//]]>
+</script>
+<!-- //content Box -->
+<div class="cntwrap" id="contents">
+<div class="breadcrumb" id="breadcrumb">
+<script type="text/javascript">
+//<![CDATA[
+
+var bookObj = {
+		formName : "bookmarkForm",
+		loginChk : function(){
+			var isLogin = "false";
+			if (isLogin == "true") {
+				bookObj.setFormInformation();
+			} else {
+				commonScriptController.addCommonLayerBg();
+				commonScriptController.showCommonLayerBg();
+				commonScriptController.showCommonPopup($("#lypop_my1"), 1000);
+			}
+		},
+		popupClose : function() {
+			commonScriptController.closeCommonLayerBg();
+			commonScriptController.closeCommonPopup($("#lypop_my1"));
+		},
+		loginMove : function() {
+			location.href = "/gscvs/ko/sign-up/login";
+		},
+		setFormInformation : function(){
+
+			if($("#bookMarkListBox > li").size() == 8) {
+				alert("즐겨찾기 메뉴는 최대 8개까지 등록 가능합니다.");
+				return false;
+			}
+
+			$( "#" + bookObj.formName ).remove();
+			var tFormHTML = "<form name='" + bookObj.formName + "' id='" + bookObj.formName + "'>\n";
+			tFormHTML += "<input type='hidden' name='pageId' id='pageId' value='locations-Page'/>\n";
+			tFormHTML += "<input type='hidden' name='dataType' id='dataType' value='I'/>\n";
+			tFormHTML += "</form>\n";
+			$("body").append( tFormHTML );
+			bookObj.setData();
+		},
+		setData : function(){
+			var tUrl = "/gscvs/ko/gscommon/set-bookmark";
+
+			$.ajax({
+				type : "post",
+				url : tUrl + "?" + bookObj.getCSRFToken(),
+				data : $("form#" + bookObj.formName ).serialize(),
+				dataType : "json",
+				error : function( request, status, error ){
+					console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
+				},
+				success : function(result){
+					var resultCode = JSON.parse(result);
+
+					var bookMarkHtml = "";
+
+					if(resultCode.length == 1) {
+						bookMarkHtml = "<p class='menu_tit'>나만의 메뉴</p>";
+						bookMarkHtml += "<ul class='menu_lst' id='bookMarkListBox'>";
+						bookMarkHtml += "<li id='bookMarkList_0'><div class='menu_cnt'><a href='"+resultCode[0].BookMarkAddress+"'>"+resultCode[0].PageName+"</a></div><div class='menu_del'><a href=\"javascript:bookMenuObj.setFormInformation(\'"+resultCode[0].pk+"\', \'bookMarkList_0\', \'"+resultCode[0].PageID+"\');\">삭제</a></div></li> \n";
+						bookMarkHtml += "</ul>";
+						bookMarkHtml += "<div class='ctr'><a href='#;' class='prev'>이전 나만의메뉴</a><a href='#;' class='next'>다음 나만의 메뉴</a></div>";						
+						$("#bookMarkListBoxTop").html(bookMarkHtml);
+					} else {
+						for(var i = 0; i < resultCode.length; i++) {
+							bookMarkHtml += "<li id='bookMarkList_"+i+"'><div class='menu_cnt'><a href='"+resultCode[i].BookMarkAddress+"'>"+resultCode[i].PageName+"</a></div><div class='menu_del'><a href='javascript:bookMenuObj.setFormInformation(\'"+resultCode[i].pk+"\', \'bookMarkList_"+i+"\', \'"+resultCode[i].PageID+"\');'>삭제</a></div></li> \n";
+						}
+						$("#bookMarkListBox").html(bookMarkHtml);
+						bookMenuObj.setMoveHTML();
+					}
+
+					$("#bookMarkBtn").attr("href", "#;").addClass("on");
+					bookObj.getData();
+					alert("즐겨찾기에 등록되었습니다.");
+				}
+			});
+		},
+		getData : function(){
+			var tUrl = "/gscvs/ko/gscommon/set-bookmark";
+			$("#dataType").val("S");
+
+			$.ajax({
+				type : "post",
+				url : tUrl + "?" + bookObj.getCSRFToken(),
+				data : $("form#" + bookObj.formName ).serialize(),
+				dataType : "json",
+				error : function( request, status, error ){
+					console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
+				},
+				success : function(result){
+					var resultCode = JSON.parse(result);
+					
+					var bookMarkHtml = "";
+					for(var i = 0; i < resultCode.length; i++) {
+						bookMarkHtml += "<li id='bookMarkList_"+i+"'><div class='menu_cnt'><a href='"+resultCode[i].BookMarkAddress+"'>"+resultCode[i].PageName+"</a></div><div class='menu_del'><a href=\"javascript:bookMenuObj.setFormInformation(\'"+resultCode[i].pk+"\', \'bookMarkList_"+i+"\', \'"+resultCode[i].PageID+"\');\">삭제</a></div></li> \n";						
+					}
+					$("#bookMarkListBox").html(bookMarkHtml);
+					bookMenuObj.setMoveHTML();
+				}
+			});
+		},
+		getCSRFToken : function(){
+			return "CSRFToken="+$("[name='CSRFToken']").val();
+	 	}
+}
+
+
+var naviListController = function(){
+	this._FONT_SIZE = -1;
+	this._NAVI_INFO = [];
+	this._MOTION_TIME = 0.4;
+	this._UL_STR = ".lctwrap ul.lct > li .lct_ly";
+	this._LI_STR = ".lctwrap ul.lct > li";
+	this._OPEN_MENU = -1;
+	this._MENU_TAB_WIDTH = 80;
+	this.init = function(){
+		var tThis = this;
+		var arrAfterWidth = [];
+		var beforeWidth = 0;
+		this._FONT_SIZE = parseInt( $( this._UL_STR + " ul li a" ).css( "font-size" ) );
+		$( ".lctwrap ul.lct > li > .menuArea" ).each(function() {
+			$(this).data("areaWidth", parseInt($(this).parent().find("div.lct_ly").css("width")));
+			$(this).on("click", function() {
+					tThis.bindExplosureMenu($(this));
+			});
+		});
+	};
+	this.bindExplosureMenu = function($clickMenu) {
+		if("none" == $clickMenu.parent().find("div.lct_ly").css("display")) {
+			this.showMenu($clickMenu);
+		} else {
+			this.hideMenu($clickMenu);
+			this._OPEN_MENU = -1;
+		}
+	};
+	this.showMenu = function($clickMenu) {
+		var tThis = this;
+		if(this._OPEN_MENU != -1 && this._OPEN_MENU != $clickMenu) {
+			tThis.hideMenu(this._OPEN_MENU);
+		}
+		this._OPEN_MENU = $clickMenu;
+		var $clickMenuParent = $clickMenu.parent();
+		$clickMenuParent.css("background" , "none").css("padding-left", "20px");
+		$clickMenuParent.find("div.lct_ly").show();
+		if($clickMenuParent.next()) {
+			$clickMenuParent.next().addClass("selecr_r");
+		}
+
+		var tIcon = this.getIcon( $clickMenu );
+		var gabWidth = 0;
+		var areaWidth = $clickMenu.data("areaWidth");
+
+		TweenMax.set( tIcon, { x:0 } );
+		TweenMax.to( tIcon, 0.2, { x:gabWidth } );
+
+		TweenMax.set( $clickMenuParent.find("div.lct_ly").find( " ul li a" ), { fontSize:parseInt( this._FONT_SIZE / 3 ) + "px" } );
+		TweenMax.to( $clickMenuParent.find("div.lct_ly").find( " ul li a" ), this._MOTION_TIME, { fontSize:( this._FONT_SIZE ) + "px", ease:Power4.easeOut } );
+
+		TweenMax.set( $clickMenuParent.find("div.lct_ly"), { alpha:0, width:areaWidth } ) ;
+		TweenMax.to( $clickMenuParent.find("div.lct_ly"), this._MOTION_TIME, { alpha:1, width:areaWidth+this._MENU_TAB_WIDTH, ease:Power4.easeOut, onComplete:this.showComplete, onCompleteParams:[ $clickMenu ]  } );
+	};
+	this.hideMenu = function($clickMenu) {
+		var $clickMenuParent = $clickMenu.parent();
+		if($clickMenuParent.next()) {
+			$clickMenuParent.next().removeClass("selecr_r");
+		}
+		$clickMenuParent.css("background" , "").css("padding-left", "20px");
+		$clickMenuParent.find("div.lct_ly").show();
+
+		var tIcon = this.getIcon( $clickMenu );
+		var gabWidth = 0;
+		var areaWidth = $clickMenu.data("areaWidth");
+
+		TweenMax.set( tIcon, { x:gabWidth } );
+		TweenMax.to( tIcon, 0.2, { x:0 } );
+
+		TweenMax.set( $clickMenuParent.find("div.lct_ly").find( " ul li a" ), { fontSize:"0" } );
+		TweenMax.set( $clickMenuParent.find("div.lct_ly"), { alpha:1, width:areaWidth+this._MENU_TAB_WIDTH } );
+		TweenMax.to( $clickMenuParent.find("div.lct_ly"), this._MOTION_TIME, { alpha:0, width:0, ease:Power4.easeOut, onComplete:this.hideComplete, onCompleteParams:[ $clickMenu ] });
+	};
+	this.getIcon = function($clickMenu) {
+		var rObj;
+		if($clickMenu.parent().next()) {
+			rObj = $clickMenu.find(".lct_op");
+		} else {
+			rObj = $clickMenu.find(".lct_lst");
+		}
+		return rObj;
+	}
+	this.showComplete = function( $clickMenu ){
+	};
+	this.hideComplete = function( $clickMenu ){
+		$clickMenu.parent().find("div.lct_ly").hide();
+	};
+}
+
+var naviMenu = new naviListController();
+
+$(document).ready(function(){
+
+	naviMenu.init();
+
+	
+$(".lctwrap a").on("click", function(){
+	try{
+		if($(this).hasClass("home")){
+			_satellite.scTrackEvent('breadcrumb.click','link.linkName',"breadcrumb^" + $(this).text());
+		}else if($(this).hasClass("menuArea")){
+			_satellite.scTrackEvent('breadcrumb.click','link.linkName',"breadcrumb^" + trim($(this).find("span:first").text()));
+		}else{
+			_satellite.scTrackEvent('breadcrumb.click','link.linkName',"breadcrumb^" + trim($(this).parents("div:first").prev("a").find("span:first").text()) + "^" + $(this).text());
+		}
+	} catch(e) { }	
+});	
+
+
+});
+
+//]]>
+</script>
+<!-- navigation -->
+<div class="cnt_topwrap">
+<div class="cnt_top">
+<!-- location -->
+<!-- 참고
+					웹접근성으로 인해 '메뉴열기'와 '메뉴닫기'를 설정했습니다.
+					메뉴닫기를 클릭했을때도 열린 메뉴가 닫혀야 합니다.
+				 -->
+<div class="lctwrap">
+<ul class="lct">
+<li><a class="home" href="/gscvs/ko/main">홈</a></li>
+<li><a class="menuArea" href="#" onclick="return false;">
+<span>매장/서비스</span>
+<span class="lct_op">메뉴열기</span>
+</a>
+<div class="lct_ly" style="display:none">
+<ul>
+<li>
+<a href="/gscvs/ko/products/event-goods">상품</a>
+</li>
+<li>
+<a href="#;">이벤트</a>
+</li>
+<li>
+<a href="/gscvs/ko/membership-services/gs-retail">멤버십</a>
+</li>
+<li>
+<a href="/gscvs/ko/franchise-info/guide">창업안내</a>
+</li>
+<li>
+<a href="/gscvs/ko/win-win-cooperation/benefits">상생협력</a>
+</li>
+<li class="pb20">
+<a href="/gscvs/ko/about-gs25/gs25introduce">GS25소개</a>
+</li>
+</ul>
+<!-- <div class="lcy_cls"><a href="#" onclick="return false;">메뉴닫기</a></div> -->
+</div>
+</li>
+<li><a class="lst menuArea" href="#" onclick="return false;">
+<span>매장검색</span>
+<span class="lct_lst">메뉴열기</span>
+</a>
+<div class="lct_ly" style="display:none">
+<ul>
+<li>
+<a href="/gscvs/ko/store-services/gs25-in-everyday-life">생활 서비스</a>
+</li>
+<li>
+<a href="/gscvs/ko/store-services/new-concept">카운터FF 점포</a>
+</li>
+<li>
+<a href="/gscvs/ko/store-services/myrefrigerator">나만의 냉장고</a>
+</li>
+<li class="pb20">
+<a href="/gscvs/ko/products/gs-tv">GSTV</a>
+</li>
+</ul>
+<!-- <div class="lcy_cls"><a href="#" onclick="return false;">메뉴닫기</a></div> -->
+</div>
+</li>
+</ul>
+</div>
+<!-- sns -->
+<div class="snswrap">
+<ul>
+<li><a class="sns_like" href="javascript:bookObj.loginChk();" id="bookMarkBtn">즐겨찾기</a></li>
+<li class="widget">
+<script charset="utf-8" src="https://101.livere.co.kr/js/livere8_lib.js" type="text/javascript"></script>
+<div id="action_view_container">
+<script type="text/javascript">
+											var consumer_seq 	= "449";
+											var livere_seq 		= "11933";
+											var smartlogin_seq 	= "500";
+											var title = "GS리테일"; 
+											if(navigator.appVersion.indexOf('MSIE 8.0') >= 0 || navigator.appVersion.indexOf('Trident/4.0') >= 0){
+												title = document.title;
+											}
+											else {
+												//var parser = new DOMParser();
+	                                            //var titleTmp = "&#47588;&#51109;&#44160;&#49353; | GS25 Site";                                            
+	                                            //title = $(parser.parseFromString(titleTmp, "text/html")).text();
+	                                            title = $("title").text();
+	                                            if ( title == '' ) {
+	                                            	title = "GS리테일";
+	                                            }
+											}
+                                            var refer = "gs25.gsretail.com/gscvs/ko/store-services/locations";
+											livereReply = new Livere( livere_seq , refer , title );
+											livereLib.start();
+										</script>
+</div>
+</li>
+<li><a class="print" href="javascript:window.print();">print</a></li>
+</ul>
+</div>
+<!-- //sbns -->
+</div>
+</div>
+<div class="popwrap lypop_my1" id="lypop_my1" style="display:none">
+<div class="pop_tltwrap">
+<h4 class="pop_tlt1">로그인 안내</h4>
+</div>
+<div class="pop_cnt">
+<p class="pop_sect">이 페이지를 즐겨찾기 하기 위해서는 로그인이 필요합니다.<br/>로그인 후 이용해 주시기 바랍니다.</p>
+<div class="btnwrap">
+<input class="btn_arr basic1" onclick="bookObj.loginMove();" type="button" value="로그인 하기"/>
+</div>
+</div>
+<div class="pop_cls" onclick="bookObj.popupClose();">
+<a href="#">닫기</a>
+</div>
+</div>
+</div>
+<div id="globalMessages">
+</div>
+<div class="yCmsComponent span-24 section1 cms_disp-img_slot">
+<div class="cnt">
+<form action="" method="post">
+<div class="store">
+<h3 class="tlt3">매장검색</h3>
+<div class="tlt3_txt">
+<p>전국 곳곳 GS25 매장을 안내해 드립니다.</p>
+<p>지역별 매장 또는 매장명 검색으로 GS25를 찾아보세요.</p>
+</div>
+<!-- store sch box -->
+<div class="stsch_box">
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		$("#searchButton").click(function(){
+			_board_info.searchType = "";
+			boardViewController.getDataList(1);
+			
+			try{
+				var stb1Val = $("#stb1").find("option[value='" + $("#stb1").val() + "']").text();	
+				_satellite.scTrackEvent('store.finder','multi-val','{store.searchTerm : '+$('#stb4').val()+',store.searchFilter : '+stb1Val+' '+$('#stb2').val()+' '+$('#stb3').val()+'}');
+			} catch(e) { }	
+			
+		});
+		$("#searchAllButton").click(function(){
+			_board_info.searchType = "all";
+			_board_info.searchTypeService = "";
+			_board_info.searchTypeLotto = "";
+			_board_info.searchTypeToto = "";
+			_board_info.searchTypeCoffee = "";
+			_board_info.searchTypeBakery = "";
+			_board_info.searchTypeInstant = "";
+			_board_info.searchTypeDrug = "";
+			_board_info.searchTypeSelf25 = "";
+			_board_info.searchTypePost = "";
+			_board_info.searchTypeBattery = "";
+			_board_info.searchTypeATM = "";
+			_board_info.searchTypeWithdrawal = "";
+			_board_info.searchTypeTaxrefund = "";
+	 		_board_info.searchTypeGelasoft = "";
+	 		
+	 		$(".stsch_nav > ul > li > a").each(function(index){
+				$(this).removeClass("on");
+			});
+	 		
+	 		$("#stb1").find("option:first").attr("selected", "selected");
+	 		$("#stb2").find("option:first").attr("selected", "selected");
+	 		$("#stb3").find("option:first").attr("selected", "selected");
+	 		$("#stb4").prop("value", "");
+	 		
+			boardViewController.getDataList(1);
+		});
+	});
+
+	// 시도로 군구찾기
+	function fnSidoComboChange() {
+		if ("" == $("#stb1").val()) {
+		    $("#stb2").html("<option value=\"\">시/군/구 선택</option>");
+		    return;
+		}
+        $("#stb3").html("<option value=\"\">동 선택</option>");        
+		//시도 검색
+		var url = "/gscvs/ko/gsapi/gis/searchGungu?";
+		var params = {"stb1" : encodeURIComponent($("#stb1").val())};
+
+		$.ajax({
+	        url: url,
+	        cache : false,
+	        type: "GET",
+	        data : params,
+	        dataType: "json",
+			contentType : "application/json",
+		    success: function (response) {
+	            //시/군/구 바인딩
+	            if ( response.resultCode == "00000") {
+	                setGunguResponse(response.result);
+	            }
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) {
+	       		alert("일시 장애가 발생하였습니다. 잠시후 다시 시도하여 주세요.");
+	        }
+		});
+	}
+
+	// [1]시/도 콤보박스 Ajax 호출 완료 시 	
+	function setGunguResponse(Data) {
+	    $("#stb2").html("<option value=\"\" checked>시/군/구 선택</option>");
+	
+	    if (Data != null && Data.length > 0 ) {
+            for (i = 0; i < Data.length; i++) {
+	            row = Data[i];
+
+	            if (row != null) {
+	                $("#stb2").append("<option value='" + fnOutValue(row[0]) + "'>" + fnOutValue(row[1]) + "</option>");
+	            }
+	        }
+	    }
+	    
+	    //$("SELECT").selectbox("detach").selectbox("attach");
+	}
+
+	   // 시도로 군구찾기
+    function fnGugunComboChange() {
+        if ("" == $("#stb1").val()) {
+            $("#stb2").html("<option value=\"\">시/군/구 선택</option>");
+            return;
+        }
+
+        if ("" == $("#stb2").val()) {
+            $("#stb3").html("<option value=\"\">동 선택</option>");
+            return;
+        }
+        
+        //시도 검색
+        var url = "/gscvs/ko/gsapi/gis/searchDong?";
+        var params = {"stb1" : encodeURIComponent($("#stb1").val()),
+        		       "stb2" : encodeURIComponent($("#stb2").val())};
+
+        $.ajax({
+            url: url,
+            cache : false,
+            type: "GET",
+            data : params,
+            dataType: "json",
+            contentType : "application/json",
+            success: function (response) {
+            	if ( response.resultCode == "00000") {
+            		setDongResponse(response.result);
+            	}
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+            	alert("일시 장애가 발생하였습니다. 잠시후 다시 시도하여 주세요.");
+            }
+        });
+    }
+
+    // [2]구군 콤보박스 Ajax 호출 완료 시     
+    function setDongResponse(Data) {
+        $("#stb3").html("<option value=\"\" checked>동 선택</option>");
+    
+        if (Data != null && Data.length > 0 ) {
+            for (i = 0; i < Data.length; i++) {
+                row = Data[i];
+
+                if (row != null) {
+                    $("#stb3").append("<option value='" + fnOutValue(row[0]) + "'>" + fnOutValue(row[1]) + "</option>");
+                }
+            }
+        }
+        
+        //$("SELECT").selectbox("detach").selectbox("attach");
+    }
+
+    //Response 헤더 체크
+    function fnChkHeader(obj) {
+    	var Head = obj.header;
+    	if (Head.errorcode != "0") {
+    		return true;
+  		} else {
+  			return false;
+  		}
+    }
+
+    //널 제거
+    function fnOutValue(str) {
+        if (str == "null" || str == null) str = "";
+        return str;
+    }
+//]]>
+</script>
+<div class="stsch">
+<ul class="stsch_form">
+<li>
+<span class="st_dot"><label for="stb1">지역구분</label></span>
+<div class="stb_sel">
+<div class="sel5_w">
+<select class="select1" id="stb1" name="" onchange="fnSidoComboChange();" title="지역 선택">
+<option value="">지역 선택</option>
+<option value="11">서울시</option>
+<option value="26">부산시</option>
+<option value="27">대구시</option>
+<option value="29">광주시</option>
+<option value="28">인천시</option>
+<option value="30">대전시</option>
+<option value="31">울산시</option>
+<option value="36">세종특별자치시</option>
+<option value="41">경기도</option>
+<option value="42">강원도</option>
+<option value="44">충청남도</option>
+<option value="43">충청북도</option>
+<option value="48">경상남도</option>
+<option value="47">경상북도</option>
+<option value="46">전라남도</option>
+<option value="45">전라북도</option>
+<option value="50">제주특별자치도</option>
+</select>
+</div>
+<div class="sel5_w">
+<select class="select2" id="stb2" name="" onchange="fnGugunComboChange();" title="시/군/구">
+<option value="">시/군/구</option>
+</select>
+</div>
+<div class="sel5_w mr0">
+<select class="select2" id="stb3" name="" title="동 선택">
+<option value="">동 선택</option>
+</select>
+</div>
+</div>
+</li>
+<li>
+<span class="st_dot"><label for="stb4">매장명 검색</label></span>
+<div class="stb_sel">
+<input class="stsch_ipt" id="stb4" name="stb4" onkeypress="if(event.keyCode==13) {return false;}" type="text" value=""/>
+</div>
+</li>
+</ul>
+<div class="stb_btnwrap">
+<a class="btn sch blue" href="#;" id="searchButton"><span>검색</span></a>
+<a class="btn sch_all gray" href="#;" id="searchAllButton"><span>전체보기</span></a>
+</div>
+</div><div class="stsch_navwrap">
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		$(".stsch_nav > ul > li > a").each(function(index){
+			
+			$(this).click(function(e){
+				if( $(this).hasClass('on') ) {
+					$(this).removeClass("on").attr('title','');		
+					_board_info.searchTypeService = _board_info.searchTypeService - 1;
+				} else {
+					$(this).addClass("on").attr('title','선택됨');
+					_board_info.searchTypeService = _board_info.searchTypeService + 1;
+				}
+	            _board_info.searchType = "";
+				boardViewController.getDataList(1);
+				
+				e.preventDefault();
+			});
+		});
+	});
+//]]>
+</script>
+<div class="stsch_nav_tlt">원하는 서비스를 선택하세요.</div>
+<div class="stsch_nav">
+<ul class="nav_tap">
+<li><a class="lotto" href="#;"><span>로또판매</span></a></li>
+<li><a class="toto" href="#;"><span>스포츠 토토</span></a></li>
+<li><a class="coffee" href="#;"><span>커피</span></a></li>
+<li><a class="bakery" href="#;"><span>베이커리</span></a></li>
+<li><a class="instant" href="#;"><span>치킨25</span></a></li>
+<li><a class="drug" href="#;"><span>의약품</span></a></li>
+<li><a class="self25" href="#;"><span>self25</span></a></li>
+<li><a class="post" href="#;"><span>택배</span></a></li>
+<li><a class="battery" href="#;"><span>보조배터리<br/>대여</span></a></li>
+</ul>
+<!-- 2016-11-15 추가 -->
+<ul class="nav_tap line2">
+<li class="first_line"><a class="bank25" href="#"><span>현금 입/출금</span></a></li><!-- 2017-04-19 수정 -->
+<li><a class="withdrawal" href="#"><span>현금 출금</span></a></li><!-- 2017-04-19 수정 -->
+<li><a class="tax" href="#"><span class="blind">TAX REFUND</span></a></li>
+<li><a class="jella_soft" href="#"><span>젤라소프트</span></a></li><!-- 2017-10-23 추가 -->
+</ul>
+<!-- //2016-11-15 추가 -->
+</div></div>
+</div>
+<!--// store sch box -->
+<!-- store search result -->
+<script src="//apis.daum.net/maps/maps3.js?apikey=7ff245ec8792510a1724021f30fecd8d&amp;libraries=services" type="text/javascript"></script>
+<script charset="utf-8" src="https://101.livere.co.kr/js/livere8_lib.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+	var dict = {
+			lotto : "로또판매",
+			toto : "스포츠 토토",
+			coffee : "커피",
+			bakery : "베이커리",
+			instant : "치킨25",
+			drug : "의약품",
+			self25 : "self25",
+			post : "택배",
+			battery : "보조배터리대여",
+			atm : "현금 입/출금",
+			withdrawal : "현금 출금",
+			tax : "TAX REFUND",
+			gelasoft : "젤라소프트"
+	}
+	var _board_info = {
+			listCnt 		    : 5,  		// default 5
+			pageNum  		: 1,
+			pagingCnt 		: 10,    	// static count default 10
+			totlPageNum  : 1,
+			searchShopName  : "",
+			formName 		: "boardGs25Store",
+			searchSido : "",
+			searchGugun : "",
+            searchDong : "",
+			searchType : "",
+			searchTypeService : 0,
+			searchTypeLotto : 0,
+			searchTypeToto : 0,
+			searchTypeCoffee : 0,
+			searchTypeBakery : 0,
+			searchTypeInstant : 0,
+			searchTypeDrug : 0,
+			searchTypeSelf25 : 0,
+			searchTypePost : 0,
+			searchTypeBattery : 0,
+			searchTypeATM : 0,
+			searchTypeWithdrawal : 0,
+			searchTypeTaxrefund : 0,
+			searchTypeGelasoft : 0
+	}
+
+	var boardViewController = {
+		getDataList : function( n ){
+			var tURL = "/gscvs/ko/store-services/locationList";
+			var tFormHTML = "";
+
+			_board_info.pageNum = n;
+			_board_info.searchShopName = $("#stb4").val();
+			boardViewController.getServiceType();
+
+			_board_info.searchSido = $("#stb1").val();
+			_board_info.searchGugun = $("#stb2").val();
+			_board_info.searchDong = $("#stb3").val();
+
+			/*조회 할려는 서비스가 있는지 검사*/
+			/* $(".stsch_nav > ul > li > a").each(function(index){
+				if($(this).attr("class").lastIndexOf("on") != -1) {
+					_board_info.searchTypeService = _board_info.searchTypeService + 1;
+				}
+			}); */
+
+			tFormHTML += "<input type=\"hidden\" name=\"pageNum\" id=\"pageNum\" value=\"" + _board_info.pageNum + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"pageSize\" id=\"pageSize\" value=\"" + _board_info.listCnt + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchShopName\" id=\"searchShopName\" value=\"" + _board_info.searchShopName + "\"/>";
+			
+			tFormHTML += "<input type=\"hidden\" name=\"searchSido\" id=\"searchSido\" value=\"" + _board_info.searchSido + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchGugun\" id=\"searchGugun\" value=\"" + _board_info.searchGugun + "\"/>";
+            tFormHTML += "<input type=\"hidden\" name=\"searchDong\" id=\"searchDong\" value=\"" + _board_info.searchDong + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchType\" id=\"searchType\" value=\"" + _board_info.searchType + "\"/>";
+
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeService\" id=\"searchTypeService\" value=\"" + _board_info.searchTypeService + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeLotto\" id=\"searchTypeLotto\" value=\"" + _board_info.searchTypeLotto + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeToto\" id=\"searchTypeToto\" value=\"" + _board_info.searchTypeToto + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeCoffee\" id=\"searchTypeCoffee\" value=\"" + _board_info.searchTypeCoffee + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeBakery\" id=\"searchTypeBakery\" value=\"" + _board_info.searchTypeBakery + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeInstant\" id=\"searchTypeInstant\" value=\"" + _board_info.searchTypeInstant + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeDrug\" id=\"searchTypeDrug\" value=\"" + _board_info.searchTypeDrug + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeSelf25\" id=\"searchTypeSelf25\" value=\"" + _board_info.searchTypeSelf25 + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypePost\" id=\"searchTypePost\" value=\"" + _board_info.searchTypePost + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeBattery\" id=\"searchTypeBattery\" value=\"" + _board_info.searchTypeBattery + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeATM\" id=\"searchTypeATM\" value=\"" + _board_info.searchTypeATM + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeWithdrawal\" id=\"searchTypeWithdrawal\" value=\"" + _board_info.searchTypeWithdrawal + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeTaxrefund\" id=\"searchTypeTaxrefund\" value=\"" + _board_info.searchTypeTaxrefund + "\"/>";
+			tFormHTML += "<input type=\"hidden\" name=\"searchTypeGelasoft\" id=\"searchTypeGelasoft\" value=\"" + _board_info.searchTypeGelasoft + "\"/>";
+
+			boardViewController.setFormInformation( tFormHTML );
+			boardViewController.getData( tURL );
+		},
+		setFormInformation : function( formHTML ){
+			$( "#" + _board_info.formName ).remove();
+			var tFormHTML = "<form name=\"" + _board_info.formName + "\" id=\"" + _board_info.formName + "\">";
+			tFormHTML += formHTML;
+			tFormHTML += "</form>";		
+			$("body").append( tFormHTML );		
+		},
+		getData : function( tUrl ){
+			$.ajax({ 
+				type : "post", 
+				url : tUrl + "?" + boardViewController.getCSRFToken(),			
+				data : $("form#" + _board_info.formName ).serialize(),			
+				dataType : "json",
+				error : function( request, status, error ){				
+					console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
+				}, 
+				success : function(result){
+					boardViewController.setBestListHTML( JSON.parse(result) );
+				}
+			});
+		},
+		setBestListHTML : function( data ){
+			
+			//페이징 총 수
+			_board_info.totlPageNum = data.pagination.totalNumberOfResults;
+
+			//리스트 구성
+			var beginPageNum = boardViewController.getBeginPageNum();
+			var tBoardHtml = "";
+			var tMapEventHtml = "";
+			$("#storeInfoList > tr").remove();
+
+			if (data.results.length == 0) {
+				tBoardHtml = tBoardHtml +"<tr>";
+				tBoardHtml = tBoardHtml + "<td colspan=\"2\" style=\"text-align:center;\">";
+				tBoardHtml = tBoardHtml + "조회 조건에 맞는 매장이 없습니다.";				
+				tBoardHtml = tBoardHtml +"</td>";
+				tBoardHtml = tBoardHtml +"</tr>";
+
+			}
+			for (var i = 0; i < data.results.length; i++) {
+				if (data.results[i].lat != "" && data.results[i].longs != "") {
+					tMapEventHtml = "style='cursor:pointer;' href=\"javascript:mapControllerManager.displayMapPoint('map', "+data.results[i].lat +"," + data.results[i].longs +");\"";
+				} else {
+					tMapEventHtml = "";
+				}
+				tBoardHtml = tBoardHtml +"<tr>";
+				tBoardHtml = tBoardHtml+"<td><a class='st_name' "+tMapEventHtml+" data-sc-action= \"store.viewDetail\" data-dimension-name= \"store.storeName\" data-dimension-value= \"" + data.results[i].shopName + " 매장명 클릭\">" + data.results[i].shopName + "</a></td>";
+				tBoardHtml = tBoardHtml+"<td>";
+				/* tBoardHtml = tBoardHtml+"<p class='st_address' "+tMapEventHtml+">"+ data.results[i].address1 + " " + data.results[i].address2 + " " + data.results[i].address3 + " " + data.results[i].address4 +"</p>"; */
+				tBoardHtml = tBoardHtml+"<a class='st_address' "+tMapEventHtml+" data-sc-action= \"store.viewDetail\" data-dimension-name= \"store.storeName\" data-dimension-value= \"" + data.results[i].shopName + " 매장명 클릭\">"+ data.results[i].address + "</a>";
+				tBoardHtml = tBoardHtml+"<div class='stsch_icon'>";
+				if ( data.results[i].offeringService != undefined) {
+					for (var j = 0; j < data.results[i].offeringService.length; j++) {
+						if(data.results[i].offeringService[j] == "atm"){
+							tBoardHtml = tBoardHtml+"<span class='"+"bank25"+"'>"+boardViewController.getServiceText(data.results[i].offeringService[j])+"</span>";	
+						}
+						else{
+							tBoardHtml = tBoardHtml+"<span class='"+data.results[i].offeringService[j]+"'>"+boardViewController.getServiceText(data.results[i].offeringService[j])+"</span>";
+						}
+					}
+				}
+				
+				tBoardHtml = tBoardHtml+"</div>";
+				tBoardHtml = tBoardHtml+"</td>";
+				tBoardHtml = tBoardHtml+"</tr>";				
+			}
+			$("#storeInfoList").append(tBoardHtml);
+			
+			var iPagingHtml = "";
+			$("#pagingTagBox > a").remove();
+			$("#pagingTagBox > span").remove();
+
+			var beginNum = boardViewController.getPageBeginIdx();
+			var endNum = boardViewController.getPageEndIdx( beginNum );
+			if (_board_info.pageNum == 1) {
+				iPagingHtml = iPagingHtml + "<a href=\"#prev2\" class=\"prev2\">처음 페이지로 이동</a>";
+				iPagingHtml = iPagingHtml + "<a href=\"#prev\" class=\"prev\">이전 페이지로 이동</a>";	
+			} else if (_board_info.pageNum > 1) {
+				iPagingHtml = iPagingHtml + "<a href=\"#prev2\" class=\"prev2\" onclick=\"boardViewController.setPagingNowIdx('PrevMax');\">처음 페이지로 이동</a>";
+				iPagingHtml = iPagingHtml + "<a href=\"#prev\" class=\"prev\" onclick=\"boardViewController.setPagingNowIdx('Prev');\">이전 페이지로 이동</a>";
+			}
+			iPagingHtml = iPagingHtml + "<span class='num' id='pagingTag'>";
+			
+			for( var i=beginNum; i<=endNum; i++ ){
+
+				var onClass = "";
+				var onClick = "";
+				var pagingNumGubun = "";
+				if (Number(data.pagination.currentPage+1) == i) {
+					onClass = " class=\"on\"";
+					onClick = "";					
+				} else {
+					onClass = "";
+					onClick = "onClick=\"boardViewController.getDataList("+i+")\"";
+				}
+				
+				if (i == endNum) {
+					pagingNumGubun = "";
+				} else {
+					pagingNumGubun = "|";
+				}
+
+				iPagingHtml = iPagingHtml + "<a href='#;' "+onClass+" " + onClick + ">"+ i +"</a>"+pagingNumGubun;
+			}
+
+			iPagingHtml = iPagingHtml + "</span>";
+			if( _board_info.pageNum < boardViewController.getPageMaxIdx() ){
+				iPagingHtml = iPagingHtml + "<a href=\"#next\" class=\"next\"onclick=\"boardViewController.setPagingNowIdx('Next');\">다음 페이지로 이동</a>";
+				iPagingHtml = iPagingHtml + "<a href=\"#next2\" class=\"next2\"onclick=\"boardViewController.setPagingNowIdx('NextMax');\">마지막 페이지로 이동</a>";
+				
+			} else {
+				iPagingHtml = iPagingHtml + "<a href=\"#next\" class=\"next\">다음 페이지로 이동</a>";
+				iPagingHtml = iPagingHtml + "<a href=\"#next2\" class=\"next2\">마지막 페이지로 이동</a>";
+			}
+			$("#pagingTagBox").append(iPagingHtml);
+			
+			$(".btn_prev").bind("click", function(e){
+				if (beginNum > 1) {
+					boardViewController.getDataList(Number(beginNum-1));
+				}
+			});
+			$(".btn_next").bind("click", function(e){
+				if (endNum < data.pagination.numberOfPages) {
+					boardViewController.getDataList(Number(endNum+1));
+				}
+			});
+		},
+	 	getBeginPageNum : function(){
+			var beginNum = 1;
+			if (_board_info.pageNum > 1) {
+				beginNum = ( _board_info.pageNum + _board_info.listCnt ) - 1;
+			}
+			return beginNum;	 		
+	 	},
+		getPageBeginIdx : function(){
+	 		var beginNum = Math.floor( _board_info.pageNum / _board_info.pagingCnt );
+			if( ( _board_info.pageNum % _board_info.pagingCnt ) == 0 )  beginNum = beginNum - 1;
+			return ( beginNum * _board_info.pagingCnt ) + 1;
+	 	},
+	 	getPageEndIdx : function( beginIdx ){
+	 		var rIdx = ( beginIdx + _board_info.pagingCnt ) - 1;
+	 		//var totalEndIdx = _board_info.totlPageNum;
+	 		var totalEndIdx = boardViewController.getPageMaxIdx();
+	 		if( totalEndIdx < rIdx ) rIdx = totalEndIdx;
+	 		return rIdx;
+	 	},
+	 	getPageMaxIdx : function(){
+	 		var rIdx = Math.floor( _board_info.totlPageNum / _board_info.listCnt );
+	 		if( _board_info.totlPageNum % _board_info.listCnt != 0 ) rIdx = rIdx + 1;
+	 		return rIdx;
+	 	},
+	 	setPagingNowIdx : function(gubun){
+	 		if(gubun == "NextMax") {
+	 			_board_info.pageNum = boardViewController.getPageMaxIdx();
+	 		} else if(gubun == "Next") {
+	 			_board_info.pageNum = _board_info.pageNum + 1;
+	 		}else if (gubun == "PrevMax") {
+	 			_board_info.pageNum = 1;
+	 		} else if (gubun == "Prev") {
+	 			_board_info.pageNum = _board_info.pageNum - 1;
+	 		}
+	 		boardViewController.getDataList(_board_info.pageNum);
+	 	},
+	 	getServiceText : function(key){
+			return dict[key]	 		
+	 	},
+	 	getServiceType : function(){
+	 		_board_info.searchTypeLotto = 0;
+	 		_board_info.searchTypeToto = 0;
+	 		_board_info.searchTypeCoffee = 0;
+	 		_board_info.searchTypeBakery = 0;
+	 		_board_info.searchTypeInstant = 0;
+	 		_board_info.searchTypeDrug = 0;
+	 		_board_info.searchTypeSelf25 = 0;
+	 		_board_info.searchTypePost = 0;
+	 		_board_info.searchTypeBattery = 0;
+	 		_board_info.searchTypeATM = 0;
+	 		_board_info.searchTypeWithdrawal = 0;
+	 		_board_info.searchTypeTaxrefund = 0;
+	 		_board_info.searchTypeGelasoft = 0;
+	 		
+	 		$(".stsch_nav > ul > li > a").each(function(index){
+				if($(this).attr("class").lastIndexOf("on") != -1) {
+					if($(this).attr("class").lastIndexOf("lotto") != -1) {
+						_board_info.searchTypeLotto = "1";
+					} else if ($(this).attr("class").lastIndexOf("toto") != -1) {
+						_board_info.searchTypeToto = "1";
+					} else if ($(this).attr("class").lastIndexOf("coffee") != -1) {
+						_board_info.searchTypeCoffee = "1";
+					} else if ($(this).attr("class").lastIndexOf("bakery") != -1) {
+						_board_info.searchTypeBakery = "1";
+					} else if ($(this).attr("class").lastIndexOf("instant") != -1) {
+						_board_info.searchTypeInstant = "1";
+					} else if ($(this).attr("class").lastIndexOf("drug") != -1) {
+						_board_info.searchTypeDrug = "1";
+					} else if ($(this).attr("class").lastIndexOf("self25") != -1) {
+						_board_info.searchTypeSelf25 = "1";
+					} else if ($(this).attr("class").lastIndexOf("post") != -1) {
+						_board_info.searchTypePost = "1";
+					} else if ($(this).attr("class").lastIndexOf("battery") != -1) {
+						_board_info.searchTypeBattery = "1";
+					} else if ($(this).attr("class").lastIndexOf("bank25") != -1) {
+						_board_info.searchTypeATM = "1";
+					} else if ($(this).attr("class").lastIndexOf("withdrawal") != -1) {
+						_board_info.searchTypeWithdrawal = "1";
+					} else if ($(this).attr("class").lastIndexOf("tax") != -1) {
+						_board_info.searchTypeTaxrefund = "1";
+					} else if ($(this).attr("class").lastIndexOf("jella_soft") != -1) {
+						_board_info.searchTypeGelasoft = "1";
+					}
+				}
+			});
+	 	},
+		getCSRFToken : function(){
+			return "CSRFToken="+$("[name='CSRFToken']").val();
+	 	}
+	}
+
+	var mapControllerManager = {
+		displayMapPoint : function( objStr, xpos, ypos){
+			
+			
+			if(xpos==undefined || ypos==undefined){
+				$("#mapBox").html("<div id=\"map\" style=\"width:350px;height:600px;\"><p><br /><br />지도가 없습니다</p></div>");
+				return false;
+			}
+			
+			
+			var lat = 0;
+			var longs = 0;
+			
+			$("#mapBox").html("<div id=\"map\" style=\"width:350px;height:600px;\"></div>");
+			
+			var geocoder = new daum.maps.services.Geocoder(), // 좌표계 변환 객체를 생성합니다
+		    wtmX = xpos, // 변환할 WTM X 좌표 입니다
+		    wtmY = ypos; // 변환할 WTM Y 좌표 입니다
+
+			// WTM 좌표를 WGS84 좌표계의 좌표로 변환합니다
+			
+			
+			geocoder.transCoord(wtmX, 
+		                    wtmY, 
+		                    daum.maps.services.Coords.KTM, // 변환을 위해 입력한 좌표계 입니다
+		                    daum.maps.services.Coords.WGS84, // 변환 결과로 받을 좌표계 입니다 
+		                    transCoordCB); // 변환 결과를 받을 콜백합수 입니다
+		                    
+ 			// 좌표 변환 결과를 받아서 처리할 콜백함수 입니다.
+ 			function transCoordCB(status, result) {
+ 			    // 정상적으로 검색이 완료됐으면 
+ 			    if (status === daum.maps.services.Status.OK) {
+ 			    	//GS25잠실3루점
+ 			    	//37.516404
+ 			    	//127.073573
+ 			    	/* lat = 37.516404;
+ 			    	longs = 127.073573; */
+ 			    	
+ 			     	lat = result.y;
+ 			    	longs = result.x; 
+ 			    }
+ 			    
+ 			    
+ 					
+ 			
+ 					var mapContainer = document.getElementById(objStr), // 지도를 표시할 div 
+ 					   mapOption = {
+ 					 	center: new daum.maps.LatLng(lat, longs), // 지도의 중심좌표
+ 					       level: 3, // 지도의 확대 레벨
+ 					       mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
+ 					   }; 
+ 				
+ 					// 지도를 생성한다 
+ 					var map = new daum.maps.Map(mapContainer, mapOption); 
+ 					
+ 					
+ 					
+ 					// 지도에 확대 축소 컨트롤을 생성한다
+ 					var zoomControl = new daum.maps.ZoomControl();
+ 					
+ 					var mapTypeControl = new daum.maps.MapTypeControl();
+ 				
+ 					// 지도의 우측에 확대 축소 컨트롤을 추가한다
+ 					
+ 					map.addControl(mapTypeControl, daum.maps.ControlPosition.RIGHT);
+ 					map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+ 				
+ 					// 지도에 마커를 생성하고 표시한다
+ 					var markerImageUrl = '/_ui/desktop/common/images/map_gs25.png', 
+ 						    markerImageSize = new daum.maps.Size(50, 60), // 마커 이미지의 크기
+ 						    markerImageOptions = { 
+ 						        offset : new daum.maps.Point(20, 42)// 마커 좌표에 일치시킬 이미지 안의 좌표
+ 						    };
+ 				
+ 					// 마커 이미지를 생성한다
+ 					var markerImage = new daum.maps.MarkerImage(markerImageUrl, markerImageSize, markerImageOptions);
+ 					
+
+ 					
+ 					// 마커를 변환된 위치에 표시합니다
+ 			        var marker = new daum.maps.Marker({
+ 			            position: new daum.maps.LatLng(lat, longs), // 마커를 표시할 위치입니다
+ 			            image : markerImage,
+ 			            map: map // 마커를 표시할 지도객체입니다
+ 			        })
+ 					
+ 			    
+ 			    
+ 			    
+ 			    
+ 			}
+ 			
+
+		
+			// 마커에 클릭 이벤트를 등록한다 (우클릭 : rightclick)
+			/* daum.maps.event.addListener(marker, 'click', function() {
+				console.log('마커를 클릭했습니다!');
+			}); */
+		
+			// 마커에 mouseover 이벤트를 등록한다
+			/* daum.maps.event.addListener(marker, 'mouseover', function() {
+			    console.log('마커에 mouseover 이벤트가 발생했습니다!');
+			}); */
+		
+			// 마커에 mouseout 이벤트 등록
+			/* daum.maps.event.addListener(marker, 'mouseout', function() {
+			    console.log('마커에 mouseout 이벤트가 발생했습니다!');
+			}); */
+		
+			// 마커에 dragstart 이벤트 등록
+			/* daum.maps.event.addListener(marker, 'dragstart', function() {
+			    console.log('마커에 dragstart 이벤트가 발생했습니다!');
+			}); */
+		
+			// 마커에 dragend 이벤트 등록
+			/* daum.maps.event.addListener(marker, 'dragend', function() {
+			    console.log('마커에 dragend 이벤트가 발생했습니다!');
+			}); */
+		}	
+	}
+	
+	$(document).ready(function(){
+		boardViewController.getDataList(1);
+		$("#mapBox").html("<img src=\"/_ui/desktop/common/images/gscvs/store/map_img.jpg\" alt=\"왼쪽에서 매장명을 선택해주세요!\" />");
+	});
+	
+	/*
+	$(window).keydown(function(event){
+	    if(event.keyCode == 13) {
+	    	event.preventDefault();
+	    	boardViewController.getDataList(1);
+	    }
+	});
+	*/
+//]]>
+</script>
+<div class="stsh_rewrap">
+<div class="result">
+<div class="tblwrap">
+<table class="tbl_ltype1 udline" summary="검색하신 매장의 목록입니다. 매장정보,주소와 제공서비스,지도보기를  제공합니다.">
+<caption>매장검색 목록</caption>
+<colgroup>
+<col style="width:36%"/>
+<col style="width:64%"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col">매장정보</th>
+<th scope="col">주소/제공서비스</th>
+</tr>
+</thead>
+<tbody id="storeInfoList">
+</tbody>
+</table>
+</div>
+</div>
+<div class="re_map">
+<div class="map_tlt">
+							지도보기
+						</div>
+<div class="map" id="mapBox">
+<div id="map" style="width:350px;height:510px;"></div>
+</div>
+</div>
+</div>
+<div class="paging clear" id="pagingTagBox">
+</div><!-- //store search result -->
+</div>
+</form>
+</div>
+</div><style type="text/css">
+/*  2016-02-04 추가 */
+.myarea {
+    left: 50% !important;
+    margin: 0 0 0 -600px !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 1200px !important;
+}
+/*  2016-02-04 추가 끝 */
+</style>
+<!-- 2015-11-30 추가 -->
+<!-- 2015-11-30 추가 -->
+<script type="text/javascript">
+//<![CDATA[
+var _pageInfo = {
+	moveHight : 31,
+	moveNowHight : 0,
+	moveNextIndex : 0,
+	moveTopIndex : 0,
+	moving : false,
+	moveCls : "",
+	downMovingMaxCnt : 3
+}
+
+var bookMenuObj = {
+	formName : "bookmarkForm",
+	setFormInformation : function(idx, e, pagenum){
+		$( "#" + bookMenuObj.formName ).remove();
+		var tFormHTML = "<form name=\"" + bookMenuObj.formName + "\" id=\"" + bookMenuObj.formName + "\">\n";
+		tFormHTML += "<input type=\"hidden\" name=\"pageId\" id=\"pageId\" value=\"locations-Page\"/>\n";
+		tFormHTML += "<input type=\"hidden\" name=\"dataType\" id=\"dataType\" value=\"D\"/>\n";
+		tFormHTML += "<input type=\"hidden\" name=\"idx\" id=\"idx\" value=\""+idx+"\"/>\n";
+		tFormHTML += "</form>\n";
+		$("body").append( tFormHTML );
+		bookMenuObj.setData(e, pagenum);
+	},
+	setData : function(e, pagenum){
+		var tUrl = "/gscvs/ko/gscommon/set-bookmark";
+
+		$.ajax({ 
+			type : "post", 
+			url : tUrl + "?" + bookMenuObj.getCSRFToken(),
+			data : $("form#" + bookMenuObj.formName ).serialize(),
+			dataType : "json",
+			error : function( request, status, error ){				
+				console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
+			}, 
+			success : function(resultCode){
+					if (resultCode == "0000") {
+						$("#"+e).remove();
+
+						if("locations-Page" == pagenum) {
+							$("#bookMarkBtn").attr("href", "javascript:bookObj.loginChk();");
+							$("#bookMarkBtn").removeClass("on")
+						}
+						
+						if($("#bookMarkListBox li").length == 0) {
+							
+							var tempHtml = "<p class=\"menu_tit\">나만의 메뉴</p>";
+							tempHtml += "<p class=\"nolst\" >즐겨찾기 메뉴는<br />최대 8개까지<br />등록 가능합니다.</p>";
+							tempHtml += "<div class=\"ctr\"><a href=\"#;\" class=\"prev\"  id=\"btn_up\">이전 나만의메뉴</a><a href=\"#;\" class=\"next\" id=\"btn_down\">다음 나만의 메뉴</a></div>";
+							$("#bookMarkListBoxTop").html(tempHtml);
+													
+						} else {
+							/* $("#bookMarkListBox li").each(function(index){
+								$("#bookMarkListBox li").eq(index).attr("id", "bookMarkList_"+index);	
+							}); */
+							bookObj.getData();
+							bookMenuObj.setMoveHTML();							
+						}
+						alert("정상적으로 삭제 되었습니다.");
+					} else if (resultCode == "9999") {
+						//문구는 바꾸던가 지우던가 해야함
+						alert("삭제 중 장애가 발생했습니다.");
+					}
+			}
+		});
+	},
+	serUpMoveController : function(loopCnt){
+		_pageInfo.moveCls = "-";
+		$("#bookMarkList_"+loopCnt).animate({top:-(_pageInfo.moveNowHight)+"px"}, 50, function(){
+			if ( loopCnt == Number($("#bookMarkListBox > li").length-1) ) {
+				_pageInfo.moving = false;
+			} else {
+				bookMenuObj.serUpMoveController(loopCnt+1);
+			}
+		});
+	},
+	serDownMoveController : function(loopCnt){
+
+		$("#bookMarkList_"+loopCnt).animate({top:(_pageInfo.moveCls+_pageInfo.moveNowHight)+"px"}, 50, function(){
+			if (loopCnt > 0) {
+				bookMenuObj.serDownMoveController(loopCnt-1);	
+			} else {
+				_pageInfo.moving = false;				
+			}
+		});
+	},
+	setMoveHTML : function(){
+		var imgBoxHtml = "";
+		var imgBtnHtml = "";
+
+		if($("#bookMarkListBox > li").length > 4){
+
+			$(".bookMarkListBox").css({"position":"absolute","width":"154px","height":"85px","overflow":"hidden"});
+			$(".bookMarkListBoxTop").css({"overflow":"hidden"});
+			$("#bookMarkListBox li").each(function(index){
+				$("#bookMarkListBox li").eq(index).css({"position":"relative","top":"0px"});	
+			});
+
+ 			$("#btn_up").click(function(){
+ 				if(!_pageInfo.moving){
+ 					
+ 					if(Number(_pageInfo.moveTopIndex+_pageInfo.downMovingMaxCnt) < Number($("#bookMarkListBox > li").length-1)) {
+ 	 					_pageInfo.moving = true;
+ 	 					_pageInfo.moveTopIndex += 1;
+ 						//현제 보이는 페이지 위로 밀기
+ 						_pageInfo.moveNowHight += _pageInfo.moveHight;
+ 						bookMenuObj.serUpMoveController( 0 );						
+ 					}
+ 				}
+ 			 });
+ 			 $("#btn_down").click(function(){
+ 			 	if(!_pageInfo.moving){
+					//현제 보이는 페이지 아래로 밀기
+ 					if(_pageInfo.moveTopIndex != 0) {
+ 	 			 		_pageInfo.moving = true;
+ 	 			 		_pageInfo.moveTopIndex -= 1;
+
+						_pageInfo.moveNowHight -= _pageInfo.moveHight;
+						if(_pageInfo.moveNowHight == 0) {
+							_pageInfo.moveCls = "+";
+						}
+						bookMenuObj.serDownMoveController( $("#bookMarkListBox > li").length-1 );	
+ 					}
+ 				 }
+ 			 });	
+		}
+	},	
+	getCSRFToken : function(){
+		return "CSRFToken="+$("[name='CSRFToken']").val();
+ 	},
+ 	getWatsonsCustomInfoGrade : function() {
+ 		var wssGd = "";
+ 		
+ 		return wssGd;
+ 	},
+ 	skyscraper : function() {
+ 		//2016-02-04 스카이스크래퍼 저해상도일때 추가
+		var myarea = $(".myarea_wrap:visible");
+		var windH = $(window).height();
+		var myareaH = myarea.height();
+
+		if(windH < myareaH){
+			scrollLock = true;
+			myarea.css({'position':'absolute','top':headHeight+'px'})
+		}else{
+			scrollLock = false;
+			myarea.removeAttr('style');
+			personaMenuContentScroll();
+		}
+		// --2016-02-04 스카이스크래퍼 저해상도일때 추가 끝
+ 	}
+}
+
+	$(function() {
+		bookMenuObj.setMoveHTML();
+		
+		
+		//2016.02.03 스카이스크래퍼 저해상도일때 추가
+		bookMenuObj.skyscraper();
+		$(window).resize(function(){
+			bookMenuObj.skyscraper();
+		});
+	});
+	
+
+//]]>
+</script>
+<!-- 개인화영역 -->
+<!-- 로그인 전 -->
+<div class="myarea">
+<div class="myarea_wrap" id="personaMenuContent">
+<!-- 2016-09-07 수정 -->
+<div class="mymenu">
+<div class="couwrap_off">
+<p>서비스 이용을<br/>위해 로그인<br/>해주세요.</p>
+<input class="btn_log" onclick="location.href='/gscvs/ko/sign-up/login';" type="button" value="로그인"/>
+</div>
+<ul class="my_lst">
+<!-- <li><a href="http://www.gsretail.com/gsretail/ko/common/events/attendance-event" class="my_m0">출석체크</a></li> 2018-03-21 삭제 -->
+<li><a class="my_m0" href="http://gs25.gsretail.com/gscvs/ko/products/youus-main">유어스 상품</a></li><!-- 2018-03-21 수정 -->
+<li><a class="my_m1" href="/gscvs/ko/products/event-goods">행사상품</a></li>
+<li><a class="my_m2" href="/gscvs/ko/products/customer-satisfaction/evaluation">고객만족평가</a></li>
+<li><a class="my_m3" href="/gscvs/ko/customer-engagement/event/current-events">EVENT</a></li>
+<li><a class="my_m4" href="https://contract.gsretail.com:7200" target="_blank" title="새창열기">가맹전자계약</a></li><!-- 2017-08-22 수정 -->
+</ul>
+<div class="menuwrap">
+<p class="menu_tit">나만의 메뉴</p>
+<p class="nolst">즐겨찾기 메뉴는<br/>최대 8개까지<br/>등록 가능합니다.</p>
+<div class="ctr"><a class="prev" href="#">이전 나만의메뉴</a><a class="next" href="#">다음 나만의 메뉴</a></div>
+</div>
+</div>
+<a class="top" href="#">TOP</a>
+</div>
+</div>
+<!-- 로그인 후 -->
+<!-- //개인화영역 -->
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function(){
+	$.suggestionHtml();
+
+	//높이조절
+	$(".family").on("click",function(){
+		if($(this).find(".ULWrap1st").height() == "284"){
+			$(this).find(".ULWrap1st").height("260"); /* 2017-03-29 수정 */
+			$(this).find(".ULWrap1st").css("top","-260px"); /* 2017-03-29 수정 */
+		}
+		return true;
+	});
+	$(".asia").on("click",function(){
+		if($(this).find(".asiaULWrap").height() == "184"){
+			$(this).find(".asiaULWrap").height("80");
+			$(this).find(".asiaULWrap").css("top","-81px");
+		}
+		return true;
+	});
+	$(".brand").on("click",function(){
+		if($(this).find(".ULWrap2nd").height() == "184"){
+			$(this).find(".ULWrap2nd").height("342");/* 2017-01-02 수정 */
+			$(this).find(".ULWrap2nd").css("top","-343px");/* 2017-01-02 수정 */
+		}
+		return true;
+	});
+	
+	
+	$(".ftwrap .ft .ft_menu a").on("click", function(){
+		try{
+			_satellite.scTrackEvent('footer.click','link.linkName',"footer^"+$(this).text());
+		} catch(e) { }
+	});	
+	$(".ftwrap .ft .ret_link dd a").on("click", function(){
+		try{
+			_satellite.scTrackEvent('footer.click','link.linkName',"footer^"+trim($(this).parents("dl:first").find("dt").text())+"^"+$(this).text());
+		} catch(e)  { }
+	});	
+	$(".ftwrap .btm_sns_warp .btm_sns a").on("click", function(){
+		try{
+			_satellite.scTrackEvent('footer.click','link.linkName',"footer^"+$(this).text());
+		} catch(e)  { }
+	});	
+	$(".ftwrap .btm_sns_warp .btn_app_down a").on("click", function(){
+		try{
+			_satellite.scTrackEvent('footer.click','link.linkName',"footer^"+$(this).children().attr("alt"));
+		} catch(e)  { }
+	});
+	$(".ftwrap .ft_copy .copy a").on("click", function(){
+		try{
+			_satellite.scTrackEvent('footer.click','link.linkName',"footer^"+$(this).text());
+		} catch(e)  { }
+	});
+	
+});
+
+//Footer 입지제안 Layer render
+$.suggestionHtml = function(){
+	var divExist = $(".layer").length;
+	if(divExist > 0){
+		$.renderLayer(1);
+	} else {
+		$.renderLayer(0);
+	}
+};
+
+
+//rendering Layer
+var layerHtml = "";
+
+$.renderLayer = function(yn){
+	if(yn < 1){
+		layerHtml += '<div class="layer">';
+		layerHtml += '	<div class="bg"></div>';
+
+	}
+
+	layerHtml += '	<div id="layerFooter" class="pop-layer">';
+	layerHtml += '		<div class="popwrap lypop_my2">';
+	layerHtml += '			<div class="pop_tltwrap">';
+	layerHtml += '				<h4 class="pop_tlt1">입지제안</h4>';
+	layerHtml += '			</div>';
+	layerHtml += '			<div class="pop_cnt">';
+	layerHtml += '				<div class="all_wrap">';
+	layerHtml += '					<div class="tblwrap">';
+	layerHtml += '						<table class="tbl_ctype2" summary="입지제안의 기준 및 접수처를 확인할 수 있으며 사업부,추천기준,접수처를 제공합니다.">';
+	layerHtml += '							<caption>입지제안 안내팝업</caption>';
+	layerHtml += '							<colgroup>';
+	layerHtml += '								<col style="width:138px"/>';
+	layerHtml += '								<col style="width:285px"/>';
+	layerHtml += '								<col style="width:155px"/>';
+	layerHtml += '							</colgroup>';
+	layerHtml += '							<thead>';
+	layerHtml += '								<tr>';
+	layerHtml += '									<th scope="col">사업부</th>';
+	layerHtml += '									<th scope="col">추천 기준</th>';
+	layerHtml += '									<th scope="col">접수처</th>';
+	layerHtml += '								</tr>';
+	layerHtml += '							</thead>';
+	layerHtml += '							<tbody>';
+	layerHtml += '								<tr>';
+	layerHtml += '									<td class="ft_ct"><img alt="GS25 로고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/ft_logo_gs25.png" /></td>';
+	layerHtml += '									<td>지역 : 전국<br/>규모 : 영업면적 10평 이상 임차점포</td>';
+	layerHtml += '									<td style="padding-left:15px;"><a class="btn onbtn" href="http://gs25.gsretail.com/gscvs/ko/franchise-info/one-on-ones-consult/location-offer" target="_blank" title="새 창" style="padding:10px 10px; margin:0; font-size:13px; background:#666;">입지제안 바로가기</a></td>';
+	layerHtml += '								</tr>';
+	layerHtml += '								<tr>';
+	layerHtml += '									<td class="ft_ct"><img alt="GS수퍼마켓 로고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/ft_logo_gssuper.png" /></td>';
+	layerHtml += '									<td>지역 : 반경 500m내 5천세대 이상 거주<br/>용도지역 : 상업, 준주거, 일반주거<br/>규모 : 전용 100평 이상</td>';
+	layerHtml += '									<td>SD부문 개발지원팀<br/>02)2006-2364</td>';
+	layerHtml += '								</tr>';
+	layerHtml += '								<tr>';
+	layerHtml += '									<td class="ft_ct"><img alt="lalavla 로고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/ft_logo_was.png" /></td>';<!-- 2018-01-23 수정 -->
+	layerHtml += '									<td>지역 : 서울/수도권<br/>규모 : 전용 35평 이상 임차점포 2</td>';
+	layerHtml += '									<td>lalavla 개발팀<br/>02)2006-3566</td>';<!-- 2018-01-23 수정 -->
+	layerHtml += '								</tr>';
+	layerHtml += '							</tbody>';
+	layerHtml += '						</table>';
+	layerHtml += '					</div>';
+	layerHtml += '					 <div class="btnwrap">';
+	layerHtml += '						<input class="btn sty01 onbtn" type="button" value="확인" onclick="$(\'#layerFooter\').find(\'.pop_cls a\').trigger(\'click\');" />';
+	layerHtml += '					</div>';
+	layerHtml += '				</div>';
+	layerHtml += '			</div>';
+	layerHtml += '			<div class="pop_cls">';
+	layerHtml += '				<a href="#">닫기</a>';
+	layerHtml += '			</div>';
+	layerHtml += '		</div>';
+	layerHtml += '	</div>';
+	
+	
+	layerHtml += '	<div  class="pop-layer" id="lypop_my11">';
+	layerHtml += '		<div class="popwrap lypop_my1" id="lypop_my11">';
+	layerHtml += '			<div class="pop_tltwrap">';
+	layerHtml += '				<h4 class="pop_tlt1">상품 입점 제안</h4>';
+	layerHtml += '			</div>';
+	layerHtml += '			<div class="pop_cnt">';
+	layerHtml += '				<div class="pop_tblwrap">';
+	layerHtml += '					<div class="pop_box2 w370">';
+	layerHtml += '						<div class="pop_txt1">';
+	layerHtml += '							<p>상품 입점 제안의 경우 이메일로 받고 있으며,<br />별도의 입점 제안 양식 없이 <br />회사 소개서, 상품 소개서 등 구비하신 내용을 <br />아래 메일 주소로 전달해주시면 됩니다.</p><p><strong class="ft_pink">product@watsons.co.kr</strong></p>';
+	layerHtml += '						</div>';
+	layerHtml += '						<div class="pop_txt3" style="font-size:12px;">';
+	layerHtml += '							*  담당 카테고리 MD 검토 후 순차적으로 피드백을 드리고 있어, 평균적으로<br />&nbsp;&nbsp;2주~4주 정도의 시간이 소요되는 점 참고바랍니다.';
+	layerHtml += '						</div>';
+	layerHtml += '						<div class="btnwrap pb10">';
+	layerHtml += '							<input type="button" value="확인" class="btn sty01 onbtn" onclick="$.closePopFooter(\'lypop_my11\');" />';
+	layerHtml += '						</div>';
+	layerHtml += '					</div>';
+	layerHtml += '				</div>';
+	layerHtml += '			</div>';
+	layerHtml += '			<div class="pop_cls">';
+	layerHtml += '				<a href="#">닫기</a>';
+	layerHtml += '			</div>';
+	layerHtml += '		</div>';
+	layerHtml += '	</div>';
+	
+	if(false){
+	/* 이메일주소 무단수집 거부 - 팝카드 */
+		layerHtml += ' <div id="layerFooter-email" class="pop-layer">';
+		layerHtml += '  <div class="popwrap lypop_my1" id="lypop_my1">';
+		layerHtml += '  	<div class="pop_tltwrap">';
+		layerHtml += '  		<h4 class="pop_tlt1">이메일주소 무단수집 거부</h4>';
+		layerHtml += '  	</div>';
+		layerHtml += '  	<div class="pop_cnt">';
+		layerHtml += '  		<div class="pop_tblwrap">';
+		layerHtml += '  			<div class="pop_box2 w370">';
+		layerHtml += '  				<div class="ptn_popdate"><strong>게시일 2003년 3월 24일</strong></div>';
+		layerHtml += '  				<div class="pop_txt1 mt20">';
+		layerHtml += '  					<p class="ptn_poptxt">본 웹사이트에 게시된 이메일 주소가<br />전자우편 수집 프로그램이나 그밖의 기술적<br />장치를 이용하여 무단으로 수집되는 것을 거부하며,<br />';
+		layerHtml += '  					이를 위반시 정보통신망법에 의해<br />형사 처벌됨을 유념하시기 바랍니다. </p>';
+		layerHtml += '  				</div>';
+		layerHtml += '  			</div>';
+		layerHtml += '  		</div>';
+		layerHtml += '  	</div>';
+		layerHtml += '  	<div class="pop_cls">';
+		layerHtml += '  		<a href="#">닫기</a>';
+		layerHtml += '  	</div>';
+		layerHtml += ' 	 </div>';
+		layerHtml += ' </div>';
+
+	}else{
+
+		/* 이메일주소 무단수집 거부 레이어 - 공통  */
+		layerHtml += '    <div id="layerFooter-email" class="pop-layer">';
+		layerHtml += '      <div class="popwrap lypop_my1">';
+		layerHtml += '      		<div class="pop_tltwrap">';
+		layerHtml += '      			<h4 class="pop_tlt1">이메일주소 무단수집 거부</h4>';
+		layerHtml += '      		</div>';
+		layerHtml += '      		<div class="pop_cnt">';
+		layerHtml += '      			<div class="all_wrap">';
+		layerHtml += '      				<div class="pop_box4">';
+		layerHtml += '      					본 웹사이트에 게시된 이메일 주소가 전자우편 수집<br />';
+		layerHtml += '      					프로그램이나 그밖의 기술적 장치를 이용하여 무단으로<br />';
+		layerHtml += '      					수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해<br />';
+		layerHtml += '      					형사 처벌됨을 유념하시기 바랍니다.';
+		layerHtml += '      				</div>';
+		layerHtml += '      				<div class="pop_txt2">※ 게시일 2003년 3월 24일</div>';
+		layerHtml += '      				<div class="btnwrap">';
+		layerHtml += '      					<input class="btn sty01 onbtn" type="button" value="확인" onclick="$.closePopFooter(\'layerFooter-email\');" />';
+		layerHtml += '      				</div>';
+		layerHtml += '      			</div>';
+		layerHtml += '      		</div>';
+		layerHtml += '      		<div class="pop_cls">';
+		layerHtml += '      			<a href="#">닫기</a>';
+		layerHtml += '      		</div>';
+		layerHtml += '      	</div>';
+		layerHtml += '     	</div>';
+
+
+	}
+
+
+
+	if(yn < 1){
+		//layerHtml += '	</div>';
+		layerHtml += '</div>';
+
+	}
+
+	if(yn < 1){
+		$(".ftwrap").append(layerHtml);
+	} else {
+		$(".layer").append(layerHtml);
+	}
+
+};
+
+function fn_layer_popup(popNm, parentId) {
+	openLayerPopup(popNm, parentId);
+}
+
+//팝업 레이어
+function layer_open_footer(el, parentId){
+	var temp = $('#' + el);
+	var bg = temp.prev().hasClass('bg');	//dimmed 레이어를 감지하기 위한 boolean 변수
+
+	$('.layer').fadeIn();
+	temp.fadeIn();
+
+	/* 2015-08-14 update - focus오류 수정. */
+	temp.attr("tabIndex", "-1");
+	$(document)
+		.off('focusin.modalLayer')
+		.on('focusin.modalLayer', $.proxy(function (e) {
+			if ( temp[0] !== e.target && !temp.has(e.target).length) {
+				temp.trigger('focus');
+			}
+		}, this));
+	
+	// 화면의 중앙에 레이어를 띄운다.
+	if (temp.height() < $(document).height() ) temp.css('margin-top', '-'+temp.height()/2+'px');
+	else temp.css('top', '0px');
+	if (temp.width() < $(document).width() ) temp.css('margin-left', '-'+temp.width()/2+'px');
+	else temp.css('left', '0px');
+	
+
+	temp.find('.pop_cls a').click(function(e){
+		$('.layer').fadeOut();
+		$('.layer').find('.pop-layer').each(function(){
+			$(this).fadeOut();
+		});
+		
+		/* 2015-08-14 update - focus오류 수정. */
+		$(document).off('focusin.modalLayer');
+		
+		if(parentId != undefined) {
+			parentId.focus();	
+		}
+		
+		e.preventDefault();
+	});
+
+	//배경을 클릭하면 레이어를 사라지게 하는 이벤트 핸들러
+	$('.layer .bg').click(function(e){
+		$('.layer').fadeOut();
+		$('.layer').find('.pop-layer').each(function(){
+			$(this).fadeOut();
+		});
+		e.preventDefault();
+	});
+
+};
+
+//확인 클릭 시 닫기
+$.closePopFooter = function(el) {
+	$('#' + el).find('.pop_cls a').trigger('click');
+	/*
+	$('.layer').fadeOut();
+	$('.layer').find('.pop-layer').each(function(){
+		$(this).fadeOut();
+	});
+	$('#' + el).fadeOut();
+	*/
+};
+
+
+
+
+//]]>
+</script>
+<!-- footer -->
+<div class="ftwrap">
+<!-- footer menu -->
+<!-- LOGGER(TM) TRACKING SCRIPT V.40 FOR logger.co.kr / 22400 : COMBINE TYPE / DO NOT ALTER THIS SCRIPT. -->
+<script type="text/javascript">var _TRK_LID="22400";var _L_TD="ssl.logger.co.kr";var _TRK_CDMN="";</script>
+<script type="text/javascript">var _CDN_DOMAIN = location.protocol == "https:" ? "https://fs.bizspring.net" : "http://fs.bizspring.net";
+		(function(b,s){var f=b.getElementsByTagName(s)[0],j=b.createElement(s);j.async=true;j.src='//fs.bizspring.net/fs4/bstrk.1m.js';f.parentNode.insertBefore(j,f);})(document,'script');</script>
+<noscript>
+<img alt="Logger Script" height="1" src="http://ssl.logger.co.kr/tracker.tsp?u=22400&amp;js=N" width="1"/>
+</noscript>
+<!-- END OF LOGGER TRACKING SCRIPT -->
+<!-- Google Tag Manager -->
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-NCKHCC" style="display:none;visibility:hidden" title="로그기록" width="0"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NCKHCC');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+			//<![CDATA[
+
+			$(document).ready(function(){
+				var otherFamilySite = new footerFamilySiteManager();
+				otherFamilySite.setResource( ".ret_link .family", ".ULWrap1st" );
+				otherFamilySite.setResource( ".ret_link .brand", ".ULWrap2nd" );
+				otherFamilySite.init();
+			});
+
+			//]]>
+			</script>
+<div class="ft">
+<div class="ft_menu">
+<ul>
+<li><a href="/gscvs/ko/about-gs25/gs25introduce">GS25소개 </a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/submain">입점상담</a></li>
+<li><a href="/gscvs/ko/customer-satisfaction/mantomancnsoundform?groupId=coopInqu">제휴문의</a></li>
+<!-- 
+							<li><a href="/gscvs/ko/footer/special-sales">특판안내</a></li>
+						 -->
+<li><a href="#" onclick="javascript:layer_open_footer('layerFooter', this);">입지제안</a></li>
+<li><a href="http://www.gsretail.com/gsretail/ko/corporation/location/subway">임대상가안내</a></li>
+<!--<li><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/report">정도경영제보</a></li><!-- 2017-01-24 삭제 -->
+<li><a href="/gscvs/ko/footer/site-map">사이트맵</a></li>
+</ul>
+</div>
+<div class="ret_link">
+<dl class="family">
+<dt>
+<a href="#;">계열사 보기<span>&gt;</span></a>
+</dt>
+<dd>
+<div class="ULWrap1st" style="overflow: hidden; width: 178px; height: 260px; position: absolute; left: -1px; top: -260px;"><!-- 2017-03-29 수정 -->
+<ul>
+<li><a href="http://www.gs.co.kr/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/(주)GS 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">(주)GS</a></li>
+<li><a href="http://www.gsnpoint.com/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS&amp;Point.com 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS&amp;Point.com</a></li>
+<li><a href="http://www.kixx.co.kr/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS칼텍스(Kixx) 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS칼텍스(Kixx)</a></li>
+<li><a href="http://www.gsshop.com/index.gs" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS홈쇼핑(GS Shop) 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS홈쇼핑(GS Shop)</a></li>
+<li><a href="http://www.gsmbiz.co.kr/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS엠비즈 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS엠비즈</a></li>
+<li><a href="http://www.fcseoul.com/new_intro.jsp" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS스포츠 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS스포츠</a></li>
+<li><a href="http://www.gseps.com/kor/main/main.aspx" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS EPS 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS EPS</a></li>
+<!-- <li><a onMouseDown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS리테일/메인페이지/푸터 계열사/d&amp;shop 바로가기\' ); }catch(_e){ }');"
+												href="http://www.dnshop.com/main/initMain.dnshop" target="_blank" title="새창" >d&amp;shop</a></li> --><!-- 2017-03-29 삭제 -->
+<li><a href="http://www.gsconst.co.kr/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS건설 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">GS건설</a></li>
+<li><a href="http://www.elysian.co.kr/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/엘리시안강촌 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">엘리시안강촌</a></li>
+</ul>
+</div>
+</dd>
+</dl>
+<dl class="brand">
+<dt>
+<a href="#;">GS리테일 브랜드<span>보기</span></a>
+</dt>
+<dd>
+<div class="ULWrap2nd">
+<ul>
+<li><a href="http://www.gsretail.com/gsretail/ko/main">GS리테일</a></li>
+<li><a href="http://gs25.gsretail.com/gscvs/ko/main">GS25</a></li>
+<li><a href="http://gssuper.gsretail.com/gssuper/ko/main">GS수퍼마켓</a></li>
+<li><a href="http://www.gsisuper.com/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS리테일/메인페이지/푸터 브랜드/GS fresh 바로가기\' ); }catch(_e){ }');">GS fresh</a></li><!-- 2017-08-08 수정(공통) -->
+<li><a href="http://lalavla.gsretail.com/lalavla/ko/main" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/왓슨스 바로가기\' ); }catch(_e){ }');">lalavla</a></li>
+<!-- 2016-03-28 추가 -->
+<li><a href="http://shop.watsons.co.kr" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/왓슨스 온라인샵 바로가기\' ); }catch(_e){ }');" target="_blank" title="새 창">lalavla 온라인샵</a></li><!-- 2016-09-07 수정 -->
+<!-- //2016-03-28 추가 -->
+<li><a href="http://www.popcard.co.kr/popcard/ko/main" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/팝카드 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">팝카드</a></li>
+<!-- 2016-04-18 추가 -->
+<li class="line_clamp"><a href="https://www.grandicparnas.com:444/kor/index.do" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/그랜드 인터컨티넨탈 서울 파르나스 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">
+												그랜드 인터컨티넨탈<br/>서울 파르나스</a></li>
+<li class="line_clamp"><a href="http://www.iccoex.com/kor/index.do" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/인터컨티넨탈 서울 코엑스 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">
+												인터컨티넨탈<br/>서울 코엑스</a></li>
+<li><a href="http://www.ninetreehotel.com" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리호텔 명동 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">
+												나인트리호텔 명동</a></li>
+<!--<li class="letter_spacing"><a onMouseDown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리 컨벤션 광화문 바로가기\' ); }catch(_e){ }');"
+												href="http://www.eninetree.com" target="_blank" title="새창">
+												나인트리 컨벤션 광화문</a></li> 2017-01-02 삭제 -->
+<li><a href="http://www.parnasmall.com/" onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/파르나스몰 바로가기\' ); }catch(_e){ }');" target="_blank" title="새창">
+												파르나스몰</a></li>
+<!-- //2016-04-18 추가 -->
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<!-- 2016-05-23 추가 -->
+<div class="btm_sns_warp">
+<div class="btm_sns_area">
+<div class="left">
+<div class="btm_sns">
+<img alt="GS25와 소통하세요!" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/main/btm_gs25_sns.jpg"/>
+<ul>
+<li><a class="facebook" href="https://www.facebook.com/funGS25/" target="_blank" title="새 창"><span class="hide">facebook</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="blog" href="http://gs25friend.blog.me/" target="_blank" title="새 창"><span class="hide">blog</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="instagram" href="https://www.instagram.com/gs25_official/" target="_blank" title="새 창"><span class="hide">instagram</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="tvcast" href="http://tvcast.naver.com/gs25" target="_blank" title="새 창"><span class="hide">tvcast</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="youtube" href="https://www.youtube.com/channel/UCl0HemfAt7dShJRf59_cuGQ" target="_blank" title="새 창"><span class="hide">youtube</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="pholar" href="http://www.pholar.co/my/855926/profile/post" target="_blank" title="새 창"><span class="hide">pholar</span></a></li><!-- 2016-09-07 수정 -->
+<li><a class="kakaostroy" href="https://story.kakao.com/ch/fungs25" target="_blank" title="새 창"><span class="hide">카카오스토리</span></a></li><!-- 2016-09-07 수정 -->
+</ul>
+</div>
+</div>
+<div class="right">
+<a href="http://gs25.gsretail.com/gscvs/ko/store-services/myrefrigerator"><img alt="담고 쓰고 쌓고! GS25 나만의 냉장고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/main/btm_gs25_link.jpg"/></a>
+</div>
+</div>
+</div>
+<!-- //2016-05-23 추가 -->
+<!-- footer copyright -->
+<div class="ft_copy">
+<div class="copywrap">
+<div class="copy">
+<div class="copy_menu">
+<ul>
+<li><a href="/gscvs/ko/footer/privacy">개인정보처리방침</a></li>
+<li><a href="/gscvs/ko/footer/member-terms">GS리테일 멤버십(GS&amp;POINT) 회원약관</a></li>
+<li><a href="#" onclick="javascript:layer_open_footer('layerFooter-email', this);">이메일무단수집거부</a></li>
+<li><a href="/gscvs/ko/about-gs25/map">오시는길</a></li>
+<li class="bold"><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/report">정도경영/파트너사 목소리</a></li>
+<li class="bold"><a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/report">CEO에게 말한다</a></li>
+</ul>
+</div>
+<div class="copy_txt">
+<p>
+								주소 : 서울시 강남구 논현로 508(역삼동 679번지 GS타워) | 대표이사 : 허연수 | 사업자등록번호 : 116-81-18745</p>
+<p>
+								GS리테일 <a href="javascript:void(0);" onclick="$.goMantoMan();">1:1 문의</a> | GS25 1644-5425 | GS수퍼마켓, GS fresh(무료) 080-345-7700 | lalavla(무료) 080-358-6429 <br/>GS fresh <a href="http://www.gsisuper.com/eretail.voc.qnaList.dev" target="_blank" title="새창열림">1:1문의</a> | POP카드 1544-8997</p>
+<p>
+								Copyright 2015 GSRetail. Co. Ltd., ALL Right Reserved.</p>
+</div>
+</div>
+<div class="copy_logo">
+<img alt="GS25" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ft_logo.gif"/>
+</div>
+<!-- 2015-09-02 수정 -->
+<ul class="ft_banner">
+<li><a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="국가 공인 인증기관 : 웹와치"></a><img alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/btm_mark01.jpg"/></li><!-- 2017-08-23 수정 -->
+</ul>
+<!-- //2015-09-02 수정 -->
+</div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[
+
+	//1:1 문의 페이지 이동
+	$.goMantoMan = function(){
+		if("gsretail" == "gscvs"){
+			location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/submain";
+		} else if("gscvs" == "gscvs"){
+			location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/mantomancnsoundgs25form";
+		} else if("gssuper" == "gscvs"){
+			location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/mantomancnsoundgssmform";
+		}
+	};
+
+	//]]>
+	</script>
+</div>
+<!-- //footer -->
+<div class="popup-outer-layer">
+<div class="bg"></div>
+<!-- id중복확인 팝업 시작 -->
+<div class="popwrap lypop_my2 pop-inner-layer" id="jungdoPop">
+<style type="text/css"> 
+		.pop_cnt .system { width:570px; margin:0 auto; font-family: "NanumBarunGothic", NanumBarunGothic,"돋움",Dotum, Arial,sans-serif;}
+		.pop_cnt .system .txt01 { font-size:16px !important; line-height: 22px;}
+		.pop_cnt .system .box { text-align:center; background:#fbfbfb; border:1px solid #dfdfdf; margin:19px 0; padding:20px 70px;}
+		.pop_cnt .system .box .inner > p { text-align:left; line-height:22px;}
+		.pop_cnt .system .box .inner .btnwrap { padding-top:15px !important;}
+		.pop_cnt .system .col_section { width:590px; overflow:hidden; margin-bottom:23px;}
+		.pop_cnt .system .col_section .line { position:relative; float:left; height:210px;}
+		.pop_cnt .system .col_section .line.order01 { border-right:1px solid #dfdfdf; padding-right:15px;}
+		.pop_cnt .system .col_section .line.order02 { border-right:1px solid #dfdfdf; padding:0 15px;}
+		.pop_cnt .system .col_section .line.order03 { padding:0 15px;}
+		.pop_cnt .system .col_section .line .tit { font-size:18px; font-weight:bold; color:#000; margin-bottom:20px; text-align:center;}
+		.pop_cnt .system .col_section .line span { line-height:22px;}
+		.pop_cnt .system .col_section .line.order01 .btnwrap {position:absolute; left:20px; bottom:0;}
+		.pop_cnt .system .col_section .line.order02 .btnwrap {position:absolute; left:50px; bottom:0;}
+		.pop_cnt .system .col_section .line.order03 .btnwrap {position:absolute; left:38px; bottom:0;}
+		</style>
+<div class="pop_tltwrap">
+<h4 class="pop_tlt1 dot">제보대상, 제보자 포상/비밀번호 제도 및 고충처리제도 안내</h4>
+</div>
+<div class="pop_cnt">
+<div class="system">
+<strong class="txt01"><span class="ft_org">GS리테일 임직원 및 파트너사의 부정/불공정 행위 제보와 개선제안</span>에 대한 의견을<br/>
+				쓰는 곳입니다. 아래 각 메뉴별 안내사항을 참고 하셔서 작성하여 주시기 바랍니다.
+				</strong>
+<div class="box">
+<div class="inner">
+<p>GS25/GS수퍼마켓 이용 중 고객불만/불편/칭찬사항은 "고객센터 &gt; 고객의 소리" <br/>
+						코너에 접수 하시면 관련부서에서 신속히 처리가 됩니다.</p>
+<div class="btnwrap">
+<a class="btn_arr pt2" href="/gscvs/ko/customer-satisfaction/submain">고객의 소리 바로가기</a>
+</div>
+</div>
+</div>
+<div class="col_section">
+<div class="line order01">
+<p class="tit">정도경영 목소리</p>
+<span>임직원/파트너사 등 부정/불공정<br/>
+							사항 제보<br/> <!-- 2016-01-06 수정 -->
+							⇒ 조사부서(경영진단팀) 제보
+						</span>
+<div class="btnwrap bottom">
+<a class="btn sty04 onbtn" href="/gscvs/ko/customer-satisfaction/precisioncnsoundform">문의하기</a><!-- 2015-09-01 수정 -->
+</div>
+</div>
+<div class="line order02">
+<p class="tit">CEO에게 말한다</p>
+<span>임직원/파트너사 등 부정/불공정<br/>사항 제보, 칭찬사례/기타 <br/>
+								CEO에게 직접 건의 하고 싶은<br/>사항 등 ⇒ CEO에게 직접 제보
+						</span>
+<div class="btnwrap bottom">
+<a class="btn sty04 onbtn" href="/gscvs/ko/customer-satisfaction/toceocnsoundform">문의하기</a><!-- 2015-09-01 수정 -->
+</div>
+</div>
+<div class="line order03">
+<p class="tit">파트너사 목소리</p>
+<span>거래상 애로(고충)/개선요청<br/>사항 제안(불공정 제외)<br/>
+						⇒ 담당부서(경영진단팀)에서<br/> 즉시 확인 후, 제안사항에 대한<br/>
+						개선계획 수립 및 회신
+						</span>
+<div class="btnwrap bottom">
+<a class="btn sty04 onbtn" href="/gscvs/ko/customer-satisfaction/partnercnsoundform">문의하기</a><!-- 2015-09-01 수정 -->
+</div>
+</div>
+</div>
+<p class="mt20 ft_org">
+				※ GS리테일에서는 『<a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/rewards"><span class="ft_blue ft_ud">제보자
+					포상제도</span></a> 』를 실시하며, 『<a href="http://www.gsretail.com/gsretail/ko/corporation/jeongdo-management/system/rewards?id=cusl_tab2"><span class="ft_blue ft_ud">
+					제보자 보호제도</span></a>』 를 운영합니다. <!-- 2016-01-06 수정 -->
+</p>
+<div class="pop_cls">
+<a href="#">닫기</a>
+</div>
+</div>
+</div>
+</div>
+<div class="popwrap lypop_my2 pop-inner-layer" id="superQrPop" style="width:400px;">
+<div class="pop_tltwrap">
+<h4 class="pop_tlt1">GS수퍼마켓 앱 다운로드</h4>
+</div>
+<div class="pop_cnt" style="padding:0; margin:0; overflow-y:hidden; height:570px;" tabindex="0">
+<div class="all_wrap" style="padding:0;">
+<img alt="결제+할인+적립을 QR하나로 간편하게! 한 번에 되는 GS수퍼마켓만의 스마트한 앱! QR찍고 앱 설치하세요!" src="/_ui/desktop/common/images/gssuper/main/btm_super_app.jpg"/>
+</div>
+</div>
+<div class="pop_cls"><a href="#">닫기</a></div>
+</div>
+</div>
+</div>
+<form action="" method="post" name="accessiblityForm">
+<input id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" type="hidden" value=""/>
+</form>
+<!-- <div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div> -->
+<div class="skip" id="ariaStatusMsg" style="role: status; aria-relevant: text; aria-live: polite;"></div>
+<script type="text/javascript">
+	//<![CDATA[
+	$(function(){
+		// globalResponseMessage 변수가 있을때 단 한번 알럿 출력-request에 저장된 메세지 출력
+		if ("" != "") alert("");
+		// globalLocationHref 변수가 있을때 이동
+		if ("" != "") location.href="";
+		
+		if ("" == "true"){
+			if ( location.href.indexOf("/my-page/pw-mod") == -1 ){
+				$("BODY").hide();
+				alert("비밀번호를 변경하셔야 사이트를 정상적으로 이용하실 수 있습니다.");
+				location.replace("http://www.gsretail.com/gscvs/ko//my-page/pw-mod");
+			}
+		}
+	})
+	//]]>
+	</script>
+<script type="text/javascript">
+	try{
+		_satellite.pageBottom();
+	} catch(e) { }	
+	</script>
+</body>
+</html>
+

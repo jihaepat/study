@@ -1,0 +1,5 @@
+response.xpath('//title') =>
+
+
+div.quote => elements with a quote class in the div tag
+
