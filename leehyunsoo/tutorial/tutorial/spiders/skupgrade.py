@@ -1,8 +1,8 @@
 import scrapy
-
+from tutorial.items import TutorialItem
 
 class QuotesSpider(scrapy.Spider):
-    name = "sk"
+    name = "up"
     page_num = 1
     start_urls = [
         'https://www.enclean.com/brand/brand.findStation.list.do?first=f&siSelReq=&oilType=All&checkAll=&solux=0&netplus=0&autoread=0&self=0&speedmate=0&wash=0&store=0&oil=0&gift=0&siSch=&guSel=&oilString=&curPage=1',
