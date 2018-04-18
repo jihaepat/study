@@ -6,6 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from scrapy import exceptions
 
 
 class TutorialSpiderMiddleware(object):
@@ -21,11 +22,8 @@ class TutorialSpiderMiddleware(object):
         return s
 
     def process_spider_input(self, response, spider):
-        # Called for each response that goes through the spider
-        # middleware and into the spider.
-
-        # Should return None or raise an exception.
-        return None
+        if not (200 <= response.status < 300):
+            raise exceptions.IgnoreRequest(('status error - ' + str(response.status) + ' : ' + str(response.url)))
 
     def process_spider_output(self, response, result, spider):
         # Called with the results returned from the Spider, after
@@ -41,6 +39,9 @@ class TutorialSpiderMiddleware(object):
 
         # Should return either None or an iterable of Response, dict
         # or Item objects.
+        log_file = open('/home/leehyunsoo/study/leehyunsoo/tutorial/log.txt', 'a')
+        log_file.write((str(exception) + '\n'))
+        log_file.close()
         pass
 
     def process_start_requests(self, start_requests, spider):
@@ -53,6 +54,7 @@ class TutorialSpiderMiddleware(object):
             yield r
 
     def spider_opened(self, spider):
+
         spider.logger.info('Spider opened: %s' % spider.name)
 
 

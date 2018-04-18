@@ -23,8 +23,7 @@ class QuotesSpider(scrapy.Spider):
             '//div[@id="content"]/div[2]/form/div[3]/div/div/span/strong/text()').extract_first()
 
         if now_page_num == str(self.page_num):
-            if self.page_num == 10 :
-                return 0
+
             print(self.page_num)
             self.page_num += 1
             yield scrapy.Request(response.urljoin(url + str(self.page_num)))
