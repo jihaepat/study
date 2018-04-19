@@ -1,6 +1,6 @@
 import os, sys
 from time import strftime
-
+from web import evaluate
 
 # os.system(
 #     'word-embeddings-benchmarks/scripts/evaluate_on_all.py -f /media/leehyunsoo/4TB2/usa_patent/small_model.vec -o /media/leehyunsoo/4TB2/usa_patent/result.csv -p word2vec')
@@ -23,7 +23,6 @@ def make_model(data_path, data_file_name, save_path, save_file_name, **kwargs):
         else:
             model = FastText.train_unsupervised(total_data_path, **kwargs)
 
-        model.save_model(total_save_path)
         model.save_vectors(total_save_path)
 
     except Exception as e:
@@ -35,29 +34,28 @@ def make_model(data_path, data_file_name, save_path, save_file_name, **kwargs):
 
 
 def benchmark(filepath, savepath, save_file_name):
-    from web import evaluate
     from web.embeddings import load_embedding
 
     w = load_embedding(filepath, format='word2vec')
 
-    out_fname = os.path.join(savepath) + save_file_name + "_results.csv"
+    # out_fname = os.path.join(savepath) + save_file_name + "_results.csv"
 
     results = evaluate.evaluate_on_all(w)
-    results._ix[1]
-    # for ind in results.keys():
-    #     print(results._get_axis(0))
-    # for ind in results.items():
-    #     print(ind)
 
-    # print(results)
+    # print(results['AP'].item())
+
+    for ind in results.keys():
+        print(ind,results[ind].item())
+
+    # for x in results.keys():
+        # print(results[])
+
     # results.to_csv(out_fname)
     # return results
 
 
-
-# benchmark(
-#     make_model('/media/leehyunsoo/4TB2/small_data/', 'small_title.txt', '/media/leehyunsoo/4TB2/model/', 'small_title',model = 'skipgram'),
-#     '/media/leehyunsoo/4TB2/model/','test')
+# make_model('/media/leehyunsoo/4TB2/small_data/','half_half_abstract.txt','/media/leehyunsoo/4TB2/model','half_test')
+benchmark('/media/leehyunsoo/4TB2/model/half_test.vec','/media/leehyunsoo/4TB2/model/','half_test')
 
 # FastText Default값
 # input,                    : 불러올 데이터

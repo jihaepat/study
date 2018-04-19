@@ -18,5 +18,5 @@ class Choice(models.Model):
         return self.choice_text
 
 class Meetup(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=True)
     title = models.CharField(max_length= 200)
