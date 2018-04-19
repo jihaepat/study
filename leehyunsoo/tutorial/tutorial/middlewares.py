@@ -22,8 +22,9 @@ class TutorialSpiderMiddleware(object):
         return s
 
     def process_spider_input(self, response, spider):
-        if not (200 <= response.status < 300):
-            raise exceptions.IgnoreRequest(('status error - ' + str(response.status) + ' : ' + str(response.url)))
+        # if not (200 <= response.status < 300):
+        #     raise exceptions.IgnoreRequest(('status error - ' + str(response.status) + ' : ' + str(response.url)))
+        pass
 
     def process_spider_output(self, response, result, spider):
         # Called with the results returned from the Spider, after
@@ -39,9 +40,9 @@ class TutorialSpiderMiddleware(object):
 
         # Should return either None or an iterable of Response, dict
         # or Item objects.
-        log_file = open('/home/leehyunsoo/study/leehyunsoo/tutorial/log.txt', 'a')
-        log_file.write((str(exception) + '\n'))
-        log_file.close()
+        # log_file = open('/home/leehyunsoo/study/leehyunsoo/tutorial/log.txt', 'a')
+        # log_file.write((str(exception) + '\n'))
+        # log_file.close()
         pass
 
     def process_start_requests(self, start_requests, spider):

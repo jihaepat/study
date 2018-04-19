@@ -12,6 +12,9 @@ class TutorialPipeline(object):
     def open_spider(self, spider):
         nowDatetime = (datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
         print(spider.name, ' is started at ', nowDatetime)
+        file = open('log.txt', 'a')
+        file.write((spider.name + ' is started at ' + nowDatetime + '\n'))
+        file.close()
         # pass
 
     def process_item(self, item, spider):
@@ -20,4 +23,7 @@ class TutorialPipeline(object):
 
     def close_spider(self, spider):
         nowDatetime = (datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
-        print(spider.name, ' is started at ', nowDatetime)
+        print(spider.name, ' is end at ', nowDatetime)
+        file = open('log.txt', 'a')
+        file.write((spider.name + ' is end at ' + nowDatetime + '\n'))
+        file.close()
