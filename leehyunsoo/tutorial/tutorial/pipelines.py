@@ -12,7 +12,7 @@ class TutorialPipeline(object):
     def open_spider(self, spider):
         nowDatetime = (datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
         print(spider.name, ' is started at ', nowDatetime)
-        file = open('log.txt', 'a')
+        file = open('/home/leehyunsoo/4TB/crawl/log.txt', 'a')
         file.write((spider.name + ' is started at ' + nowDatetime + '\n'))
         file.close()
         # pass
