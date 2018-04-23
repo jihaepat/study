@@ -19,7 +19,7 @@ class spider_url(scrapy.Spider):
         print(response)
         end_page = response.xpath('/html/body/div[1]/ul/li[5]/a/text()').extract_first()
         print(end_page)
-        for i in range(int(end_page))[1:100]:
+        for i in range(int(end_page)):
             yield scrapy.Request('http://www.shangbiao.com/tm/{0}?t=t&p=25'.format(i), callback=self.parse)
 
     def parse(self, response):
@@ -37,7 +37,7 @@ class spider_url(scrapy.Spider):
         sum_category = (split_category.splitlines()[1].strip()+split_category.splitlines()[2].strip())
 
         sum_registration_number_image = response.xpath('/html/body/div[1]/div[2]/div[2]/dl[2]/dd/img/@src').extract()
-        item['logo_image'] = response.xpath('/html/body/div[1]/div[2]/div[1]/img/@src').extract()
+        item['logo_image'] = response.xpath('/html/body/div[1]/div[2]/div[2]/h4/img/@src').extract()
         item['company_name_image'] = response.xpath('/html/body/div[1]/div[2]/div[2]/h4/img/@src').extract()
         item['category'] = sum_category
         item['registration_number_image'] = sum_registration_number_image
