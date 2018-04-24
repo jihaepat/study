@@ -24,6 +24,6 @@ class TutorialPipeline(object):
     def close_spider(self, spider):
         nowDatetime = (datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')
         print(spider.name, ' is end at ', nowDatetime)
-        file = open('log.txt', 'a')
+        file = open('/home/leehyunsoo/4TB/crawl/log.txt', 'a')
         file.write((spider.name + ' is end at ' + nowDatetime + '\n'))
         file.close()
