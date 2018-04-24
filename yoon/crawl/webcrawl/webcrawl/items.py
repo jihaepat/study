@@ -16,5 +16,4 @@ class WebcrawlItem(scrapy.Item):
     validity_date = scrapy.Field()  # 독점기간
     group = scrapy.Field()  # 상표 그룹
     price = scrapy.Field()  # 가격
-    index = '\t'
-    pass
+

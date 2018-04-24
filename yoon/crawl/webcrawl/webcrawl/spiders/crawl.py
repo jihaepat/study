@@ -16,21 +16,22 @@ class spider_url(scrapy.Spider):
         yield scrapy.Request('http://www.shangbiao.com/tm/?t=t&p=25', callback=self.page_count)
 
     def page_count(self, response):
-        print(response)
+        # print(response)
         end_page = response.xpath('/html/body/div[1]/ul/li[5]/a/text()').extract_first()
-        print(end_page)
+        # print(end_page)
         for i in range(int(end_page)):
             yield scrapy.Request('http://www.shangbiao.com/tm/{0}?t=t&p=25'.format(i), callback=self.parse)
 
     def parse(self, response):
-        print(response)
         origin_url = 'http://www.shangbiao.com'
         response_url = response.xpath('/html/body/div[1]/div[5]/ul/li/a/@href').extract()
         real_url = [(origin_url + ind) for ind in response_url]
         for page_item in real_url:
+            print(type(page_item))
             yield scrapy.Request(page_item, callback=self.main)
 
     def main(self, response):
+        # print(response)
         item = WebcrawlItem()
 
         split_category = response.xpath('/html/body/div[1]/div[2]/div[2]/dl[1]/dd/text()').extract_first()
