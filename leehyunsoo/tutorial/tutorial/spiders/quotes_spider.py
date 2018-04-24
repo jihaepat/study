@@ -12,11 +12,12 @@ class QuotesSpider(scrapy.Spider):
     def parse(self, response):
         print(self.page_num,'\n')
         for quote in response.css('div.quote'):
-            yield {
-                'text': quote.css('span.text::text').extract_first(),
-                'author': quote.css('small.author::text').extract_first(),
-                'tags': quote.css('div.tags a.tag::text').extract(),
-            }
+            print(type(quote))
+            # yield {
+            #     'text': quote.css('span.text::text').extract_first(),
+            #     'author': quote.css('small.author::text').extract_first(),
+            #     'tags': quote.css('div.tags a.tag::text').extract(),
+            # }
         #     print(quote.css('span.text::text').extract_first())
         #     print(quote.css('small.author::text').extract_first())
         #     print(quote.css('div.tags a.tag::text').extract())

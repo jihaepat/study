@@ -4,7 +4,7 @@ from scrapy import exceptions
 
 
 class QuotesSpider(scrapy.Spider):
-    name = "china"
+    name = "gbicom"
     start_url = 'http://www.gbicom.cn'
 
     # start_url = 'http://www.'
