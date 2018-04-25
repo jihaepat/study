@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for phantomJS project
+# Scrapy settings for javascripsSpider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'phantomJS'
+BOT_NAME = 'javascripsSpider'
 
-SPIDER_MODULES = ['phantomJS.spiders']
-NEWSPIDER_MODULE = 'phantomJS.spiders'
+SPIDER_MODULES = ['javascripsSpider.spiders']
+NEWSPIDER_MODULE = 'javascripsSpider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'phantomJS (+http://www.yourdomain.com)'
+#USER_AGENT = 'javascripsSpider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'phantomJS.middlewares.PhantomjsSpiderMiddleware': 543,
+#    'javascripsSpider.middlewares.PhantomjsSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'phantomJS.middlewares.PhantomjsDownloaderMiddleware': 543,
+#    'javascripsSpider.middlewares.PhantomjsDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'phantomJS.pipelines.PhantomjsPipeline': 300,
+#    'javascripsSpider.pipelines.PhantomjsPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

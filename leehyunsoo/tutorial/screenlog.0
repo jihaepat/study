@@ -1,0 +1,10 @@
+[01;32mleehyunsoo@leehyunsoo[00m:[01;34m~/study/leehyunsoo/tutorial[00m$ screen[K[01;32mleehyunsoo@leehyunsoo[00m:[01;34m~/study/leehyunsoo/tutorial[00m$ screen -list
+There is a screen on:
+	32568.pts-20.leehyunsoo	(2018년 04월 25일 14시 46분 50초)	(Attached)
+1 Socket in /var/run/screen/S-leehyunsoo.
+[01;32mleehyunsoo@leehyunsoo[00m:[01;34m~/study/leehyunsoo/tutorial[00m$ screen -r 35[K~[K2568
+There is a screen on:
+	32568.pts-20.leehyunsoo	(2018년 04월 25일 14시 46분 50초)	(Attached)
+There is no screen to be resumed matching 32568.
+[01;32mleehyunsoo@leehyunsoo[00m:[01;34m~/study/leehyunsoo/tutorial[00m$ exit
+exit

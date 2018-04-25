@@ -5,7 +5,7 @@ class QuotesSpider(scrapy.Spider):
     name = "test"
     page_num = 1
     start_urls = [
-        'http://quotes.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/js/',
         # 'http://quotes.toscrape.com/page/2/',
     ]
 
