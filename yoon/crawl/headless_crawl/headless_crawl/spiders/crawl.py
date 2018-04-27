@@ -1,12 +1,13 @@
 import scrapy
 from time import sleep
+import json
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-
 from headless_crawl.items import HeadlessCrawlItem
 from selenium import webdriver
+
 
 
 class ch_spider(scrapy.Spider):
@@ -19,15 +20,18 @@ class ch_spider(scrapy.Spider):
     end_page = int(end_page.text[1:-1])
     print(end_page)
 
+
+
     def start_requests(self):
-        for i in range(1595, self.end_page): #
+        for i in range(0, 2):
+
             self.driver.get('http://sbgg.saic.gov.cn:9080/tmann/annInfoView/annSearch.html?annNum={}'.format(i+1))
             cat_button = self.driver.find_element_by_xpath('//*[@id="annTypes"]/option[2]')
             sleep(0.5)
             cat_button.click()
             ok_button = self.driver.find_element_by_xpath('//*[@id="loadWin"]/input')
             ok_button.click()
-            sleep(7)
+            sleep(5)
             img_button = self.driver.find_element_by_xpath('//*[@id="annTB"]/tbody/tr[2]/td[8]/a')
             img_button.click()
 
@@ -47,7 +51,7 @@ class ch_spider(scrapy.Spider):
                 self.driver.find_element_by_xpath('//*[@id="nowPage"]').clear()
 
             for next_page in range(end_page_num_div+1):
-                sleep(1)
+                sleep(0.5)
                 if end_page_num >(next_page) * 20 + 4:
                     self.driver.find_element_by_xpath('//*[@id="nowPage"]').clear()
                     self.driver.find_element_by_xpath('//*[@id="nowPage"]').send_keys((next_page) * 20 + 4)
@@ -57,17 +61,11 @@ class ch_spider(scrapy.Spider):
                 img_url_save = self.driver.find_elements_by_xpath('//*[@id="list_shot"]/ul/li/img')
                 for x in img_url_save:
                     if x.get_attribute('src') != '':
-                        print(x.get_attribute('src'))
-                print('-' * 30, '(', next_page+1, ')')
+                        with open('ch_TM_src_crawl.json','a', encoding='utf-8') as json_file:
+                            json_file.write(json.dumps(x.get_attribute('src'), ensure_ascii=False))
+                            json_file.write('\n')
+        img_close_button = self.driver.find_element_by_xpath('/html/body/div[12]/div[1]/div[2]/a')
+        img_close_button.click()
 
 
 
-            # img_close_button = self.driver.find_element_by_xpath('/html/body/div[12]/div[1]/div[2]/a')
-            # img_close_button.click()
-
-
-                # for i in range(20):
-                #     img_url_save = self.driver.find_element_by_xpath('//*[@id="list_shot"]/ul/li[{}]/img'.format(i+1))
-                #     print(img_url_save.get_attribute('src'))
-                # print('-' * 30, '(', next_page + 1, ')')
-                #

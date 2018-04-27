@@ -6,13 +6,6 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class HeadlessCrawlPipeline(object):
+class ChTmImagePipeline(object):
     def process_item(self, item, spider):
         return item
-
-    def close_spider(self,respon):
-        print('end')
-        self.send_email()
-
-    def send_email(self):
-        print('s')

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for headless_crawl project
+# Scrapy settings for ch_TM_image project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,18 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'headless_crawl'
+BOT_NAME = 'ch_TM_image'
 
-SPIDER_MODULES = ['headless_crawl.spiders']
-NEWSPIDER_MODULE = 'headless_crawl.spiders'
+SPIDER_MODULES = ['ch_TM_image.spiders']
+NEWSPIDER_MODULE = 'ch_TM_image.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'headless_crawl (+http://www.yourdomain.com)'
+#USER_AGENT = 'ch_TM_image (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-LOG_LEVEL = 'ERROR'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -47,13 +47,13 @@ LOG_LEVEL = 'ERROR'
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'headless_crawl.middlewares.HeadlessCrawlSpiderMiddleware': 543,
+#    'ch_TM_image.middlewares.ChTmImageSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'headless_crawl.middlewares.HeadlessCrawlDownloaderMiddleware': 543,
+#    'ch_TM_image.middlewares.ChTmImageDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,9 +64,9 @@ LOG_LEVEL = 'ERROR'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'headless_crawl.pipelines.HeadlessCrawlPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'ch_TM_image.pipelines.ChTmImagePipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
