@@ -2,6 +2,7 @@ from time import sleep
 import json
 import codecs
 import re
+import os
 
 import scrapy
 
@@ -26,43 +27,55 @@ class JSLoadTest(scrapy.Spider):
 
         raw_url = 'http://sbgg.saic.gov.cn:9080/tmann/annInfoView/annSearch.html?annNum='
 
-        page_num = self.driver.find_element_by_xpath(
+        period_href = self.driver.find_element_by_xpath(
             '/html/body/div[2]/div/div/div[2]/table/tbody/tr[2]').get_attribute('onclick')
-        num = int(''.join(filter(str.isdigit, page_num)))
+        period_num = int(''.join(filter(str.isdigit, period_href)))
 
+        self.check_data_dict = self.check_before_data()
+        print(self.check_data_dict['new'])
+        print(self.check_data_dict['before'])
         try:
-            file = open('testt.json', 'r')
-
+            file = open(self.check_data_dict['before'], 'r')
+            print('load before data')
             data = json.load(file)
-            print(data[-1]['period_number'])
-            if int(data[-1]['period_number']) < num:
-                with open('test2.json', 'a', encoding='utf8') as f:
+            print(data[-1]['period_number'], '----------------------------')
+            if int(data[-1]['period_number']) < period_num:
+                with open(self.check_data_dict['new'], 'a', encoding='utf8') as f:
                     for ind in data:
                         f.write(json.dumps(ind, ensure_ascii=False))
                         f.write(',')
-            for ind in range(int(data[-1]['period_number'])+1, 5):
-                # for ind in range(1, num+1):
+            for ind in range(int(data[-1]['period_number']) + 1 , period_num + 1):
                 self.main_page_dict = {
                     'period_number': str(ind),
                     'data': {}
                 }
                 self.get_data(response=(raw_url + str(ind)))
                 self.save_data(self.main_page_dict)
-                if ind + 1 != 5:
-                    with open('test2.json', 'a') as file:
+                if ind + 1 != period_num:
+                    with open(self.check_data_dict['new'], 'a') as file:
                         file.write(',')
         except:
-            for ind in range(1, 5):
-                # for ind in range(1, num+1):
+            for ind in range(1, period_num + 1):
                 self.main_page_dict = {
                     'period_number': str(ind),
                     'data': {}
                 }
                 self.get_data(response=(raw_url + str(ind)))
                 self.save_data(self.main_page_dict)
-                if ind + 1 != 5:
-                    with open('test2.json', 'a') as file:
+                if ind + 1 != period_num:
+                    with open(self.check_data_dict['new'], 'a') as file:
                         file.write(',')
+
+    def check_before_data(self):
+        file_list = os.listdir()
+        json_file_list = [file_name for file_name in file_list if
+                          file_name.split('.')[-1] == 'json' and self.name in file_name.split('.')[0]]
+        json_file_list.sort(reverse=True)
+        if len(json_file_list) < 2:
+            return {'new': json_file_list[0], 'before': json_file_list[0]}
+        else:
+            print(json_file_list[1])
+            return {'new': json_file_list[0], 'before': json_file_list[1]}
 
     def get_data(self, response):
         print('get_data')
@@ -108,7 +121,7 @@ class JSLoadTest(scrapy.Spider):
                 self.main_page_dict['data'][publish_num[count].text] = self.data_dict
 
     def save_data(self, data):
-        file_ = codecs.open('test2.json', 'a', encoding='utf8')
+        file_ = codecs.open(self.check_data_dict['new'], 'a', encoding='utf8')
         file_.write(json.dumps(data, ensure_ascii=False))
 
     def get_img_url(self):
