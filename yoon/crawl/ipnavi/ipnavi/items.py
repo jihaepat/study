@@ -8,7 +8,9 @@
 import scrapy
 
 
-class HeadlessCrawlItem(scrapy.Item):
+class IpnaviItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    pass
+    no = scrapy.Field()
+    date = scrapy.Field()
+    count = scrapy.Field()

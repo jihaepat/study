@@ -27,11 +27,11 @@ class spider_url(scrapy.Spider):
         response_url = response.xpath('/html/body/div[1]/div[5]/ul/li/a/@href').extract()
         real_url = [(origin_url + ind) for ind in response_url]
         for page_item in real_url:
-            print(type(page_item))
+            # print(type(page_item))
             yield scrapy.Request(page_item, callback=self.main)
 
     def main(self, response):
-        # print(response)
+        print(response)
         item = WebcrawlItem()
 
         split_category = response.xpath('/html/body/div[1]/div[2]/div[2]/dl[1]/dd/text()').extract_first()
@@ -44,5 +44,5 @@ class spider_url(scrapy.Spider):
         item['registration_number_image'] = sum_registration_number_image
         item['group'] = response.xpath('/html/body/div[1]/div[2]/div[2]/dl[4]/dd/text()').extract()
         item['price'] = response.xpath('/html/body/div[1]/div[2]/div[2]/div/dl[1]/dd/em/i/text()').extract()
-
+        print(item['price'])
         yield item
