@@ -5,6 +5,7 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import scrapy
 from scrapy import signals
 from scrapy import exceptions
 
@@ -49,7 +50,6 @@ class TutorialSpiderMiddleware(object):
         # Called with the start requests of the spider, and works
         # similarly to the process_spider_output() method, except
         # that it doesn’t have a response associated.
-
         # Must return only requests (not items).
         for r in start_requests:
             yield r

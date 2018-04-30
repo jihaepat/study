@@ -8,7 +8,7 @@
 import scrapy
 
 
-class phantomJsItem(scrapy.Item):
+class StudycrawlerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

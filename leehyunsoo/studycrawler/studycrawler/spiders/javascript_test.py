@@ -22,11 +22,9 @@ class JSLoadTest(scrapy.Spider):
 
     def get_main_page_url(self, response):
         print('get_main_page_url')
-
         self.driver.get(response.url)
 
         raw_url = 'http://sbgg.saic.gov.cn:9080/tmann/annInfoView/annSearch.html?annNum='
-
         period_href = self.driver.find_element_by_xpath(
             '/html/body/div[2]/div/div/div[2]/table/tbody/tr[2]').get_attribute('onclick')
         period_num = int(''.join(filter(str.isdigit, period_href)))
@@ -34,6 +32,8 @@ class JSLoadTest(scrapy.Spider):
         self.check_data_dict = self.check_before_data()
         print(self.check_data_dict['new'])
         print(self.check_data_dict['before'])
+
+        log_file = open('log_file.txt','a')
         try:
             file = open(self.check_data_dict['before'], 'r')
             print('load before data')
@@ -44,13 +44,14 @@ class JSLoadTest(scrapy.Spider):
                     for ind in data:
                         f.write(json.dumps(ind, ensure_ascii=False))
                         f.write(',')
-            for ind in range(int(data[-1]['period_number']) + 1 , period_num + 1):
+            for ind in range(int(data[-1]['period_number']) + 1, period_num + 1):
                 self.main_page_dict = {
                     'period_number': str(ind),
                     'data': {}
                 }
                 self.get_data(response=(raw_url + str(ind)))
                 self.save_data(self.main_page_dict)
+                log_file.write('new data insert about period_number '+ str(ind))
                 if ind + 1 != period_num:
                     with open(self.check_data_dict['new'], 'a') as file:
                         file.write(',')
@@ -62,6 +63,7 @@ class JSLoadTest(scrapy.Spider):
                 }
                 self.get_data(response=(raw_url + str(ind)))
                 self.save_data(self.main_page_dict)
+                log_file.write('new data insert about period_number ' + str(ind))
                 if ind + 1 != period_num:
                     with open(self.check_data_dict['new'], 'a') as file:
                         file.write(',')
@@ -123,6 +125,3 @@ class JSLoadTest(scrapy.Spider):
     def save_data(self, data):
         file_ = codecs.open(self.check_data_dict['new'], 'a', encoding='utf8')
         file_.write(json.dumps(data, ensure_ascii=False))
-
-    def get_img_url(self):
-        return 'img_url'

@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
+
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+
 import datetime
 import codecs
+import json
 
 import smtplib
 import email.encoders as enc
@@ -9,13 +16,17 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 
 
-class PhantomjsPipeline(object):
+class StudycrawlerPipeline(object):
+    def process_item(self, item, spider):
+        return item
 
     file_name = ''
     spider_name = ''
-
+    log_file_name = ''
 
     def process_item(self, item, spider):
+        # line = json.dumps(dict(item)) +',\n'
+        # self.data_file.write(line)
         return item
 
     def open_spider(self, spider):
@@ -24,10 +35,6 @@ class PhantomjsPipeline(object):
         file = open('/home/leehyunsoo/4TB/crawl/log.txt', 'a')
         file.write((spider.name + ' is started at ' + nowDatetime + '\n'))
         file.close()
-        self.file_name = spider.name + nowDatetime + '.json'
-        data_file = codecs.open(self.file_name, 'a', encoding='utf8')
-        data_file.write('[\n')
-        data_file.close()
 
     def close_spider(self, spider):
         nowDatetime = (datetime.datetime.now()).strftime('%Y_%m_%d_%H:%M:%S')
@@ -35,12 +42,8 @@ class PhantomjsPipeline(object):
         file = open('/home/leehyunsoo/4TB/crawl/log.txt', 'a')
         file.write((spider.name + ' is end at ' + nowDatetime + '\n'))
         file.close()
-        data_file = codecs.open(self.file_name, 'a', encoding='utf8')
-
-        data_file.write(']')
-        data_file.close()
         self.spider_name = spider.name
-        self.send_mail()
+        # self.send_mail()
 
     def send_mail(self):
         smtp = smtplib.SMTP_SSL('smtp.naver.com', 465)
@@ -55,7 +58,7 @@ class PhantomjsPipeline(object):
 
         part = MIMEBase('application', 'octet-stream')
 
-        # part = MIMEApplication()
+        # part = MIMEApplication()self.file_name
         part.set_payload(open(self.file_name, 'rb').read())
         enc.encode_base64(part)
         part.add_header('Content-Disposition', 'attachment; filename=ttt.json')

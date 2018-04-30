@@ -1,0 +1,105 @@
+baidu  is started at  2018_04_30_17:39:24
+moonjaein
+load_data
+Sign up
+Sign in
+Archives »
+Angela Merkel to meet Donald Trump on Friday, eyes broader dialogue on trade, Europe News & Top Stories - The Straits Times
+straitstimes.com 27 Apr '18, 10am
+The #MoonJaeIn-#KimJongUn handshake: Other historic handshakes that shook the world
+BERLIN (REUTERS) - Germany's Angela Merkel visits US President Donald Trump on Friday (April 27) with no illusions of matching his "special relationship" with France's Emmanuel Macron, but hoping to foster a broader dialogue on trade - one of a batch of tricky topics likely to be addressed. The cautious Merkel has failed to establish a good personal rapport with the brash Trump, and the mood music of her one-day working visit to the White House will almost certainly contrast sharply with the tactile "bromance" between Trump and Macron. Yet her trip may prove more productive. Before heading home after a three-day state visit in Washington, Macron acknowledged that, despite his efforts to dissuade Trump from pulling out of the multinational Iran nuclear deal, he remained likely to do so. The Iran deal, looming US tariffs on European steel and aluminium products, a planned Ru...
+Full article: https://www.straitstimes.com/world/europe/angela-merkel-t...
+Tweets
+@STsportsdesk » a day ago
+#Bowling: #Singapore's Shayna Ng claims maiden @PWBATour title in Las Vegas [link] [link]
+@New_Narrative » 28 Apr '18, 1am
+Merkel arrives at White House to high stakes, low expectations [link]
+@STForeignDesk » 28 Apr '18, 1am
+#AngelaMerkel arrives at White House to high stakes, low expectations [link] [link]
+@DannyAxL » 27 Apr '18, 12pm
+RT @STcom: The #MoonJaeIn-#KimJongUn handshake: Other historic handshakes that shook the world [link] #InterKoreanSummit h…
+@STcom » 27 Apr '18, 12pm
+The #MoonJaeIn-#KimJongUn handshake: Other historic handshakes that shook the world [link]… [link]
+@ginamcnaughton » 27 Apr '18, 12pm
+RT @STForeignDesk: The #MoonJaeIn-#KimJongUn handshake: Other historic handshakes that shook the world [link] #InterKorean…
+@STForeignDesk » 27 Apr '18, 12pm
+The #MoonJaeIn-#KimJongUn handshake: Other historic handshakes that shook the world [link]… [link]
+@amazing_wong » 27 Apr '18, 10am
+RT @STcom: Angela Merkel to meet Donald Trump on Friday, eyes broader dialogue on trade [link] [link]
+@New_Narrative » 27 Apr '18, 10am
+“Merkel to meet Trump on Friday, eyes broader dialogue on trade [link] [link]
+@STcom » 27 Apr '18, 10am
+Angela Merkel to meet Donald Trump on Friday, eyes broader dialogue on trade [link] [link]
+@STForeignDesk » 27 Apr '18, 10am
+Angela #Merkel to meet #DonaldTrump on Friday, eyes broader dialogue on trade [link] [link]
+@bdnews24 » 27 Apr '18, 10am
+Angela Merkel to meet Donald Trump on Friday, eyes broader dialogue on trade [link] via @bdnews24 #news
+Kim, Moon meet at start of historic inter-Korea...
+channelnewsasia.com 27 Apr '18, 9am
+SEOUL: The leaders of North and South Korea met on Friday (Apr 27) at the Demilitarised Zone that divides their countries ...
+Meet the Top Companies Changing the Face of the...
+greentechmedia.com 26 Apr '18, 8pm
+This year’s Grid Edge Innovation Summit will bring together top talent and expertise from around the world of distributed ...
+Aviation companies open doors to students, Sing...
+straitstimes.com 26 Apr '18, 6am
+For motorheads, there's nothing like the smell of burnt rubber, but for aeronautical engineering student Aretha Chanokporn...
+protagonista a Greenbuild Europe - News
+gbcitalia.org 28 Apr '18, 2am
+Si è concluso da pochi giorni un evento molto importante per la nostra comunità: Greenbuild Europe , che in questa edizion...
+S’pore’s 1st-ever female Cabinet minister laste...
+mothership.sg 27 Apr '18, 12pm
+The Cabinet reshuffle in Singapore occurred on April 24, 2018. Advertisement For the first time, three female ministers go...
+Why Kim may not be keen to meet Trump in Singapore
+scmp.com 28 Apr '18, 12am
+Kim Jong-un may be reluctant to travel to Singapore for his proposed summit with Donald Trump, analysts claimed, citing a ...
+Donald Trump mistakes PM Lee for Indonesian Pre...
+mothership.sg 25 Apr '18, 10am
+The G-20 summit in Germany concluded yesterday (July 8) and Prime Minister Lee Hsien Loong came away from the event with h...
+Smiles aside, the historic summit of the Koreas...
+straitstimes.com 27 Apr '18, 1pm
+In an announcement Saturday that North Korea would not conduct any more nuclear or missile tests, Kim made no mention of g...
+US prefers Singapore as venue for Trump-Kim sum...
+straitstimes.com 26 Apr '18, 9am
+Singapore is the United States' top choice for its upcoming summit with North Korea as it can "best draw the attention of ...
+Trump may meet with South Korea's Moon before s...
+channelnewsasia.com 26 Apr '18, 9am
+WASHINGTON: U.S. President Donald Trump may meet with South Korea's president before his summit with North Korean leader K...
+"It's not me, it's WE."-@realDonaldTrump @POTUS
+youtube.com a day ago
+MUST WATCH: President Donald Trump holds GIGANTIC Rally in Washington, Michigan We Need Your Help to Stay on the Air. PayP...
+Can't wait to meet the 2 GREAT MEN!
+mothership.sg 26 Apr '18, 1am
+Previously, New York Times reported that Singapore was on a shortlist of possible locations for a historic first meeting b...
+Singapore revealed to be a top choice to host T...
+coconuts.co 26 Apr '18, 2pm
+While the United States and North Korea mull over the locations to host an anticipated meeting between President Donald Tr...
+Stay updated with SgLinks.com
+Contribute an Article   ·   Submit a Site   ·   Comments   ·   About Us   ·   Terms of Service   ·   Privacy Policy   ·   Advertise   ·   Contact Us
+© 2010-2012 Jeyel Media (UK) Limited. All Rights Reserved.
+load_data
+2018-04-30 17:39:40 [scrapy.core.scraper] ERROR: Spider error processing <GET http://music.baidu.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/leehyunsoo/work/study/leehyunsoo/studycrawler/studycrawler/spiders/baidu_crawler.py", line 23, in parse
+    self.load_page()
+  File "/home/leehyunsoo/work/study/leehyunsoo/studycrawler/studycrawler/spiders/baidu_crawler.py", line 41, in load_page
+    self.get_data_elements_go_next_page(word)
+  File "/home/leehyunsoo/work/study/leehyunsoo/studycrawler/studycrawler/spiders/baidu_crawler.py", line 59, in get_data_elements_go_next_page
+    self.load_data(url)
+  File "/home/leehyunsoo/work/study/leehyunsoo/studycrawler/studycrawler/spiders/baidu_crawler.py", line 78, in load_data
+    body = self.driver.find_element_by_tag_name('body').text
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 521, in find_element_by_tag_name
+    return self.find_element(by=By.TAG_NAME, value=name)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 955, in find_element
+    'value': value})['value']
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.139)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Linux 4.15.9 x86_64)
+
+baidu  is end at  2018_04_30_17:39:40

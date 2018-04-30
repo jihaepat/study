@@ -15,7 +15,7 @@ SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
+# USER_AGENT = 'Mozilla/5.0 (MSIE 10.0; Windows NT 6.1; Trident/5.0)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,7 +64,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'tutorial.pipelines.TutorialPipeline':1000
+    'tutorial.pipelines.TutorialPipeline': 1000
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -91,4 +91,3 @@ ITEM_PIPELINES = {
 LOG_LEVEL = 'WARNING'
 
 FEED_EXPORT_ENCODING = 'utf-8'
-

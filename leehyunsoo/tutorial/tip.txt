@@ -1,5 +1,0 @@
-response.xpath('//title') 해당 elements의  xpath로 검색
-div.quote => elements with a quote class in the div tag
-
-LOG_LEVEL='WARNING' -> 쓸데없는 로그 안나오게함
-FEED_EXPORT_ENCODING = 'utf-8' -> json으로 저장시 인코딩 방식으로 인해 데이터가 깨져서 나오는데 이를 utf-8로 바꾸어 저장함
