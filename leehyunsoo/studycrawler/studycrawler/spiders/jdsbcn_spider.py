@@ -1,5 +1,7 @@
 import scrapy
-from scrapy.selector import Selector
+import os
+import json
+import codecs
 
 
 class JDSBSpider(scrapy.Spider):
@@ -28,37 +30,31 @@ class JDSBSpider(scrapy.Spider):
 
     def crawling_data(self, response):
         print(response.url)
-
-        yield {
+        data = {
             'brand_name': response.css('tr.sb_value:nth-child(4) > td:nth-child(1)::text').extract_first(),
             'category': response.css('tr.sb_value:nth-child(2) > td:nth-child(2)::text').extract_first(),
             'expiration date': response.css('tr.sb_value:nth-child(6) > td:nth-child(2)::text').extract_first(),
             'ID': response.css('tr.sb_value:nth-child(2) > td:nth-child(1)::text').extract_first(),
             'img_url': response.xpath('//table[@class="img_part_table"]//img/@src').extract()
         }
+        self.save_data(data)
 
-# # 상표 등록 번호
-# print(response.css('tr.sb_value:nth-child(2) > td:nth-child(1)::text').extract_first())
-# # 상표 카테고리
-# print(response.css('tr.sb_value:nth-child(2) > td:nth-child(2)::text').extract_first())
-# # 시험발표날짜
-# print(response.css('tr.sb_value:nth-child(2) > td:nth-child(3)::text').extract_first())
-# # 예비 발표 기간 번호
-# print(response.css('tr.sb_value:nth-child(2) > td:nth-child(4)::text').extract_first())
-#
-# # 상표이름
-# print(response.css('tr.sb_value:nth-child(4) > td:nth-child(1)::text').extract_first())
-# # 상표 적용 날짜
-# print(response.css('tr.sb_value:nth-child(4) > td:nth-child(2)::text').extract_first())
-# # 상표 유형
-# print(response.css('tr.sb_value:nth-child(4) > td:nth-child(3)::text').extract_first())
-# # 영구 보존 유무
-# print(response.css('tr.sb_value:nth-child(4) > td:nth-child(4)::text').extract_first())
-#
-# # 상표 지주 회사
-# print(response.css('tr.sb_value:nth-child(6) > td:nth-child(1) > a::text').extract_first())
-# # 독점권의 기간
-# print(response.css('tr.sb_value:nth-child(6) > td:nth-child(2)::text').extract_first())
+    # TODO : 데이터 저장시 마지막 요소에 ',' 제거
+    # TODO : 기존에 있는 데이터에 대한 처리 여부 전면 수정
+    # -> 해당 사이트의 경우 매매사이트이므로 상표 번호를 모두 가져와 데이터 수집시 비교해야 한다고 판단함
 
-# # img url
-# print(response.xpath('/*[@class="img_part_table"]//img/@src').extract())
+    # TODO : 실제 스크립트에 적용하지 않음 -> 테스트를 위해 작성했던 스크립트의 페이징 방식과 다른 부분이 존재하여 아직 적용하지 못함
+    def check_before_data(self):
+        file_list = os.listdir()
+        json_file_list = [file_name for file_name in file_list if
+                          file_name.split('.')[-1] == 'json' and self.name in file_name.split('.')[0]]
+        json_file_list.sort(reverse=True)
+        if len(json_file_list) < 2:
+            return {'new': json_file_list[0], 'before': json_file_list[0]}
+        else:
+            print(json_file_list[1])
+            return {'new': json_file_list[0], 'before': json_file_list[1]}
+
+    def save_data(self, data):
+        file_ = codecs.open(self.check_data_dict['new'], 'a', encoding='utf8')
+        file_.write(json.dumps(data, ensure_ascii=False) + ',\n')

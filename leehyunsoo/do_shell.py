@@ -9,7 +9,7 @@ def make_model_and_benchmark(fasttext_path, benchmark_path, file_path, thread):
     call([fasttext_path + make_model_order], shell=True)
 
     benchmark_path = os.path.abspath(benchmark_path)
-    benchmark_order = '/scripts/evaluate_on_all.py ' + '-f ' + file_path.replace('.txt',
+    benchmark_order = '/start_scripts/evaluate_on_all.py ' + '-f ' + file_path.replace('.txt',
                                                                                  '') + '_model.vec ' + '-o ' + file_path.replace(
         '.txt', '') + '_result.csv ' + '-p word2vec'
     call([benchmark_path + benchmark_order], shell=True)
@@ -42,7 +42,7 @@ def make_model_and_benchmark2(fasttext_path, benchmark_path, file_path, **kwargs
     call([fasttext_path + make_model_order], shell=True)
 
     benchmark_path = os.path.abspath(benchmark_path)
-    benchmark_order = '/scripts/evaluate_on_all.py ' + '-f ' + file_path.replace('.txt',
+    benchmark_order = '/start_scripts/evaluate_on_all.py ' + '-f ' + file_path.replace('.txt',
                                                                                  '') + '_model.vec ' + '-o ' + file_path.replace(
         '.txt', '') + '_result.csv ' + '-p word2vec'
     call([benchmark_path + benchmark_order], shell=True)

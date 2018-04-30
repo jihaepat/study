@@ -3,7 +3,7 @@ from time import strftime
 from web import evaluate
 
 # os.system(
-#     'word-embeddings-benchmarks/scripts/evaluate_on_all.py -f /media/leehyunsoo/4TB2/usa_patent/small_model.vec -o /media/leehyunsoo/4TB2/usa_patent/result.csv -p word2vec')
+#     'word-embeddings-benchmarks/start_scripts/evaluate_on_all.py -f /media/leehyunsoo/4TB2/usa_patent/small_model.vec -o /media/leehyunsoo/4TB2/usa_patent/result.csv -p word2vec')
 
 
 from fastText import FastText

@@ -2,7 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
-# from email.mime import
+import email.encoders as enc
 
 
 def send_mail():
@@ -20,6 +20,7 @@ def send_mail():
 
     # part = MIMEApplication()
     part.set_payload(open('test2.json','rb').read())
+    enc.encode_base64(part)
     part.add_header('Content-Disposition', 'attachment; filename=ttt.json')
     msg.attach(part)
 
