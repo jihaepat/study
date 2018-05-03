@@ -146,7 +146,7 @@ class baidu(scrapy.Spider):
         file.close()
 
     def check_regax(self, body_ar):
-        regax = re.compile('(19|20)\d+(-|.|/|)\d+(-|.|/|)\d+')
+        regax = re.compile('[19|20]\w*[-|.|/|\w*]\w*[-|.|/|\w*]\w*')
         result = []
         for x in range(len(body_ar)):
             if regax.findall(body_ar[x]):
