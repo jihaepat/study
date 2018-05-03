@@ -1,9 +1,11 @@
-file = open('test.json','r')
-ttt = file.readlines()
-print(ttt[-2])
-file2 = open('test.json','r+')
-tttw = file2.readlines()
-print(tttw[-2])
-file2.write('111')
-# file.writelines(-2,'ttt')
-# print(file.)
+import re
+
+regax = re.compile(r'((19|20)\w)((-|.|/|)\w)((-|.|/|)\w)')
+regax2 = re.compile(r'[1|2][9|0]\d*[-|.|/|\w]\d\d[-|.|/|\w]\d\d')
+asdf = re.compile(r'ab')
+tttt = 'ab asdf'
+print(asdf.findall(tttt))
+
+ttt = '   2013-05-27'
+
+print(regax2.findall(ttt))
