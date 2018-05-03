@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for shangbiao_json project
+# Scrapy settings for pipeline project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,19 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'shangbiao_json'
+BOT_NAME = 'pipeline'
 
-SPIDER_MODULES = ['shangbiao_json.spiders']
-NEWSPIDER_MODULE = 'shangbiao_json.spiders'
+SPIDER_MODULES = ['pipeline.spiders']
+NEWSPIDER_MODULE = 'pipeline.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'shangbiao_json (+http://www.yourdomain.com)'
+#USER_AGENT = 'pipeline (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 LOG_LEVEL = 'ERROR'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -47,13 +48,13 @@ LOG_LEVEL = 'ERROR'
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'shangbiao_json.middlewares.ShangbiaoJsonSpiderMiddleware': 543,
+#    'pipeline.middlewares.PipelineSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'shangbiao_json.middlewares.ShangbiaoJsonDownloaderMiddleware': 543,
+#    'pipeline.middlewares.PipelineDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +66,7 @@ LOG_LEVEL = 'ERROR'
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'shangbiao_json.pipelines.ShangbiaoJsonPipeline': 300,
+   'pipeline.pipelines.PipelinePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

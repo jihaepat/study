@@ -8,7 +8,9 @@
 import scrapy
 
 
-class ShangbiaoJsonItem(scrapy.Item):
-    # define the fields for your item here like:
+class PipelineItem(scrapy.Item):
     name = scrapy.Field()
+    no = scrapy.Field()
+    date = scrapy.Field()
+    count = scrapy.Field()
     number = scrapy.Field()
