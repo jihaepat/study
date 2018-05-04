@@ -1,11 +1,16 @@
+dict = {
+    'url': 'asdfasdf',
+    'data': [
+        1,2,3,4,5
+    ]}
+
+print(bool(len(dict['data'])))
+
 import re
+regax = re.compile(r'[1|2][9|0]\d\d[-|.|/|\w]\d\d[-|.|/|\w]\d\d')
+num_regax = re.compile(r'\w\w\w\w\w\w\w\w')
 
-regax = re.compile(r'((19|20)\w)((-|.|/|)\w)((-|.|/|)\w)')
-regax2 = re.compile(r'[1|2][9|0]\d*[-|.|/|\w]\d\d[-|.|/|\w]\d\d')
-asdf = re.compile(r'ab')
-tttt = 'ab asdf'
-print(asdf.findall(tttt))
-
-ttt = '   2013-05-27'
-
-print(regax2.findall(ttt))
+ttt = 'asdf 2013-12-05 asdlfjklasjdfklasjdkl jaskldf masdn,mans cjah 2013-12-08'
+date = max(regax.findall(ttt))
+# asdf = ''.join(filter(str.isdigit,date))
+print(date)

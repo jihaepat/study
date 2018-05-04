@@ -9,28 +9,37 @@ from time import sleep
 import scrapy
 
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException, NoSuchElementException, TimeoutException
+from selenium.common.exceptions import WebDriverException, NoSuchElementException, TimeoutException, \
+    UnexpectedAlertPresentException
+
+regax = re.compile(r'[1|2][9|0]\d\d[-|.|/|\w]\d\d[-|.|/|\w]\d\d')
 
 
-class baidu(scrapy.Spider):
+class Baidu(scrapy.Spider):
     name = 'baidu'
     # 처음 검색 페이지가 scrapy에서 로드가 안되서 music으로 로드한 후 selenium에서 각각의 검색어 별로 이동
     start_urls = ['http://music.baidu.com/']
-    maximum_page = 1
+    maximum_page = 101
 
     data_file_path = ''
     log_file_path = ''
+
+    end_date = '20180501'
 
     def __init__(self):
         self.set_driver()
 
     def parse(self, response):
-        self.load_page()
+        try:
+            self.load_page()
+        except Exception as ex:
+            self.log_write('load_page_exception.txt', str(ex))
+            pass
 
     def set_driver(self):
         # chrome_options = webdriver.ChromeOptions()
         fire_fox_options = webdriver.FirefoxOptions()
-        # fire_fox_options.add_argument('-headless')
+        fire_fox_options.add_argument('-headless')
 
         # self.driver = webdriver.Chrome('/home/leehyunsoo/4TB/chromedriver/chromedriver', options=chrome_options)
         self.driver = webdriver.Firefox(executable_path='/home/leehyunsoo/4TB/geckodriver/geckodriver',
@@ -38,12 +47,13 @@ class baidu(scrapy.Spider):
 
     def load_page(self):
         keyword = [
-            'asic', 'samsung'
+            'asics',
+            '明朗热狗'  # 명랑핫도그
         ]
         for word in keyword:
             nowDatetime = (datetime.datetime.now()).strftime('%Y_%m_%d_%H:%M:%S')
             self.data_file_path = word + '_' + nowDatetime + '.json'
-            self.log_file_path = word + '_' + nowDatetime + '.txt'
+            self.log_file_path = word + '_error_' + nowDatetime + '.txt'
             self.set_start_json_file(self.data_file_path)
             self.get_data_elements_go_next_page(word)
             self.set_end_json_file(self.data_file_path)
@@ -53,12 +63,13 @@ class baidu(scrapy.Spider):
     def get_data_elements_go_next_page(self, word):
         raw_url = 'https://www.baidu.com/s?'
         print(word)
-        first_url = raw_url + 'wd=' + str(word) + '&pn=10'
-        self.driver.get(first_url)
-        gpc = self.set_date_term('2018-04-30', '2018-05-02')
+
+        # first_url = raw_url + 'wd=' + str(word) + '&pn=10'
+        # self.driver.get(first_url)
+        # gpc = self.set_date_term('2018-04-30', '2018-05-02')
 
         for page_num in range(0, self.maximum_page):
-            self.made_url = raw_url + 'wd={}&pn={}0&'.format(word, str(page_num)) + gpc
+            self.made_url = raw_url + 'wd={}&pn={}0&'.format(word, str(page_num))
             print(self.made_url)
 
             self.driver.get(self.made_url)
@@ -78,60 +89,54 @@ class baidu(scrapy.Spider):
                     raise Exception
             except:
                 return 0
-            # sleep(1)
 
     def load_data(self, url):
         data_dict = {}
-        regax = re.compile('(19|20)\d+(-|.|/|)\d+(-|.|/|)\d+')
         try:
-            self.driver.set_page_load_timeout(5)
+            self.driver.set_page_load_timeout(8)
             self.driver.get(url)
             print(self.driver.current_url)
 
             body = self.driver.find_element_by_xpath('//body').text
             body_ar = body.split('\n')
 
-            if regax.findall(body):
+            if ''.join(filter(str.isdigit, max(regax.findall(body)))) < self.end_date:
                 data_dict['title'] = self.driver.title
                 data_dict['url'] = self.driver.current_url
-                data_dict['data'] = self.check_regax(body_ar)
+                # data_dict['data'] = self.check_regax(body_ar)
+                # if len(data_dict['data']):
                 self.json_write(self.data_file_path, data_dict)
             self.driver.get(self.made_url)
-            sleep(3)
 
         except TimeoutException:
-            print('time_out')
+            print('time_out : ', self.driver.current_url)
             try:
                 body = self.driver.find_element_by_xpath('//body').text
                 body_ar = body.split('\n')
-                if regax.findall(body):
+                if ''.join(filter(str.isdigit, max(regax.findall(body)))) < self.end_date:
                     data_dict['title'] = self.driver.title
                     data_dict['url'] = self.driver.current_url
-                    data_dict['data'] = self.check_regax(body_ar)
+                    # data_dict['data'] = self.check_regax(body_ar)
+                    # if len(data_dict['data']):
                     self.json_write(self.data_file_path, data_dict)
-                self.driver.get(self.made_url)
-                sleep(3)
 
             except TimeoutException:
                 pass
+
             except NoSuchElementException as no_element:
                 self.log_write(self.log_file_path, str(no_element) + self.driver.current_url + '\n\n')
+
+            except UnexpectedAlertPresentException as un:
+                self.log_write(self.log_file_path, str(un) + self.driver.current_url + '\n\n')
+
+            finally:
                 self.driver.get(self.made_url)
                 sleep(3)
 
-        except NoSuchElementException as no_element:
-            self.log_write(self.log_file_path, str(no_element) + self.driver.current_url + '\n\n')
-            self.driver.get(self.made_url)
-            sleep(3)
-
-
-        except WebDriverException as wd:
-            self.log_write(self.log_file_path, str(wd) + self.driver.current_url + '\n\n')
-            self.driver.get(self.made_url)
-            sleep(3)
-
         except BaseException:
             self.log_write(self.log_file_path, 'BaseException : ' + self.driver.current_url + '\n\n')
+
+        finally:
             self.driver.get(self.made_url)
             sleep(3)
 
@@ -146,16 +151,17 @@ class baidu(scrapy.Spider):
         file.close()
 
     def check_regax(self, body_ar):
-        regax = re.compile(r'[1|2][9|0]\d*[-|.|/|\w]\d\d[-|.|/|\w]\d\d')
         result = []
         for x in range(len(body_ar)):
-            if regax.findall(body_ar[x]):
+            if ''.join(filter(str.isdigit, ''.join(regax.findall(body_ar[x])))) < self.end_date:
                 try:
                     result.append(body_ar[x - 1])
                     result.append(body_ar[x])
                     result.append(body_ar[x + 1])
-                except:
-                    result.append(body_ar[x])
+                except Exception as ex:
+                    print('check_regax_exception')
+                    pass
+
         return sorted(set(result), key=result.index)
 
     def set_start_json_file(self, path):
@@ -168,6 +174,8 @@ class baidu(scrapy.Spider):
         file.write('\n]')
         file.close()
 
+    # 기간검색 필터링
+    # 현재 미사용 중 -> 검색결 중 상당수가 입력한 기간에 맞지 않음
     def set_date_term(self, start_data, finish_data):
         sleep(1)
 
