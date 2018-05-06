@@ -6,8 +6,7 @@ import os
 from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
-from shangbiao_json.items import ShangbiaoJsonItem
-
+# from shangbiao_json.items import ShangbiaoJsonIpiptem
 
 WAIT_TIME_SHORT = 1
 WAIT_TIME_LONG = 4
@@ -15,21 +14,25 @@ WAIT_TIME_LONG = 4
 class spider_url(scrapy.Spider):
     name = 'CR'
     prnt_date = datetime.datetime.now().strftime('%Y%m%d%H%M')
-    chromedriver = '/media/yoonjae/4TB2/chromedriver'
+    # chromedriver = '/media/yoonjae/4TB2/chromedriver'
+    chromedriver = '/home/ubuntu/StudyFile/chromedriver'# 집
     driver = webdriver.Chrome(chromedriver)
     driver.set_window_size(1400, 1080)
     driver.set_window_position(2650, 1000)
-    driver.get('http://www.shangbiao.com/search')
+    driver.get('http://www.shangbiao.com/search')#
 
-    ipnavi_path = '/media/yoonjae/4TB2/ipnavi'
-    dirs = os.listdir(ipnavi_path)[-1]
-
-    read_json = json.load(open('/media/yoonjae/4TB2/ipnavi/'+dirs))
+    # ipnavi_path = '/media/yoonjae/4TB2/ipnavi'
+    ipnavi_path = '/home/ubuntu/StudyFile/ipnavi' #집
+    dirs = os.listdir(ipnavi_path)
+    print(dirs)
+    # read_json = json.load(open('/media/yoonjae/4TB2/ipnavi/'+dirs))
+    read_json = json.load(open('/home/ubuntu/StudyFile/ipnavi/' + dirs)) #집
     page_count_num = 0
     cycle_count = 0
     def start_requests(self):
         sleep(WAIT_TIME_SHORT)
-        self.file = open('/media/yoonjae/4TB2/ScrapyData/shangbiao_'+self.prnt_date+'.json', 'w', encoding='utf-8')
+        # self.file = open('/media/yoonjae/4TB2/ScrapyData/shangbiao_'+self.prnt_date+'.json', 'w', encoding='utf-8')
+        self.file = open('/home/ubuntu/StudyFile/ScrapyData/shangbiao_' + self.prnt_date + '.json', 'w', encoding='utf-8') #집
         for x in range(len(self.read_json)):
 
             sleep(WAIT_TIME_SHORT)
