@@ -32,14 +32,18 @@ class Baidu(scrapy.Spider):
     def parse(self, response):
         try:
             self.load_page()
-        except Exception as ex:
-            self.log_write('load_page_exception.txt', str(ex))
+        except UnexpectedAlertPresentException as un:
+            # self.log_write('unexpecteaAlertPresentExcetpion.txt', str(un) + self.driver.current_url + '\n\n')
             pass
+        except BaseException as ex:
+            self.log_write('load_page_exception.txt', str(ex) + '\n' + self.driver.current_url)
+
+        # self.load_page()
 
     def set_driver(self):
         # chrome_options = webdriver.ChromeOptions()
         fire_fox_options = webdriver.FirefoxOptions()
-        fire_fox_options.add_argument('-headless')
+        # fire_fox_options.add_argument('-headless')
 
         # self.driver = webdriver.Chrome('/home/leehyunsoo/4TB/chromedriver/chromedriver', options=chrome_options)
         self.driver = webdriver.Firefox(executable_path='/home/leehyunsoo/4TB/geckodriver/geckodriver',
@@ -69,74 +73,109 @@ class Baidu(scrapy.Spider):
         # gpc = self.set_date_term('2018-04-30', '2018-05-02')
 
         for page_num in range(0, self.maximum_page):
+            self.driver.set_page_load_timeout(60)
             self.made_url = raw_url + 'wd={}&pn={}0&'.format(word, str(page_num))
-            print(self.made_url)
 
             self.driver.get(self.made_url)
 
             data_elements = self.driver.find_elements_by_xpath('//div[@id="content_left"]/div/h3/a')
             data_href = [ind.get_attribute('href') for ind in data_elements]
-            now_page_num = int(self.driver.find_element_by_xpath('//*[@id="page"]/strong/span[2]').text)
-
+            now_page_num = int(self.driver.find_element_by_xpath('//div[@id="page"]/strong/span[2]').text)
+            print(now_page_num)
             for url in data_href:
                 self.load_data(url)
-            sleep(1)
+            sleep(3)
+            self.driver.get(self.made_url)
+            sleep(3)
             try:
-                next_page = self.driver.find_element_by_xpath('//*[@id="page"]/a[@class="n"]')
-                href = next_page.get_attribute('href')
-                print(href)
+                print('페이지 찾는중======================================')
+                print(self.driver.current_url)
+                print('=================================================')
+                next_page = self.driver.find_elements_by_xpath('//*[@id="page"]/a[@class="n"]')
+                if now_page_num > 1 and len(next_page) < 2:
+                    raise Exception
                 if now_page_num > self.maximum_page:
                     raise Exception
-            except:
+            except Exception:
+                print('exception 발생===================================\n')
+                finish_keyword_file = open('finish.txt', 'a')
+                finish_keyword_file.write(word + '페이지 완료')
+                finish_keyword_file.close()
                 return 0
 
     def load_data(self, url):
         data_dict = {}
         try:
-            self.driver.set_page_load_timeout(8)
+            self.driver.set_page_load_timeout(5)
             self.driver.get(url)
             print(self.driver.current_url)
 
             body = self.driver.find_element_by_xpath('//body').text
-            body_ar = body.split('\n')
-
-            if ''.join(filter(str.isdigit, max(regax.findall(body)))) < self.end_date:
-                data_dict['title'] = self.driver.title
-                data_dict['url'] = self.driver.current_url
-                # data_dict['data'] = self.check_regax(body_ar)
-                # if len(data_dict['data']):
-                self.json_write(self.data_file_path, data_dict)
-            self.driver.get(self.made_url)
-
-        except TimeoutException:
-            print('time_out : ', self.driver.current_url)
-            try:
-                body = self.driver.find_element_by_xpath('//body').text
-                body_ar = body.split('\n')
-                if ''.join(filter(str.isdigit, max(regax.findall(body)))) < self.end_date:
+            # body_ar = body.split('\n')
+            print(regax.findall(body))
+            if len(regax.findall(body)) > 1:
+                if ''.join(filter(str.isdigit, min(regax.findall(body)))) < self.end_date:
+                    data_dict['title'] = self.driver.title
+                    data_dict['url'] = self.driver.current_url
+                    # data_dict['data'] = self.check_regax(body_ar)
+                    # if len(data_dict['data']):
+                    self.json_write(self.data_file_path, data_dict)
+            elif len(regax.findall(body)) == 1:
+                if ''.join(regax.findall(body)) < self.end_date:
                     data_dict['title'] = self.driver.title
                     data_dict['url'] = self.driver.current_url
                     # data_dict['data'] = self.check_regax(body_ar)
                     # if len(data_dict['data']):
                     self.json_write(self.data_file_path, data_dict)
 
+            self.driver.set_page_load_timeout(30)
+            self.driver.get(self.made_url)
+            sleep(3)
+
+        except TimeoutException:
+            print('time_out : ', self.driver.current_url)
+            try:
+                body = self.driver.find_element_by_xpath('//body').text
+                print(regax.findall(body))
+                if len(regax.findall(body)) > 1:
+                    if ''.join(filter(str.isdigit, min(regax.findall(body)))) < self.end_date:
+                        data_dict['title'] = self.driver.title
+                        data_dict['url'] = self.driver.current_url
+
+                        self.json_write(self.data_file_path, data_dict)
+                elif len(regax.findall(body)) == 1:
+                    if ''.join(regax.findall(body)) < self.end_date:
+                        data_dict['title'] = self.driver.title
+                        data_dict['url'] = self.driver.current_url
+
+                        self.json_write(self.data_file_path, data_dict)
+                self.driver.set_page_load_timeout(30)
+                self.driver.get(self.made_url)
+                sleep(3)
             except TimeoutException:
                 pass
 
             except NoSuchElementException as no_element:
                 self.log_write(self.log_file_path, str(no_element) + self.driver.current_url + '\n\n')
-
-            except UnexpectedAlertPresentException as un:
-                self.log_write(self.log_file_path, str(un) + self.driver.current_url + '\n\n')
-
-            finally:
+                self.driver.set_page_load_timeout(30)
                 self.driver.get(self.made_url)
                 sleep(3)
 
+            except UnexpectedAlertPresentException as un:
+                self.log_write(self.log_file_path, str(un) + self.driver.current_url + '\n\n')
+                self.driver.set_page_load_timeout(30)
+                self.driver.get(self.made_url)
+                sleep(3)
+
+        except UnexpectedAlertPresentException as un:
+            # self.log_write(self.log_file_path, str(un) + self.driver.current_url + '\n\n')
+            self.driver.set_page_load_timeout(30)
+            self.driver.get(self.made_url)
+            sleep(3)
+
         except BaseException:
             self.log_write(self.log_file_path, 'BaseException : ' + self.driver.current_url + '\n\n')
-
-        finally:
+            self.driver.set_page_load_timeout(30)
             self.driver.get(self.made_url)
             sleep(3)
 
