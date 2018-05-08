@@ -5,11 +5,11 @@ C_GREEN  = "\033[32m"
 C_END     = "\033[0m"
 
 prnt_date = datetime.datetime.now().strftime('%Y%m%d%H%M')
-ipnavi_path = '/media/yoonjae/4TB2/ScrapyData'
-if len(os.listdir(ipnavi_path)) < 2:
+scrapy_file = '/media/yoonjae/4TB2/ScrapyData'
+if len(os.listdir(scrapy_file)) < 2:
     print('비교대상이 없습니다.')
-dirs_new = os.listdir(ipnavi_path)[-1]
-dirs_old = os.listdir(ipnavi_path)[-2]
+dirs_new = os.listdir(scrapy_file)[-1]
+dirs_old = os.listdir(scrapy_file)[-2]
 print('이전파일 :',C_RED+dirs_old+C_END)
 print('최신파일 :', C_GREEN+dirs_new+C_END)
 
