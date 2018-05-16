@@ -1,0 +1,47 @@
+Message: Unable to locate element: //body
+http://www.asics.com.cn/
+
+
+Message: Unable to locate element: //body
+https://www.asics.com/kr/ko-kr/
+
+
+Message: Unable to locate element: //body
+https://www.asicstiger.com/us/en-us/
+
+
+Message: Unable to locate element: //body
+http://www.catwhy.com/post/asics-gel-saga-and-asics-gel-lyte-iii.html
+
+
+Message: Unable to locate element: //body
+https://www.asics.co.za/
+
+
+Message: Unable to locate element: //body
+http://iranshao.com/articles/2251-asics-all
+
+
+Message: Unable to locate element: //body
+https://post.smzdm.com/p/612768/
+
+
+BaseException : http://www.5law.cn/youhui/1582574/
+
+
+Message: Unable to locate element: //body
+http://www.asicstphm.com/
+
+
+Message: Unable to locate element: //body
+http://www.midwestjrvolleyball.com/
+
+
+Message: Unable to locate element: //body
+https://www.afew-store.com/en/asics/
+
+
+Message: Unable to locate element: //body
+https://www.smzdm.com/p/6282996/
+
+

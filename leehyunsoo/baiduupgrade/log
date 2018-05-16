@@ -1,0 +1,497 @@
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=jKPdC_c-Rz5rdQ_mNxsUxCMtqH7E1lGBoxJUJW6kyvozb70bxCiTtlnXfos4Fba5>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 131, in process_request
+    return HtmlResponse(url=self.driver.current_url, status=200,
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 660, in current_url
+    return self.execute(Command.GET_CURRENT_URL)['value']
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Failed to decode response from marionette
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=Yvg0auSewS9bgdoBBR7CDPDvqv7nvOfsZFIGdIaqPOOkUZOkdyyPgmKXYYcpqj5iu6h4GSLZRdxE3BkgfYDHhq>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=RUr6MXteWAPex1_Rqte8pUWqdcW8BJTOZUQYWXqpLTO>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=Bav8tFkg0ucd04cuTlFnXbcblw0F1cevtabujhkO2UC-eayBetM5aJSQTiGBPzJO>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.baidu.com/s?wd=%E6%98%8E%E6%9C%97%E7%83%AD%E7%8B%97&&pn=10>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=XaPcmuS_tnO5JYMVf98sHGmeMXopRBA5BtLiBL0uJd3-gH0u6kjmnWabiIuwkSft>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=rNGdKrw1dDM2PWouJW7Q8igGmhTf6xUaXIz72moPvwDQqvJAXrTOjrTigCPmdlyu>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=2ryfs6KzYbcTCeKhYeXQNcZfarKaslHKXeRIXkrarwq>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=iyB80BPMxnrP8tLx0gEvgkfyR6qT_dRXs11PgLXHvrFPFZ0f6dkaSU9S0sMyYFKo>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=goq_mgHPpRxxGGCIy0Ivrt19iHM7_1E3PzkOH9qM6zhN3SrBfWNcv42LWcTnlJIoximRSxbaxxSQgMhgDzEFxa>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=55PyJMWe0yWYW-wTkW42Xp4GICNNGYR92IQXFT9EAKWZ6Yx4ThZLxkJzTkrofFAY>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=S_axWD21eyI-lfJoFjJIz1C41gOL6Ja0phmdlI_e-I-Y_THb3RFw731IqULFlRdIDYgUcHr3RBiZCGW4lwDfKK>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=4ajIsKFiUoW2Z8LrYDn1peHRrGVmy0VizQ5PAgNULgk1O6tBy0vaBFUoaBLknHPC>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=wQe_9cMtjHjmXvHJXxd9fEjbQ-EuYcLx6JKlrMZ_8FCJ374QUMqLbioBHqW_zVF9UWvaC9-WWctMim7i-ugtzK>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=okjyIIVvSO7GePtGySmCt-wCSTw7LPpmkb1rOYAVUo1BMkb2IVSbxzPrtGMIPVTM>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=oSZAxHjl5gkWPkTva6qdOH_NjbpwMzeWZp8Im3Vp-JqAK-tMREKfZYqERvPT9wov>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=8sZxbAkqvPTIQjD3pGFaOLJREUJZxmOgwerbM1O8NOA1cdJn0fO-zSBdA2NeZ8fx>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=gsmGxZaiW6gbrg1eR4oKLNtovw0y4oyFeusTe0GcMAUe8dgZNlN-aJUNMwcWw39i>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=Qp1WcCzPBuRuHdEJSaOIZQDktzqKinEA2UUUalhdoPuN6WZfDNKjWgnPzGJbN6KaFxWEpLz423FLOL50FfAHCa>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=cjsuWWuvmT2lbMKIAViRloWgyYUlVMz5eFXQo6cXWNsI0z8AmoN254guQW0HTxxgmcWTU-mabL8KmX0F3-KgTxwJTqzvErLAuD-02FZnjNi>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=063lgrOQ5Vc3f8FRAD6JLIGAZXWkY7r3_Y-gAWstthOu_sIq_ACm98nYAN_wneCA3fQMD5EVqe7wKzdfC1m0mUBhedkC87D-6WzyooQ1vK8Zt6rA32HaYsFcWEq68FCrukCOPFcWt-oGH_PTs5Kxdkw1CnJYPl_TSOCYqwo3x75xsF1_L-Y7NjArF0tcAn-oRfwAPNNQgK_pgZ5sQStEKr5GJDs8dFqGAdikhkrBfA7>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=IZFCYTAY3pNKb_eaCJJ0guLALJYJtNfNOesnGGiBmInuY4YMkL0dG-S1VmvjTGBOFr9EBgprFa08DBX1rrFCuuz2hxXBaCYXr-B9CiQpJqC>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=lAWKlnd-wIoekJ3jIs_o7EkieURmpwWpG-bf5h00LwZwZXfqe_URBJXHT57SjX9mK4p_uNpjOAMYxMXaP-q8CZAaVWZ-UeLclU-t78jIO_C>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=McNNO8JpyIZRFwXKAI3-o5N7ub_WbXpUq-GeYzDtvFX0D8IAx4pMBlQ8Gp-HTWH-0TZCAkukRWrNrpsD_SiRVq>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=651KF-s4aFXWM7eTf1Wq3itn3umS8dZcDHOXB0TxW1RehICBHtSAc7i6GY6NkOoU>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=7dW3oKJgrNX3_x7ku4gO62VpCbFxG3RIL4z_bN0WBok7mXmOn92nSsi-7-Mhg1BZZy_XWEPMxcLE3coYXs4yLq>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=2eYbRgUzRSN9DtPE0YoIH8Vy-zRqvLFeoKwVceuAb1-mOPQRzr3rMTHTYXDO2_Vm>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=4FwkkKHd5UediEPMbgNQAIwlVFGteBe82M5FK3YB4vSK6axSE_Chgmd8jLHv0YRk>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.baidu.com/link?url=bwxqKd5o-zF7xU8tj89iRa8Z9Q8u_0i1Pt6CO4maJOsQ5pP2oy6PDKssiysp2DPb>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: Tried to run command without establishing a connection
+
+2018-05-08 12:02:47 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.baidu.com/s?wd=asics&&pn=00>
+Traceback (most recent call last):
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/scrapy/core/downloader/middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "/home/leehyunsoo/work/study/leehyunsoo/baiduupgrade/baiduupgrade/middlewares.py", line 128, in process_request
+    self.driver.get(request.url)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 324, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 310, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 466, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/envs/study/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 489, in _request
+    self._conn.request(method, parsed_url.path, body, headers)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/home/leehyunsoo/.pyenv/versions/3.6.4/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
