@@ -30,3 +30,4 @@ class spider_url(scrapy.Spider):
             # item['date'] = response.xpath('//*[@id="contents"]/div[2]/table/tbody/tr[{}]/td[4]/text()'.format(i + 1)).extract_first()
             # item['count'] = response.xpath('//*[@id="contents"]/div[2]/table/tbody/tr[{}]/td[3]/text()'.format(i + 1)).extract_first()
             yield item
+        print(no_count)
