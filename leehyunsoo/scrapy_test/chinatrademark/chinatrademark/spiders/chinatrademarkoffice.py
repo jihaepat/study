@@ -11,10 +11,6 @@ class ChinatradeMart(scrapy.Spider):
     name = "china"
     page_num = 1
     start_url = 'https://www.chinatrademarkoffice.com/index.php/search/listxb'
-    # key_word = [
-    #     '金光春',
-    #     '金广利',
-    # ]
     with open('broker_name.json') as broker:
         broker = json.load(broker)
         broker_list = [name['name'] for name in broker]
@@ -29,10 +25,8 @@ class ChinatradeMart(scrapy.Spider):
     def parse(self, response):
         print(response.meta['name'],'-----',response.url)
         row_count = len(response.xpath('//*[@id="xblisthtml"]/table/tbody/tr[1]/td[2]').extract())
-        print(row_count)
         mark_name = response.xpath('//*[@id="xblisthtml"]/table/tbody/tr[1]/td[2]/h3/a[2]/text()').extract()
         img_href = response.xpath('//*[@id="xblisthtml"]/table/tbody/tr[1]/td[1]/a/div/@loadsrc').extract()
-        print(len(img_href))
         owner = response.xpath('//*[@id="xblisthtml"]/table/tbody/tr[1]/td[2]/font/a/text()').extract()
         number_class_num = response.xpath('//*[@id="xblisthtml"]/table/tbody/tr[1]/td[2]/font/text()[1]').extract()
         regax_number = self.number_regax(number_class_num)

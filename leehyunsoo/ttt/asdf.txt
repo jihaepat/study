@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head> 
+	<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE">
+	<meta charset="UTF-8">
+	<meta name="subject" content="买卖商标,买卖专利找尚标400-711-0860"/>
+	<link rel="dns-prefetch" href="http://www.86sb.com"/>
+	<link rel="dns-prefetch" href="http://pic.86sb.com"/>
+	<link rel="dns-prefetch" href="http://img-cdn.86sb.com"/>
+		<script type="text/javascript" src="/index/webhead"></script>
+
+    <script type="text/javascript">
+        var _Url = decodeURI(location.href), Refer = decodeURI(document.referrer),_hosturls = 'www.86sb.com',islogin= 0;
+	 </script>
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="aVFaX2pDMUkuZw0NEipIPjM9IjscIH0kJhsrMDwiQTgFNh4XLg5ZFg==">
+    <title>第类商标转让交易_尚标商标买卖-尚标商标网</title>
+    <link rel="shortcut icon" href="../favicon.ico?0001" />
+    <meta name="keywords" content="第类商标转让,尚标商标买卖,第类商标交易">
+<meta name="description" content="第类商标转让,尚标商标交易列表,买卖第类商标上尚标商标网,买卖双方担保交易,商标转让流程经公证处全程100%公证,咨询热线4007110860">
+<link href="/css/public.css?0000001" rel="stylesheet">
+<link href="/css/kj.public.css" rel="stylesheet" position="1">
+<link href="/css/kj.search.css?v.0.2" rel="stylesheet" position="1">
+<script src="/js/jquery-3.0.0.min.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/jquery.nicescroll.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
+<script src="/js/todata.js?0.00001"></script>
+<script src="/js/index.js?0012"></script>
+<script src="/js/dialog-min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/index/webhead"></script>
+<script src="/js/kj.yokautf_0.1.js"></script>    <base href="http://www.86sb.com/">	 
+</head>
+<body>
+    <script src="http://img-cdn.86sb.com/pc/calert/js/Toast.js"></script>
+
+
+<style>
+    * {
+        margin: 0 auto;
+    }
+
+    .notice {
+        width: 100%;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        /*position: fixed;*/
+        line-height: 30px;
+        top: 0;
+    }
+
+    .notice .center {
+        padding-left: 24px;
+        background: url('/images/notice/notice.png') no-repeat left center;
+        background-size: 20px 20px;
+        color:#ffca18;
+    }
+
+    .notice .right {
+        float: right;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background: url('/images/notice/close.png') center right;
+        background-size: 20px 20px;
+        margin-top: 4px;
+    }
+</style>
+<div class="notice" >
+    <span class="center">2018 年 5 月 19 日凌晨 02:00--05:00 将对系统进行升级，届时系统将暂停访问，请知悉。给您带来的不便请多见谅！</span>
+    <span class="right"></span>
+</div>
+<script>
+    $('.notice .right').on('click', function () {
+        $('.notice').css('display', 'none')
+    });
+    var myDate = new Date('2018-05-20 00:00:00');
+    var willTime = myDate.getTime();
+
+    var date = new Date();
+    var nowTimes = date.getTime();
+    if (nowTimes >= willTime){
+        $('.notice').css({'display':'none'});
+    }
+
+</script>
+<header class="public-top-layout" style="background-color: #fff;">
+    <div class="topBar wrap">
+        <div class="user-entry">          
+			<script> document.write(webmsg[0]);</script>
+           <span>|&nbsp;&nbsp;<a href="/news-classId-23.html" target="_blank" style="color: #76b9ea;">帮助</a></span>
+        </div>
+        <ul class="login tophead_zr"></ul>
+    </div>
+</header>
+
+<script type="text/javascript">
+if(ad[24] && ad[24][0]){
+	document.write('<a href="'+ad[24][0].link+'" style="padding-top:8px;display: block;margin: 0 auto;width: 1180px;"><img src="'+ad[24][0].pic+'" alt="买卖商标找尚标,'+ad[24][0].atitle+'" ></a>');
+}
+</script>
+<section class="logo">
+    <div class="header-top wrap">
+        <div class="left-logo" style="width:319px;">            
+			<script type="text/javascript">document.writeln('<a href="/" target="_blank" title="'+webmsg[1]+'"> <img src="'+wesite[4]+'" alt="'+webmsg[1]+'"/></a>');</script>
+            
+            <script type="text/javascript"> if(wesite[6]==1 || wesite[6]=='1'){document.writeln("<span>"+wesite[5]+"</span>");}</script>
+        </div>
+        <div class="center-search">
+            <form  name="searchform" class="searchinfor" id="head_search" action="/products/list">
+                <em class="search-icon"></em>
+                <input type="text" id="tt" class="heard_search_keys text"  name="search_keys" autofocus placeholder="请输入商标名称或编号"  value="">
+                <a href="javascript:void(0);"><button class="search-btn">搜索</button></a>
+            </form>
+        </div>
+        <ul class="buy-brand">
+            <li><a href="/want.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_want', 'headmenu01_want', 'click']);" rel="nofollow">求购商标</a></li>
+            <li><a href="/sendPro.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_sendPro', 'headmenu01_sendPro', 'click']);" rel="nofollow">发布商标</a></li>
+        </ul>
+    </div> 
+    <section class="siteNav wrap">
+        <ul class="site_menu siteMenu clearfix">
+            <li><a href="/">首页</a></li>
+            <li><a href="/zr.html" target="_blank"  onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_zr', 'click']);">商标转让<em class="arrowDu"></em></a></li>
+            <li><a href="/sbreg" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_zc', 'click']);">商标注册</a></li>
+            <li><a href="http://www.86dianpu.com" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_dianpu', 'click']);" >店铺交易</a></li>
+            <li><a href="/patentszlsq.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_zl', 'click']);">专利申请<i style="position: absolute;  margin: -8px 0 0 3px;"><img src="images/icon011.png" alt=""></i></a></li>
+            <li><a href="/patent" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_zlzr', 'click']);">专利转让</a></li>
+            <li><a href="/Services-106.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_about', 'click']);">关于尚标</a></li>
+            <!--<li style="opacity:0;"><a href="/zt/index.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_headmeanu01', 'headmenu01_ztindex', 'click']);">专题列表</a></li>-->
+        </ul>
+        <ul class="underLine clearfix">
+            <li ></li><li class='currentUn'></li><li ></li><li ></li><li ></li><li ></li>        </ul>   
+        <div class="selectDown"  style="display: none;">
+            <div class="selectDown_left">
+                <h4>商标分类 <span style="float:right;color:#333;font-size: 14px;" ><a href="/pro/index"  target="_blank" style="color:red;font-weight:bold;">第十版商标分类表</a></span> </h4>
+                <ul class="clearfix">
+                    <li><a href="/class-s1-1-1.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_1', 'click']);" >01类-化学原料</a></li>
+                    <li><a href="/class-s1-1-2.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_2', 'click']);">02类-涂料油漆</a></li>
+                    <li><a href="/class-s1-1-3.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_3', 'click']);">03类-日化用品</a></li>
+                    <li><a href="/class-s1-1-4.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_4', 'click']);">04类-燃料油脂</a></li>
+                    <li><a href="/class-s1-1-5.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_5', 'click']);">05类-医药品</a></li>
+                    <li><a href="/class-s1-1-6.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_6', 'click']);">06类-五金金属</a></li>
+                    <li><a href="/class-s1-1-7.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_7', 'click']);">07类-机械设备</a></li>
+                    <li><a href="/class-s1-1-8.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_8', 'click']);">08类-手工器械</a></li>
+                    <li><a href="/class-s1-1-9.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_9', 'click']);">09类-科学仪器</a></li>
+                    <li><a href="/class-s1-1-10.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_10', 'click']);">10类-医疗器械</a></li>
+                    <li><a href="/class-s1-1-11.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_11', 'click']);">11类-灯具空调</a></li>
+                    <li><a href="/class-s1-1-12.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_12', 'click']);">12类-运输工具</a></li>
+                    <li><a href="/class-s1-1-13.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_13', 'click']);">13类-军火烟火</a></li>
+                    <li><a href="/class-s1-1-14.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_14', 'click']);">14类-珠宝钟表</a></li>
+                    <li><a href="/class-s1-1-15.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_15', 'click']);">15类-乐器</a></li>
+                    <li><a href="/class-s1-1-16.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_16', 'click']);">16类-办公用品</a></li>
+                    <li><a href="/class-s1-1-17.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_17', 'click']);">17类-橡胶制品</a></li>
+                    <li><a href="/class-s1-1-18.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_18', 'click']);">18类-皮革皮具</a></li>
+                    <li><a href="/class-s1-1-19.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_19', 'click']);">19类-建筑材料</a></li>
+                    <li><a href="/class-s1-1-20.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_20', 'click']);">20类-家具</a></li>
+                    <li><a href="/class-s1-1-21.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_21', 'click']);">21类-厨房洁具</a></li>
+                    <li><a href="/class-s1-1-22.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_22', 'click']);">22类-绳网袋篷</a></li>
+                    <li><a href="/class-s1-1-23.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_23', 'click']);">23类-纱线丝</a></li>
+                    <li><a href="/class-s1-1-24.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_24', 'click']);">24类-布料床单</a></li>
+                    <li><a href="/class-s1-1-25.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_25', 'click']);">25类-服装鞋帽</a></li>
+                    <li><a href="/class-s1-1-26.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_26', 'click']);">26类-钮扣拉链</a></li>
+                    <li><a href="/class-s1-1-27.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_27', 'click']);">27类-地毯席垫</a></li>
+                    <li><a href="/class-s1-1-28.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_28', 'click']);">28类-健身器材</a></li>
+                    <li><a href="/class-s1-1-29.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_29', 'click']);">29类-食品</a></li>
+                    <li><a href="/class-s1-1-30.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_30', 'click']);">30类-方便食品</a></li>
+                    <li><a href="/class-s1-1-31.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_31', 'click']);">31类-饲料种籽</a></li>
+                    <li><a href="/class-s1-1-32.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_32', 'click']);" >32类-啤酒饮料</a></li>
+                    <li><a href="/class-s1-1-33.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_33', 'click']);" >33类-酒</a></li>
+                    <li><a href="/class-s1-1-34.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_34', 'click']);">34类-烟草烟具</a></li>
+                    <li><a href="/class-s1-1-35.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_35', 'click']);" >35类-广告销售</a></li>
+                    <li><a href="/class-s1-1-36.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_36', 'click']);" >36类-金融物管</a></li>
+                    <li><a href="/class-s1-1-37.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_37', 'click']);" >37类-建筑修理</a></li>
+                    <li><a href="/class-s1-1-38.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_38', 'click']);" >38类-通讯服务</a></li>
+                    <li><a href="/class-s1-1-39.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_39', 'click']);">39类-运输贮藏</a></li>
+                    <li><a href="/class-s1-1-40.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_40', 'click']);">40类-材料加工</a></li>
+                    <li><a href="/class-s1-1-41.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_41', 'click']);">41类-教育娱乐</a></li>
+                    <li><a href="/class-s1-1-42.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_42', 'click']);" >42类-网站服务</a></li>
+                    <li><a href="/class-s1-1-43.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_43', 'click']);">43类-餐饮住宿</a></li>
+                    <li><a href="/class-s1-1-44.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_44', 'click']);">44类-医疗园艺</a></li>
+                    <li><a href="/class-s1-1-45.html" target="_blank" onclick="my_hmt_push(['_trackEvent', 'index_hotsbclass', 'hotsbclass_45', 'click']);">45类-社会服务</a></li>
+                </ul>
+            </div>
+            <div class="selectDown_center">
+                <h4>推荐商标</h4>
+                <ul class="clearfix">               
+				   <script src="http://www.86sb.com/index/ad?id=6&n=15"></script>
+				   <script>
+					if(_AD[6][0]&& _AD[6][0]['atitle']){
+						for(var i=0;i<15;i++){
+						document.write('<li>\
+										<a href="'+_AD[6][i]['link']+'" target="_blank" onclick="my_hmt_push([\'_trackEvent\', \'index_hotsbclass\', \'hotsbclass_sendPro'+i+'\', \'click\']);" data-id="hotsbimg'+i+'">\
+											<img src="'+_AD[6][i]['pic']+'" width="98" height="58" alt="买卖商标找尚标,'+_AD[6][i]['atitle']+'">\
+										</a></li>');
+						}				
+					}
+				</script>
+				   
+                </ul>
+            </div>
+            <div class="selectDown_right">               
+                <script src="http://www.86sb.com/index/ad?id=34&n=1"></script>
+				<script>
+					if(_AD[34][0]&& _AD[34][0]['atitle']){
+						document.write(' <a href="'+_AD[34][0]['link']+'" target="_blank"><img src="'+_AD[34][0]['pic']+'" alt="'+_AD[34][0]['atitle']+'"/></a>');
+					}else{
+						document.write(' <a href="/"><img src="../images/s_rightpic.jpg" alt="买卖商标找尚标"/></a>');
+					}
+				</script>
+            </div>       
+        </div>
+    </section>   
+</section>
+<input name="_csrf" type="hidden" id="_csrf" value="aVFaX2pDMUkuZw0NEipIPjM9IjscIH0kJhsrMDwiQTgFNh4XLg5ZFg==">
+
+<script language="javascript">
+	// jQuery.noConflict(); //解决jq冲突
+    var groupidarr = '',classid='0',bt='';
+	var ts = '',te='',urllist='http://www.86sb.com/products/list';
+
+</script>
+
+<div class="ie8">您的浏览器版本较低，请使用ie9及以上版本或其他浏览器浏览体验更佳！&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:clIE();" onClick="cie8">关闭</a></div>
+<div id="div1">
+    <div class="w1190 ptop10" style="margin-top: 10px;"><!--广告位-->	
+		<a href="/products/list?style4=6 " target="_blank" title="主打商标"><img src="http://pic.86sb.com/sbgjgg/2018-04-23/201804230945108.png" width="1178" height="120" alt="主打商标"/></a>      
+    </div>
+    <script>var head_keyword_lg = ''; </script>
+    <!--筛选模块-->
+    <div class="w1190 screen ptop10">
+        <p style="padding:10px 0" class="group_a">您当前所在的位置：
+            <a href="/">尚标首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="/zr.html">商标转让</a> &gt; <strong>尚标</strong>&gt;<strong></strong>        </p>
+        <ul>
+            <li class="keyword">
+                <dl>
+                    <dt>
+                        商标筛选
+                    </dt>
+                    <dd>
+                        <p class="w19 left">&nbsp;</p>
+                        <!-- 带条件关键词 url -->
+                        <div class="key_cont">
+
+                                                    </div>
+                        <!-- 初始搜索url -->
+                            <span class="key allkey blue"  >
+                                <a href="javascript:void(0);" class="allclose">全部删除</a>
+                            </span>
+                            <span class="skey">
+                              <input type="text" name="keyword" id="keyword" placeholder=" 输入商标名称" value="" maxlength="20" class="keyword"/>
+                              <input type="button" class='btsubmit' value="" title="提交" />
+                            </span>
+                    </dd>
+                </dl>
+                <div class="cleare"></div>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        分&nbsp;&nbsp;&nbsp;&nbsp;类
+                    </dt>
+                    <dd>                    
+                        <div class="allclass category bigclass maclass" >
+							<span>
+								<i class="none"></i>
+								<a href="javascript:void(0);" data-id="0" class="selected">不限</a>
+							</span>
+                        </div>
+                        <div class="twoclass category">
+                            <div class="twoclass2 maclass" >
+                                                                        <span style="width: 150px;">
+                                        <i class="none">1</i>
+                                        <a href="javascript:void(0);" data-id="1">第01类 化学原料</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">2</i>
+                                        <a href="javascript:void(0);" data-id="2">第02类 涂料油漆</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">3</i>
+                                        <a href="javascript:void(0);" data-id="3">第03类 日化用品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">4</i>
+                                        <a href="javascript:void(0);" data-id="4">第04类 燃料油脂</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">5</i>
+                                        <a href="javascript:void(0);" data-id="5">第05类 医药品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">6</i>
+                                        <a href="javascript:void(0);" data-id="6">第06类 五金金属</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">7</i>
+                                        <a href="javascript:void(0);" data-id="7">第07类 机械设备</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">8</i>
+                                        <a href="javascript:void(0);" data-id="8">第08类 手工器械</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">9</i>
+                                        <a href="javascript:void(0);" data-id="9">第09类 科学仪器</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">10</i>
+                                        <a href="javascript:void(0);" data-id="10">第10类 医疗器械</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">11</i>
+                                        <a href="javascript:void(0);" data-id="11">第11类 灯具空调</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">12</i>
+                                        <a href="javascript:void(0);" data-id="12">第12类 运输工具</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">13</i>
+                                        <a href="javascript:void(0);" data-id="13">第13类 军火烟火</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">14</i>
+                                        <a href="javascript:void(0);" data-id="14">第14类 珠宝钟表</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">15</i>
+                                        <a href="javascript:void(0);" data-id="15">第15类 乐器</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">16</i>
+                                        <a href="javascript:void(0);" data-id="16">第16类 办公用品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">17</i>
+                                        <a href="javascript:void(0);" data-id="17">第17类 橡胶制品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">18</i>
+                                        <a href="javascript:void(0);" data-id="18">第18类 皮革皮具</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">19</i>
+                                        <a href="javascript:void(0);" data-id="19">第19类 建筑材料</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">20</i>
+                                        <a href="javascript:void(0);" data-id="20">第20类 家具</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">21</i>
+                                        <a href="javascript:void(0);" data-id="21">第21类 厨房洁具</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">22</i>
+                                        <a href="javascript:void(0);" data-id="22">第22类 绳网袋篷</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">23</i>
+                                        <a href="javascript:void(0);" data-id="23">第23类 纱线丝</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">24</i>
+                                        <a href="javascript:void(0);" data-id="24">第24类 布料床单</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">25</i>
+                                        <a href="javascript:void(0);" data-id="25">第25类 服装鞋帽</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">26</i>
+                                        <a href="javascript:void(0);" data-id="26">第26类 钮扣拉链</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">27</i>
+                                        <a href="javascript:void(0);" data-id="27">第27类 地毯席垫</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">28</i>
+                                        <a href="javascript:void(0);" data-id="28">第28类 健身器材</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">29</i>
+                                        <a href="javascript:void(0);" data-id="29">第29类 食品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">30</i>
+                                        <a href="javascript:void(0);" data-id="30">第30类 方便食品</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">31</i>
+                                        <a href="javascript:void(0);" data-id="31">第31类 饲料种籽</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">32</i>
+                                        <a href="javascript:void(0);" data-id="32">第32类 啤酒饮料</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">33</i>
+                                        <a href="javascript:void(0);" data-id="33">第33类 酒</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">34</i>
+                                        <a href="javascript:void(0);" data-id="34">第34类 烟草烟具</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">35</i>
+                                        <a href="javascript:void(0);" data-id="35">第35类 广告销售</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">36</i>
+                                        <a href="javascript:void(0);" data-id="36">第36类 金融物管</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">37</i>
+                                        <a href="javascript:void(0);" data-id="37">第37类 建筑修理</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">38</i>
+                                        <a href="javascript:void(0);" data-id="38">第38类 通讯服务</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">39</i>
+                                        <a href="javascript:void(0);" data-id="39">第39类 运输储藏</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">40</i>
+                                        <a href="javascript:void(0);" data-id="40">第40类 材料加工</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">41</i>
+                                        <a href="javascript:void(0);" data-id="41">第41类 教育娱乐</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">42</i>
+                                        <a href="javascript:void(0);" data-id="42">第42类 网站服务</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">43</i>
+                                        <a href="javascript:void(0);" data-id="43">第43类 餐饮住宿</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">44</i>
+                                        <a href="javascript:void(0);" data-id="44">第44类 医疗园艺</a>
+                                    </span>
+                                                                            <span style="width: 150px;">
+                                        <i class="none">45</i>
+                                        <a href="javascript:void(0);" data-id="45">第45类 社会服务</a>
+                                    </span>
+                                                                    <div class="cleare"></div>
+                            </div>
+                        </div>
+                        <div class="queryarrSwitch maclass" >
+                            <a href="javascript:void(0);" class=""><!--默认箭头向下，class为arrup着箭头向上-->
+                                展开更多
+                            </a>
+                        </div>
+                        <div class="queryarr"><!--多条分类查询-->
+                            <div class="mcl_list"></div>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="cleare"></div>
+            </li>
+            <section class="moretype">
+                <li class="classother language">
+                    <dl>
+                        <dt>
+                            类&nbsp;&nbsp;&nbsp;&nbsp;型
+                        </dt>
+                        <dd>
+                                <span>
+                                    <a href="javascript:void(0);" class="selected">不限</a>
+                                </span>
+                                                                <span>
+                                    <a href="javascript:void(0);" data-id="1">中文</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="2">英文</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="3">图形</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="4">拼音</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="5">数字</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="6">其他</a>
+                                </span>
+                                                        </dd>
+                    </dl>
+                    <div class="cleare"></div>
+                </li>
+                <li class="classother year">
+                    <dl>
+                        <dt>
+                            注册年限
+                        </dt>
+                        <dd>
+                                <span>
+                                    <a href="javascript:void(0);" class="selected">
+                                        不限
+                                    </a>
+                                </span>
+                                                                <span>
+                                    <a href="javascript:void(0);" title="1" data-id="1">满1年</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" title="2" data-id="2">满2年</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" title="3" data-id="3">满3年</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" title="4" data-id="4">满4年</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" title="5" data-id="5">满5年</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" title="6" data-id="6">满5年以上</a>
+                                </span>
+                                                        </dd>
+                    </dl>
+                    <div class="cleare"></div>
+                </li>
+                <li class="classother fontnumber">
+                    <dl>
+                        <dt>
+                            字&nbsp;&nbsp;&nbsp;&nbsp;数
+                        </dt>
+                        <dd>
+                                <span>
+                                    <a href="javascript:void(0);" class="selected">不限</a>
+                                </span>
+                                                                <span>
+                                    <a href="javascript:void(0);" data-id="1">1-2字</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="7">2字</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="2">3字</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="3">4字</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="4">4个字以上</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="5">不限</a>
+                                </span>
+                                                                    <span>
+                                    <a href="javascript:void(0);" data-id="6">纯图</a>
+                                </span>
+                                                        </dd>
+                    </dl>
+                    <div class="cleare"></div>
+                </li>
+								
+				<li class="classother lownumber">
+					<dl>
+						<dt>价格区间：</dt>
+						<dd>
+							<span><a href="javascript:void(0);" id="low0" class="selected">不限</a></span>
+							<span><a href="javascript:void(0);" data-id="1"  id="low1" data-s="0" data-e="18000">0-3万</a></span>
+							<span><a href="javascript:void(0);" data-id="2"  id="low2" data-s="18000" data-e="30000">3万-5万</a></span>
+							<span><a href="javascript:void(0);" data-id="3"  id="low3" data-s="30000" data-e="60000">5万-10万</a></span>
+							<span><a href="javascript:void(0);" data-id="4"  id="low4" data-s="60000" data-e="0">10万以上</a></span>
+						</dd>
+					</dl>
+					<div class="cleare"></div>
+					</li>
+					
+            </section>
+        </ul>
+    </div><!--screen end-->
+    <!--排序模块-->
+    <div class="w1190 ptop10 sort">
+        <dl>
+            <dt class="tcenter">
+                默认排序
+            </dt>
+            <dd>
+                    <span>
+                        <a href="javascript:void(0);" class="renqi"><!-- class 为 fdown下  fup上-->
+                            <p></p>人气
+                        </a>
+                    </span>
+ 											<span>
+                        <a href="javascript:void(0);" class="xinpin" data-id="xinpin">
+                            <p></p>新品
+                        </a>
+                    </span>
+                <div class="pges">
+                    <p>
+                        共18000个商标&nbsp;&nbsp;&nbsp;&nbsp;1/30                    </p>
+                    <a class="n" href="/products/list?orderby=sort%7Cdesc%2Cup_at%7Cdesc&between=&bigclassid=0&is_index=1&page=2&per-page=30"></a>                </div>
+            </dd>
+        </dl>
+    </div><!--sort end-->
+
+    <div class="w1190 ptop10 overflow result show_brand">
+                   
+                            <ul>
+                                      <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-106198.html" target="_blank" data-id="106198"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/787870526.jpg?1" id="products_img_106198" width="200" height="150" alt="唐延"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    26类&nbsp;<a href="/info-106198.html" target="_blank" data-id="106198" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="唐延">唐延</abbr></a>
+
+                                    <p class="clearboth"><abbr title="花边饰品;头发装饰品;钮扣;假发;针;人造花;服装垫肩;修补纺织品用热粘合片;亚麻布标记用数字或字母;茶壶保暖套">花边饰品;头发装饰品;钮扣;假...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="106198" data-title="唐延"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(106198,event,'唐延');"
+                                       id="fxid_106198">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-106401.html" target="_blank" data-id="106401"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/847901426.jpg?1" id="products_img_106401" width="200" height="150" alt="唐域"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    26类&nbsp;<a href="/info-106401.html" target="_blank" data-id="106401" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="唐域">唐域</abbr></a>
+
+                                    <p class="clearboth"><abbr title="花边饰品;头发装饰品;钮扣;假发;针;人造花;服装垫肩;修补纺织品用热粘合片;亚麻布标记用数字或字母;茶壶保暖套">花边饰品;头发装饰品;钮扣;假...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="106401" data-title="唐域"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(106401,event,'唐域');"
+                                       id="fxid_106401">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-106694.html" target="_blank" data-id="106694"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/886749726.jpg?1" id="products_img_106694" width="200" height="150" alt="福翼"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    26类&nbsp;<a href="/info-106694.html" target="_blank" data-id="106694" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="福翼">福翼</abbr></a>
+
+                                    <p class="clearboth"><abbr title="花边饰品;头发装饰品;钮扣;假发;针;人造花;服装垫肩;修补纺织品用热粘合片;亚麻布标记用数字或字母;茶壶保暖套">花边饰品;头发装饰品;钮扣;假...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="106694" data-title="福翼"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(106694,event,'福翼');"
+                                       id="fxid_106694">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-261076.html" target="_blank" data-id="261076"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/159969982.jpg?1" id="products_img_261076" width="200" height="150" alt="藏宝天漆"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    2类&nbsp;<a href="/info-261076.html" target="_blank" data-id="261076" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="藏宝天漆">藏宝天漆</abbr></a>
+
+                                    <p class="clearboth"><abbr title="染料;颜料;食用色素;印刷油墨;铝涂料;油漆;防水粉（涂料）;木材防腐剂;金属防锈制剂;天然树脂（原料）;">染料;颜料;食用色素;印刷油墨...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="261076" data-title="藏宝天漆"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(261076,event,'藏宝天漆');"
+                                       id="fxid_261076">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-329904.html" target="_blank" data-id="329904"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/179241516.jpg?1" id="products_img_329904" width="200" height="150" alt="劳筑"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    6类&nbsp;<a href="/info-329904.html" target="_blank" data-id="329904" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="劳筑">劳筑</abbr></a>
+
+                                    <p class="clearboth"><abbr title="金属建筑材料,五金器具,五金器具,金属锁（非电）,保险柜,金属包装容器,存储和运输用金属容器,金属纪念标牌,普通金属艺术品,普通金属合金,金属管道,五金器具,">金属建筑材料,五金器具,五金...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="329904" data-title="劳筑"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(329904,event,'劳筑');"
+                                       id="fxid_329904">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-453659.html" target="_blank" data-id="453659"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-03-13/242201803131025157.jpg" id="products_img_453659" width="200" height="150" alt="炫度"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    8类&nbsp;<a href="/info-453659.html" target="_blank" data-id="453659" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="炫度">炫度</abbr></a>
+
+                                    <p class="clearboth"><abbr title="餐具(刀、叉和匙),剑,剪刀,手工操作的手工具,刀,雕刻工具(手工具),切削工具(手工具),卷发用手工具,修指甲成套工具,磨刀器具">餐具(刀、叉和匙),剑,剪刀,手...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="453659" data-title="炫度"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(453659,event,'炫度');"
+                                       id="fxid_453659">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-453663.html" target="_blank" data-id="453663"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-03-13/242201803131026140.jpg" id="products_img_453663" width="200" height="150" alt="惠妙"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    8类&nbsp;<a href="/info-453663.html" target="_blank" data-id="453663" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="惠妙">惠妙</abbr></a>
+
+                                    <p class="clearboth"><abbr title="餐具(刀、叉和匙),剑,剪刀,手工操作的手工具,刀,雕刻工具(手工具),切削工具(手工具),卷发用手工具,修指甲成套工具,磨刀器具">餐具(刀、叉和匙),剑,剪刀,手...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="453663" data-title="惠妙"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(453663,event,'惠妙');"
+                                       id="fxid_453663">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-453664.html" target="_blank" data-id="453664"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-03-13/242201803131033105.jpg" id="products_img_453664" width="200" height="150" alt="豪妙"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    8类&nbsp;<a href="/info-453664.html" target="_blank" data-id="453664" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="豪妙">豪妙</abbr></a>
+
+                                    <p class="clearboth"><abbr title="餐具(刀、叉和匙),剑,剪刀,手工操作的手工具,刀,雕刻工具(手工具),切削工具(手工具),卷发用手工具,修指甲成套工具,磨刀器具">餐具(刀、叉和匙),剑,剪刀,手...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="453664" data-title="豪妙"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(453664,event,'豪妙');"
+                                       id="fxid_453664">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-334252.html" target="_blank" data-id="334252"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2017-06-01/211201706011550131.jpg" id="products_img_334252" width="200" height="150" alt="途德傲"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    12类&nbsp;<a href="/info-334252.html" target="_blank" data-id="334252" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="途德傲">途德傲</abbr></a>
+
+                                    <p class="clearboth"><abbr title="陆、空、水或铁路用机动运载工具,电动运载工具,汽车车轮,自行车,婴儿车,轮胎（运载工具用）,气垫船,运载工具内装饰品,运载工具防盗设备,儿童安全座（运载工具用）">陆、空、水或铁路用机动运载...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="334252" data-title="途德傲"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(334252,event,'途德傲');"
+                                       id="fxid_334252">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-567626.html" target="_blank" data-id="567626"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/2263137124.jpg?1" id="products_img_567626" width="200" height="150" alt="午夜玖瑰"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    24类&nbsp;<a href="/info-567626.html" target="_blank" data-id="567626" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="午夜玖瑰">午夜玖瑰</abbr></a>
+
+                                    <p class="clearboth"><abbr title="纺织织物,布,纺织品制壁挂,毡,浴用织品（服装除外）,床上用毯,家具遮盖物,门帘,纺织品制或塑料制旗,寿衣,">纺织织物,布,纺织品制壁挂,毡...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="567626" data-title="午夜玖瑰"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(567626,event,'午夜玖瑰');"
+                                       id="fxid_567626">分享</a>
+                                    <img style="position: absolute;top: 235px;right: 21px;" class="tuijian" src="/images/imgico/tuijian.jpg" alt="买商标，找尚标！">                                </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-400529.html" target="_blank" data-id="400529"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1964715335.jpg" id="products_img_400529" width="200" height="150" alt="京购"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    35类&nbsp;<a href="/info-400529.html" target="_blank" data-id="400529" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="京购">京购</abbr></a>
+
+                                    <p class="clearboth"><abbr title="自动售货机出租,医疗用品零售或批发服务 ">自动售货机出租,医疗用品零售...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="400529" data-title="京购"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(400529,event,'京购');"
+                                       id="fxid_400529">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-355283.html" target="_blank" data-id="355283"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1860141316.jpg" id="products_img_355283" width="200" height="150" alt="欣微雅"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    16类&nbsp;<a href="/info-355283.html" target="_blank" data-id="355283" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="欣微雅">欣微雅</abbr></a>
+
+                                    <p class="clearboth"><abbr title="纸,卫生纸,纸餐巾,印刷品,印刷出版物,平版印刷工艺品,包装用纸袋或塑料袋（信封、小袋）,文具,教学材料（仪器除外）,念珠,">纸,卫生纸,纸餐巾,印刷品,印...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="355283" data-title="欣微雅"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(355283,event,'欣微雅');"
+                                       id="fxid_355283">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-93625.html" target="_blank" data-id="93625"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1089009533.jpg" id="products_img_93625" width="200" height="150" alt="佐川"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    33类&nbsp;<a href="/info-93625.html" target="_blank" data-id="93625" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="佐川">佐川</abbr></a>
+
+                                    <p class="clearboth"><abbr title="果酒(含酒精);白兰地;开胃酒;烧酒;米酒;葡萄酒;黄酒;威士忌;鸡尾酒;酒精饮料(啤酒除外)">果酒(含酒精);白兰地;开胃酒;...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="93625" data-title="佐川"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(93625,event,'佐川');"
+                                       id="fxid_93625">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-423136.html" target="_blank" data-id="423136"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/2000070436.jpg?1" id="products_img_423136" width="200" height="150" alt="真典"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    36类&nbsp;<a href="/info-423136.html" target="_blank" data-id="423136" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="真典">真典</abbr></a>
+
+                                    <p class="clearboth"><abbr title="保险承保,资本投资,艺术品估价,不动产管理,不动产代理,经纪,担保,募集慈善基金,代管产业,典当,">保险承保,资本投资,艺术品估...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="423136" data-title="真典"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(423136,event,'真典');"
+                                       id="fxid_423136">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-145322.html" target="_blank" data-id="145322"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-01-05/242201801050931180.jpg" id="products_img_145322" width="200" height="150" alt="欣方炎"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    5类&nbsp;<a href="/info-145322.html" target="_blank" data-id="145322" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="欣方炎">欣方炎</abbr></a>
+
+                                    <p class="clearboth"><abbr title="补药;减肥用药剂;人用药;药草;中药成药;医用营养食物;空气净化制剂;兽医用药;灭微生物剂;卫生巾">补药;减肥用药剂;人用药;药草...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="145322" data-title="欣方炎"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(145322,event,'欣方炎');"
+                                       id="fxid_145322">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-90319.html" target="_blank" data-id="90319"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2016-4-7/201647152919.png" id="products_img_90319" width="200" height="150" alt="美津植秀"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    8类&nbsp;<a href="/info-90319.html" target="_blank" data-id="90319" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="美津植秀">美津植秀</abbr></a>
+
+                                    <p class="clearboth"><abbr title="修指甲工具;修脚指甲成套器具;电力和非电力脱毛器;电动或非电动刮胡刀;卷睫毛夹;剪刀;餐具(刀、叉和匙);随身武器;园艺工具(手动的);手工操作的手工具">修指甲工具;修脚指甲成套器具...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="90319" data-title="美津植秀"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(90319,event,'美津植秀');"
+                                       id="fxid_90319">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-409200.html" target="_blank" data-id="409200"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1312528930.jpg?1" id="products_img_409200" width="200" height="150" alt="酥美脆"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    30类&nbsp;<a href="/info-409200.html" target="_blank" data-id="409200" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="酥美脆">酥美脆</abbr></a>
+
+                                    <p class="clearboth"><abbr title="虾味条,糖,糖,以谷物为主的零食小吃,糕点,饼干,馅饼,方便面,大米花,米果,以谷物为主的零食小吃,锅巴,">虾味条,糖,糖,以谷物为主的零...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="409200" data-title="酥美脆"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(409200,event,'酥美脆');"
+                                       id="fxid_409200">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-409304.html" target="_blank" data-id="409304"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/89665923.jpg?1" id="products_img_409304" width="200" height="150" alt="欧莱友"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    3类&nbsp;<a href="/info-409304.html" target="_blank" data-id="409304" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="欧莱友">欧莱友</abbr></a>
+
+                                    <p class="clearboth"><abbr title="肥皂,浴液,擦鞋膏,护发素,洗洁精,香精油,化妆品,香,洗发液,牙膏,">肥皂,浴液,擦鞋膏,护发素,洗...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="409304" data-title="欧莱友"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(409304,event,'欧莱友');"
+                                       id="fxid_409304">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-377945.html" target="_blank" data-id="377945"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2017-12-15/916201712151845173.jpg" id="products_img_377945" width="200" height="150" alt="玉冰花"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    25类&nbsp;<a href="/info-377945.html" target="_blank" data-id="377945" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="玉冰花">玉冰花</abbr></a>
+
+                                    <p class="clearboth"><abbr title="服装,袜,婴儿全套衣,皮带(服饰用),帽,内衣,童装,手套(服装),围巾,鞋(脚上的穿着物)">服装,袜,婴儿全套衣,皮带(服...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="377945" data-title="玉冰花"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(377945,event,'玉冰花');"
+                                       id="fxid_377945">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-350889.html" target="_blank" data-id="350889"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2017-10-27/211201710271355168.jpg" id="products_img_350889" width="200" height="150" alt="青驴"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    20类&nbsp;<a href="/info-350889.html" target="_blank" data-id="350889" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="青驴">青驴</abbr></a>
+
+                                    <p class="clearboth"><abbr title="家具,床,非金属箱,镜子（玻璃镜）,竹木工艺品,未加工或半加工角、牙、介制品,木头或塑料标志牌,家养宠物窝,枕头,室内纺织品制百叶窗帘,">家具,床,非金属箱,镜子（玻璃...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="350889" data-title="青驴"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(350889,event,'青驴');"
+                                       id="fxid_350889">分享</a>
+                                    <img style="position: absolute;top: 235px;right: 21px;" class="tuijian" src="/images/imgico/tuijian.jpg" alt="买商标，找尚标！">                                </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-66027.html" target="_blank" data-id="66027"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/8010882432018-01-19/926201801191741104.jpg" id="products_img_66027" width="200" height="150" alt="创志"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    43类&nbsp;<a href="/info-66027.html" target="_blank" data-id="66027" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="创志">创志</abbr></a>
+
+                                    <p class="clearboth"><abbr title="住所(旅馆、供膳寄宿处);咖啡馆;饭店;餐馆;茶馆;活动房屋出租;养老院;日间托儿所(看孩子);动物寄养">住所(旅馆、供膳寄宿处);咖啡...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="66027" data-title="创志"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(66027,event,'创志');"
+                                       id="fxid_66027">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-308620.html" target="_blank" data-id="308620"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2016-11-23/211201611231133125.png" id="products_img_308620" width="200" height="150" alt="新好"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    1类&nbsp;<a href="/info-308620.html" target="_blank" data-id="308620" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="新好">新好</abbr></a>
+
+                                    <p class="clearboth"><abbr title="活性炭,水软化剂,未加工人造树脂,肥料,金属退火剂,制革用油,皮革粘合剂,工业用粘合剂,纸浆
+">活性炭,水软化剂,未加工人造...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="308620" data-title="新好"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(308620,event,'新好');"
+                                       id="fxid_308620">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-461854.html" target="_blank" data-id="461854"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-01-17/211201801171738132.jpg" id="products_img_461854" width="200" height="150" alt="运卓"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    31类&nbsp;<a href="/info-461854.html" target="_blank" data-id="461854" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="运卓">运卓</abbr></a>
+
+                                    <p class="clearboth"><abbr title="宠物用香沙,未加工谷种,酿酒麦芽,宠物饮料">宠物用香沙,未加工谷种,酿酒...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="461854" data-title="运卓"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(461854,event,'运卓');"
+                                       id="fxid_461854">分享</a>
+                                    <img style="position: absolute;top: 235px;right: 21px;" class="tuijian" src="/images/imgico/tuijian.jpg" alt="买商标，找尚标！">                                </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-309986.html" target="_blank" data-id="309986"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1682471544.jpg?1" id="products_img_309986" width="200" height="150" alt="尚喜堂"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    44类&nbsp;<a href="/info-309986.html" target="_blank" data-id="309986" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="尚喜堂">尚喜堂</abbr></a>
+
+                                    <p class="clearboth"><abbr title="健康咨询,医疗诊所服务,饮食营养指导,公共卫生浴,桑拿浴服务,美容院,理发店,动物养殖,园艺,眼镜行,">健康咨询,医疗诊所服务,饮食...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="309986" data-title="尚喜堂"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(309986,event,'尚喜堂');"
+                                       id="fxid_309986">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-224581.html" target="_blank" data-id="224581"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/15065488112018-01-19/926201801191737168.jpg" id="products_img_224581" width="200" height="150" alt="我的明天"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    11类&nbsp;<a href="/info-224581.html" target="_blank" data-id="224581" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="我的明天">我的明天</abbr></a>
+
+                                    <p class="clearboth"><abbr title="灯,电炊具,电热水瓶,冷冻设备和机器,运载工具用空调器,加热装置,水管龙头,太阳能热水器,卫生器械和设备,水净化装置">灯,电炊具,电热水瓶,冷冻设备...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="224581" data-title="我的明天"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(224581,event,'我的明天');"
+                                       id="fxid_224581">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-123063.html" target="_blank" data-id="123063"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-01-03/926201801031033174.jpg" id="products_img_123063" width="200" height="150" alt="推播"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    9类&nbsp;<a href="/info-123063.html" target="_blank" data-id="123063" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="推播">推播</abbr></a>
+
+                                    <p class="clearboth"><abbr title="计算机软件(已录制);计算机程序(可下载软件);电子记事器;传真机;网络通讯设备;摄像机;照相机(摄影);插头、插座和其他接触器(电连接);眼镜;电池">计算机软件(已录制);计算机程...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="123063" data-title="推播"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(123063,event,'推播');"
+                                       id="fxid_123063">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-261692.html" target="_blank" data-id="261692"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1588999841.jpg" id="products_img_261692" width="200" height="150" alt="桔子小屋"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    41类&nbsp;<a href="/info-261692.html" target="_blank" data-id="261692" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="桔子小屋">桔子小屋</abbr></a>
+
+                                    <p class="clearboth"><abbr title="教育;组织教育或娱乐竞赛;流动图书馆;录像带发行;书籍出版;娱乐;俱乐部服务（娱乐或教育）;广播和电视节目制作;提供体育设施;经营彩票;">教育;组织教育或娱乐竞赛;流...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="261692" data-title="桔子小屋"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(261692,event,'桔子小屋');"
+                                       id="fxid_261692">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-355372.html" target="_blank" data-id="355372"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/1860145910.jpg?1" id="products_img_355372" width="200" height="150" alt="漫萌领域"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    10类&nbsp;<a href="/info-355372.html" target="_blank" data-id="355372" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="漫萌领域">漫萌领域</abbr></a>
+
+                                    <p class="clearboth"><abbr title="医疗器械和仪器,按摩器械,牙科设备和仪器,放射医疗设备,医用特制家具,奶瓶,非化学避孕用具,性玩具,矫形用物品,缝合材料,">医疗器械和仪器,按摩器械,牙...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="355372" data-title="漫萌领域"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(355372,event,'漫萌领域');"
+                                       id="fxid_355372">分享</a>
+                                                                    </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-415765.html" target="_blank" data-id="415765"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand_sb/2056865972018-01-17/711201801171740180.jpg" id="products_img_415765" width="200" height="150" alt="深雅"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    7类&nbsp;<a href="/info-415765.html" target="_blank" data-id="415765" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="深雅">深雅</abbr></a>
+
+                                    <p class="clearboth"><abbr title="农业机械,粉碎机,木材加工机,造纸机（纸业机器）,印刷机,烘干机（制茶工业用）,搅拌机,电动制饮料机,陶瓷工业用机器设备（包括建筑用陶瓷机械）,雕刻机,搅拌机,粉碎机,粉碎机,搅拌机,粉碎机,">农业机械,粉碎机,木材加工机,...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="415765" data-title="深雅"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(415765,event,'深雅');"
+                                       id="fxid_415765">分享</a>
+                                    <img style="position: absolute;top: 235px;right: 21px;" class="tuijian" src="/images/imgico/tuijian.jpg" alt="买商标，找尚标！">                                </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                                                <li id="listfirst">
+                            <dl class="rdef">
+                                <dt>
+                                    <a href="/info-448682.html" target="_blank" data-id="448682"  onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist1_0', 'click']);">
+                                        <img src="http://pic.86sb.com/uploads/Brand/2018-01-12/918201801121645153.jpg" id="products_img_448682" width="200" height="150" alt="康梦"/>
+                                    </a>
+                                </dt>
+                                <dd class="title">
+                                    15类&nbsp;<a href="/info-448682.html" target="_blank" data-id="448682" onclick="my_hmt_push(['_trackEvent', 'pc_sblist', 'pc_sblist_1_0', 'click']);"><abbr title="康梦">康梦</abbr></a>
+
+                                    <p class="clearboth"><abbr title="吉他,钢琴,乐器,电子琴,簧（管）乐器,打击乐器,音乐盒,乐谱架,校音器（定音器）,乐器键盘,">吉他,钢琴,乐器,电子琴,簧（...</abbr></p>
+                                </dd>
+                                <dd class="other">                                
+                                    <a class="aother to_product_heart shouchang"
+                                       href="javascript:void(0);"  data-type="0" data-id="448682" data-title="康梦"
+                                       class="to_product_heart">收藏</a>
+
+                                    <!--class有selectshare为分享中的产品-->
+                                    <a class="aother fenxiang" href="javascript:void(0);"
+                                       onclick="dblist(448682,event,'康梦');"
+                                       id="fxid_448682">分享</a>
+                                    <img style="position: absolute;top: 235px;right: 21px;" class="tuijian" src="/images/imgico/tuijian.jpg" alt="买商标，找尚标！">                                </dd>
+                                <dd class="price consult-price">
+                                    <span onClick="toswt('');">免费咨询</span>
+                                    <span class="communicate-price" >立即询价</span>
+                                </dd>
+                            </dl>
+                        </li>
+                        </ul>
+    </div><!--result end-->
+	
+    <div class="w1190 page">
+        <div class="plist">
+            <ul  id="page_numbers" data-n="18000" data-m="1" data-ta="600" data-href="/products/list?orderby=sort%7Cdesc%2Cup_at%7Cdesc&between=&bigclassid=0&is_index=1&"></ul>
+                    </div>
+    </div>
+    <script>
+        var global_types = 0;
+        jQuery(document).on("click",".shouchang",function(){
+            var islogon =0,types =jQuery(this).attr("data-type");
+            var sid = jQuery(this).attr("data-id"),pname = jQuery(this).attr("data-title"),bigclassid = '0';
+            var that = $(this);
+            if(islogin==1)
+            {
+                if($(this).hasClass('mycc')){
+                    var url ="/products/collectiondel";
+                    data =  {sid: sid, _csrf: csrfToken, t: Math.random()};
+					$(this).removeClass("selectcollect");
+					$(this).removeClass("mycc");
+                }else {
+                    var url ='/products/addcollection';
+                    data = {sid: sid,bigclassid:bigclassid,pname:pname,_csrf:csrfToken, t: Math.random()};
+					$(this).addClass("mycc");
+					$(this).addClass("selectcollect");
+                }
+                toheart(sid,pname,bigclassid,url,data,that);
+            }else{
+                dologin();
+            }
+
+        });
+    </script>
+        <div class="cleare"></div>
+</div>
+<!-- 主体部分结束 -->
+<!-- 对比 begin -->
+<div id="xsyc"></div>
+<div id="bbv" style="z-index: 8;">
+    <div id="dbimg" onclick="dbhidd()"></div>
+    <div id="dbnr">
+        <b>
+            <span>分享推荐商标</span>
+            <span class="span2" onclick="dbhidd()">收起&gt;</span>
+        </b>
+        <div class="db_border">
+            <div id="tishi">请选择商标</div>
+            <ul></ul>
+            <div class="pkbut">
+                <a href="javascript:void(0);" onclick="return comparepro();">马上分享</a>
+            </div>
+            <div class="pkbut" style="display:none;">
+                <span onclick="clears()">清空分享</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/kj.pk.js?0.002" type="text/javascript" charset="utf-8"></script>
+<script src="/js/kj.search.js?0.003" type="text/javascript"></script>
+<script type="text/javascript">
+   tomobile(mobile_url+"/list.php");
+    //ie兼容提示
+    setTimeout(function(){
+        if( jQuery.support.leadingWhitespace )
+        {
+            var iie = GetCookie('86sb_ie');
+            if(iie=='')
+            {
+                jQuery('.ie8').slideDown(150);
+                SetCookie('86sb_ie','ie8');
+            }
+        }
+    },1000);
+
+    setTimeout('clIE()',10000);
+    function clIE()
+    {
+        jQuery('.ie8').slideUp(150);
+    }
+   $(function () {
+       Common.show_sb_list_pop('http://crmv2.86sb.com');
+   });
+
+</script>
+<!-- 主体部分结束 --><!-- 底部部分开始 -->
+<footer class="footerNav">
+    <div class="footer wrap">
+        <ul class="footer-l-list clearfix">
+            <li>
+                <h4>服务保障</h4>
+                <ul>
+                    <li><a  href="/Services-111.html#sbgz" target="_self"  >100%商标公证</a></li>
+					<li><a  href="javascript:void(0)" onclick="toswt('');" rel="nofollow">7×24小时客服</a></li>
+                    <li><a  href="/Services-111.html#ydydb" target="_self">一对一担保服务</a></li>
+                    <li><a  href="/Services-111.html#fbsx" target="_self" >24h内发布上线</a></li>
+                    <li><a  href="/Services-111.html#scrz" target="_self" >商标包入驻商城</a></li>
+                    <li><a  href="/Services-111.html#mmdb" target="_self">买卖双方担保交易</a></li>
+                    <li><a  href="mailto:ceo@86sb.com" rel="nofollow">投诉 ceo@86sb.com</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>使用帮助</h4>
+                <ul>
+                    <li> <a href="javascript:void(0)" onclick="toswt('');" rel="nofollow">新手指南</a></li>
+                    <li><a href="/news-classId-23.html" target="_self">常见问题</a></li>
+                    <li><a href="/member/register" target="_self" rel="nofollow">会员注册</a></li>
+                    <li><a href="/Services-102.html" target="_self">商标注册流程</a></li>
+                    <li><a href="/Services-94.html" target="_self">商标转让流程</a></li>
+                    <li><a href="/Services-92.html" target="_self">商标发布流程</a></li>
+                    <li><a href="/Services-57.html" target="_self">网站导航</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>售后服务</h4>
+                <ul>
+                    <li><a  href="/Services-59.html" target="_self">客服中心</a></li>
+                    <li><a  href="/Services-127.html" target="_self">联系尚标</a></li>
+                    <li><a href="javascript:void(0)" onclick="toswt('');" rel="nofollow">用户反馈</a></li>
+                    <li><a  href="/Services-111.html#pzcl" target="_self">品质承诺</a></li>
+                    <li><a  href="/Services-111.html#shfw" target="_self">售后咨询</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>增值服务</h4>
+                <ul>
+                    <li> <a  href="/news-info-5366.html#tm" target="_self">天猫入驻</a></li>
+                    <li> <a  href="/news-info-5366.html#jd" target="_self">京东入驻</a></li>
+                    <li> <a  href="/news-info-5366.html#yhd" target="_self">一号店入驻</a></li>
+                    <li> <a  href="javascript:void(0)" onclick="toswt('');" rel="nofollow">广告服务</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>关于尚标</h4>
+                <ul>
+                    <li> <a href="/Services-108.html" target="_self" rel="nofollow">董事长介绍</a></li>
+                    <li> <a   href="/Services-106.html" target="_self">尚标品牌</a></li>
+                    <!--<li> <a   href="/Services-71.html" target="_self">资质证明</a></li>-->
+                    <li> <a href="/Services-2.html" target="_self" rel="nofollow">财务账号</a></li>
+                    <li> <a href="/Services-68.html" target="_self" rel="nofollow">法律声明</a></li>
+                    <li> <a   href="/Services-78.html" target="_self">服务条款</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4>文章导航</h4>
+                <ul>
+                    <li> <a  href="/news-classId-16.html" target="_self">尚标资讯</a></li>
+                    <li> <a  href="/news-classId-0.html" target="_self">行业动态</a></li>
+                    <li> <a  href="/news-classId-19.html" target="_self">商标知识</a></li>
+                    <!-- <li> <a  href="/zt/index.html">专题聚合</a></li>
+                    <li> <a  href="/gjzc">国际注册</a></li>
+                    <li> <a  href="/qgzc">注册代理</a></li> -->
+                    <!--<li> <a  href="/qgzr">全国转让</a></li>-->
+                </ul>
+            </li>
+        </ul>
+        <div class="concent-r-list" style="margin-top: 33px;">
+            <ul class="clearfix">
+                <!--<li>
+                    <a  href="javascript:;">
+                        <img src="../images/sbwx.png">
+                        <p>尚标公众平台</p>
+                    </a>
+                </li>-->
+                <li style="text-align:center;">
+                    <a  href="javascript:;">
+                        <script type="text/javascript">
+                            document.write('<img style="height:85px" src="'+wesite[10]+'">');
+                        </script>
+                        <p>尚标手机站</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="week">周一至周日( 9:00~24：00 )</p>
+            <p class="telNum"><script type="text/javascript">document.write(isphone);</script></p>
+            <p style="font-size: 24px;color: #fff;">021-66983179</p>
+        </div>
+    </div>
+</footer>
+<!-- 滚动友情链接开始 -->
+<div id="Scrol2">
+
+    <div id="ScrollMe" style="overflow: hidden; height: 27px;">
+
+		<marquee direction="up"  scrolldelay="10" scrollamount="1" loop="-1" behavior="scroll" hspace="20" vspace="10" width="100%" height="30px" onmouseover="this.stop()" onmouseout="this.start()">
+        		</marquee>       
+    </div>
+</div>
+<!-- 滚动友情链接结束 -->
+<footer class="frend_link">
+    <ul class="aboutUs clearfix">
+        <li><a  href="/Services-106.html" target="_blank">关于我们</a>|</li>
+        <!--<li><a  href="/Services-71.html" target="_blank">公司资质</a>|</li>-->
+        <li><a  href="/Services-127.html" target="_blank">联系我们</a>|</li>
+        <li><a  href="/Services-73.html" target="_blank">人才招聘</a>|</li>
+        <li><a  href="javascript:void(0)" onclick="toswt('');">广告服务</a>|</li>
+        <li><a  href="/Services-2.html" target="_blank">汇款账号</a>|</li>
+        <li><a  href="/wzdt.html" target="_blank">网站地图</a>|</li>       
+        <li><a  href="/flink/index" target="_blank">友情链接</a>|</li>
+        <li><a  href="javascript:void(0)" onclick="toswt('');">用户建议</a></li>
+    </ul>
+    <p class="contant"><script type="text/javascript">document.write(wesite[7]);</script>：
+         <a href="http://www.86sb.com" target="_blank">商标转让</a>
+         <a href="http://www.86dianpu.com" target="_blank">店铺转让</a>
+         <a href="/products/elitelist" target="_blank">精品商标转让</a>
+		<a href="/patent" target="_blank">专利转让</a>
+		<a href="/ztb" target="_blank">尚标招投标</a>
+		<a href="/hunter.html" target="_blank">商标猎头</a>
+		<a href="/pro/index" target="_blank">商标分类表</a>
+    </p>	
+    <p class="sh-center"><script type="text/javascript">document.write(wesite[0]);</script>：<script type="text/javascript">document.write(wesite[1]);</script>  网站备案：<script type="text/javascript">document.write(wesite[2]);</script></p>
+</footer>
+<style>
+    .clearfix li span img{
+        margin-top:7px;
+    }
+</style>
+<footer class="aptitude wrap" style="margin-bottom:48px;">
+    <ul class="clearfix" style=" width: 880px;">
+        <li><a rel="nofollow"  href="http://www.sgs.gov.cn/shaic/" target="_blank"><img src="/images/gs.png" /></a></li>
+        <li><script src="http://kxlogo.knet.cn/seallogo.dll?sn=e16081131011564451shwm000000&size=0"></script></li>
+        <li><a rel="nofollow"  id='___szfw_logo___'  href='https://credit.szfw.org/CX20160812028506250428.html' target='_blank'>
+		<img src='http://icon.szfw.org/cert.png' border='0' style='margin-top: 7px;' />
+		</a><script type='text/javascript'>(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();</script></li>
+        <li><a rel="nofollow"  href="http://www.cyberpolice.cn/wfjb/" target="_blank"><img src="/images/jcxy.png" /></a></li>
+        <li><a rel="nofollow"  href="http://net.china.com.cn/" target="_blank"><img src="/images/bl.png" /></a></li>
+        <li><a rel="nofollow"  href="http://www.315online.com.cn/" target="_blank"><img src="/images/ws.png" /></a></li>
+        </ul>
+</footer>
+
+
+
+<script src="/js/rightswt.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+
+            jQuery(document).on("click",".to_search",function(){
+              var bigclass = jQuery("#bigclassid").find("option:selected").val();
+              var typeid = jQuery("#typeid").find("option:selected").val();
+              var proname = jQuery("#proname").val(),proid = jQuery("#proid").val();
+               window.location.href = "/products/list?orderby=sort%7Cdesc%2Cup_at%7Cdesc&between=&is_index=1&bigclassid="+bigclass+"&typeid="+typeid+"&sbname="+proname+"&sbid="+proid;
+              });
+             jQuery(document).on("click","#page_to_yes",function(){
+                var page = jQuery("#redirpage_data").val();
+                if(!isNaN(page)){
+                    window.location.href = "/products/list?orderby=sort%7Cdesc%2Cup_at%7Cdesc&between=&bigclassid=0&is_index=1&page="+page+"&per-page=30";
+                }else{
+                    alert("请输入数字");
+                }
+              });
+             jQuery(document).on("click","em.to_product_share",function(){
+                var islogon = 0,types =jQuery(this).attr("data-type");
+                 var sid = jQuery(this).attr("data-id"),pname=jQuery(this).attr("data-title"),bigclassid = "0";
+                if(islogin==1)
+                {
+                  if(types==0||types=="0"){
+                     toshare(sid,pname,bigclassid);
+                  }
+                }else{
+                    dologin();
+                }
+            });
+        
+});</script>
+<script type="text/javascript">
+	if(islogin>0)
+	{	
+	//<li><a href="/Services-71.html">公司资质</a></li>\
+							
+		var htmls = '<li  class="dologins"></li>\
+							<li class="doregs"><a href="/memberinfo">' +login_datas[1]+ '</a></li><li class="doregs"><a href="/member/loginout">退出</a></li>\
+							<li><a href="/Services-57.html">网站导航</a></li>\
+							<li class="buylcar"><a href="/memberinfo/buylist">购物车<i>(' +login_datas[2]+ ')</i></a></li>\
+							<li><span class="tel"></span>客服专线：'+isphone+'</li>';			
+		
+	}else{
+		var htmls = '<li  class="dologins"><a href="/member/login" target="_blank">登录</a></li>\
+					<li  class="doregs"><a href="/member/register" target="_blank">注册</a></li>\
+					<li><a href="/Services-57.html">网站导航</a></li>\
+					<li><span class="tel"></span>客服专线：'+isphone+'</li>';						
+	}
+  $("ul.tophead_zr").html(htmls);
+</script>
+
+<script src="/js/analytics/init_ad.js"></script>
+<script type="text/javascript">
+	var browser=navigator.appName
+	var b_version=navigator.appVersion
+	var version=b_version.split(";");
+	var trim_Version=version[1].replace(/[ ]/g,"");
+	if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0")
+	{
+		alert("因您的浏览器版本太低、无法显示、请升级你浏览器版本或换其他浏览器");
+		window.location.href='https://support.dmeng.net/upgrade-your-browser.html?referrer='+location.href;
+	}
+	else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+	{
+		alert("因您的浏览器版本太低、无法显示、请升级你浏览器版本或换其他浏览器");
+		window.location.href='https://support.dmeng.net/upgrade-your-browser.html?referrer='+location.href;
+	}
+	else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
+	{
+		alert("因您的浏览器版本太低、无法显示、请升级你浏览器版本或换其他浏览器");
+		window.location.href='https://support.dmeng.net/upgrade-your-browser.html?referrer='+location.href;
+	}
+</script>
+
+<script src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/index/webfoot?0.000000000001"></script>
+
+<span style="display:none;">
+  <script type="text/javascript" src="http://www.86sb.com/js/analytics/init.js"></script>
+   </span> 
+
+</body>
+</html>

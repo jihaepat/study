@@ -110,16 +110,10 @@ class ChinatrademarkDownloaderMiddleware(object):
 class SeleniumMiddleware(object):
     def __init__(self):
         self.firefox_options = webdriver.FirefoxOptions()
-        # self.firefox_options.add_argument('-headless')
+        self.firefox_options.add_argument('-headless')
         self.driver = webdriver.Firefox(
-            # executable_path='/home/leehyunsoo/work/scrapy-selenium-taobao/web_driver/geckodriver',
             executable_path='/media/leehyunsoo/4TB2/geckodriver/geckodriver',
             firefox_options=self.firefox_options)
-        # self.chrome_option = webdriver.ChromeOptions()
-        # self.chrome_option.add_argument('headless')
-        # self.driver = webdriver.Chrome('/media/leehyunsoo/4TB2/chromedriver/chromedriver',
-        #                                chrome_options=self.chrome_option)
-
         self.driver.set_page_load_timeout(10)
 
     def __del__(self):
